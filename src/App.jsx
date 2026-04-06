@@ -796,7 +796,7 @@ function MapaView() {
 
       {/* Squaring Summary */}
       <div style={{background:"rgba(255,200,50,.05)",border:"1px solid rgba(255,200,50,.2)",borderRadius:8,padding:"14px 16px"}}>
-        <div style={{fontSize:12,color:"#ffc832",letterSpacing:2,marginBottom:10,textTransform:"uppercase"}}>📐 Squaring de Preço — Contexto Actual</div>
+        <div style={{fontSize:13,color:"#ffc832",letterSpacing:2,marginBottom:10,textTransform:"uppercase"}}>📐 Squaring de Preço — Contexto Actual</div>
         <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8}}>
           {[
             ["ATH","$126,272 = 272° = 2°Capricórnio"],
@@ -807,19 +807,19 @@ function MapaView() {
             ["Squaring simultâneo","TEMPO 180° + PREÇO 162° + S9 23×"],
           ].map(([k,v],i)=>(
             <div key={i} style={{background:"rgba(255,255,255,.03)",borderRadius:4,padding:"7px 10px"}}>
-              <div style={{fontSize:10,color:"#a89050",marginBottom:2}}>{k}</div>
+              <div style={{fontSize:11,color:"#a89050",marginBottom:2}}>{k}</div>
               <div style={{fontSize:12,color:"#ffe080",lineHeight:1.4}}>{v}</div>
             </div>
           ))}
         </div>
-        <div style={{marginTop:10,padding:"8px 12px",background:"rgba(144,240,128,.06)",border:"1px solid rgba(144,240,128,.2)",borderRadius:4,fontSize:12,color:"#90f080"}}>
+        <div style={{marginTop:10,padding:"8px 12px",background:"rgba(144,240,128,.06)",border:"1px solid rgba(144,240,128,.2)",borderRadius:4,fontSize:13,color:"#90f080"}}>
           Saturno a 2°Áries em 3 Mar 2026 (orb 0.03°) = Saturno a fazer square EXACTO do grau zodiacal do ATH + Total Lunar Eclipse Blood Moon
         </div>
       </div>
 
       {/* Price Ladder */}
       <div style={{background:"rgba(255,255,255,.02)",border:"1px solid rgba(255,255,255,.07)",borderRadius:8,padding:"14px 16px"}}>
-        <div style={{fontSize:12,color:"#90c0e0",letterSpacing:2,marginBottom:14,textTransform:"uppercase"}}>📊 Escada de Preços Square of Nine + 0°Áries</div>
+        <div style={{fontSize:13,color:"#90c0e0",letterSpacing:2,marginBottom:14,textTransform:"uppercase"}}>📊 Escada de Preços Square of Nine + 0°Áries</div>
         <div style={{position:"relative"}}>
           {/* Price bar */}
           <div style={{position:"absolute",left:140,right:0,top:0,bottom:0}}>
@@ -843,9 +843,9 @@ function MapaView() {
               return (
                 <div key={i} style={{display:"flex",alignItems:"center",gap:8,padding:"4px 0",borderBottom:"1px solid rgba(255,255,255,.04)",background:isCurrent?"rgba(144,240,128,.05)":"transparent"}}>
                   <div style={{width:8,height:8,borderRadius:"50%",background:lv.c,flexShrink:0,boxShadow:isCurrent?`0 0 8px ${lv.c}`:"none"}}/>
-                  <div style={{fontSize:11,color:lv.c,minWidth:100,fontFamily:"monospace"}}>{lv.label.split(" — ")[0]}</div>
-                  <div style={{fontSize:11,color:"#666",flex:1}}>{lv.label.split(" — ")[1]}</div>
-                  <div style={{fontSize:10,color:"#444"}}>{lv.note}</div>
+                  <div style={{fontSize:13,color:lv.c,minWidth:120,fontFamily:"monospace"}}>{lv.label.split(" — ")[0]}</div>
+                  <div style={{fontSize:13,color:"#666",flex:1}}>{lv.label.split(" — ")[1]}</div>
+                  <div style={{fontSize:12,color:"#444"}}>{lv.note}</div>
                 </div>
               );
             })}
@@ -855,34 +855,34 @@ function MapaView() {
 
       {/* Gann Angular Declines */}
       <div style={{background:"rgba(255,255,255,.02)",border:"1px solid rgba(255,255,255,.07)",borderRadius:8,padding:"14px 16px"}}>
-        <div style={{fontSize:12,color:"#c8b478",letterSpacing:2,marginBottom:12,textTransform:"uppercase"}}>🌕 Ângulos de Preço Gann (desde ATH $126,272)</div>
+        <div style={{fontSize:13,color:"#c8b478",letterSpacing:2,marginBottom:12,textTransform:"uppercase"}}>🌕 Ângulos de Preço Gann (desde ATH $126,272)</div>
         <div style={{display:"flex",flexDirection:"column",gap:6}}>
           {angles.map((a,i)=>{
             const isCurrent = Math.abs(a.p - 69000) < 3000;
             return (
               <div key={i} style={{display:"flex",alignItems:"center",gap:10,padding:"6px 10px",background:isCurrent?"rgba(144,240,128,.06)":"rgba(255,255,255,.02)",borderRadius:4,border:isCurrent?"1px solid rgba(144,240,128,.3)":"1px solid rgba(255,255,255,.04)"}}>
-                <div style={{fontSize:12,color:a.c,fontFamily:"monospace",minWidth:50}}>{a.a}°</div>
-                <div style={{fontSize:13,color:a.c,fontFamily:"monospace",minWidth:90}}>${a.p.toLocaleString()}</div>
-                <div style={{fontSize:12,color:isCurrent?"#90f080":"#888",flex:1}}>{a.label}</div>
+                <div style={{fontSize:14,color:a.c,fontFamily:"monospace",minWidth:55}}>{a.a}°</div>
+                <div style={{fontSize:14,color:a.c,fontFamily:"monospace",minWidth:100}}>${a.p.toLocaleString()}</div>
+                <div style={{fontSize:14,color:isCurrent?"#90f080":"#888",flex:1}}>{a.label}</div>
                 {isCurrent && <div style={{fontSize:11,color:"#90f080",fontWeight:"bold"}}>◄ ACTUAL</div>}
               </div>
             );
           })}
         </div>
-        <div style={{marginTop:10,fontSize:11,color:"#555",lineHeight:1.6}}>
+        <div style={{marginTop:10,fontSize:13,color:"#555",lineHeight:1.6}}>
           Fórmula: ATH × (1 − ângulo/360) | $54K/$72K/$108K = 0°Áries exactos (múltiplos de 360)
         </div>
       </div>
 
       {/* Key Dates Timeline */}
       <div style={{background:"rgba(255,255,255,.02)",border:"1px solid rgba(255,255,255,.07)",borderRadius:8,padding:"14px 16px"}}>
-        <div style={{fontSize:12,color:"#ffb0d0",letterSpacing:2,marginBottom:12,textTransform:"uppercase"}}>📅 Datas Chave 2026 — Confluências Máximas</div>
+        <div style={{fontSize:13,color:"#ffb0d0",letterSpacing:2,marginBottom:12,textTransform:"uppercase"}}>📅 Datas Chave 2026 — Confluências Máximas</div>
         <div style={{display:"flex",flexDirection:"column",gap:6}}>
           {keyDates.map((kd,i)=>(
             <div key={i} style={{display:"flex",alignItems:"center",gap:10,padding:"7px 10px",background:"rgba(255,255,255,.02)",borderRadius:4,border:"1px solid rgba(255,255,255,.04)"}}>
-              <div style={{fontSize:13,color:"#a89050",fontFamily:"monospace",minWidth:52,flexShrink:0}}>{kd.d}</div>
-              <div style={{fontSize:12,color:"#ffe080",minWidth:64,flexShrink:0}}>{kd.stars}</div>
-              <div style={{fontSize:12,color:bC[kd.bias]||"#ddd",flex:1,lineHeight:1.35}}>{kd.label}</div>
+              <div style={{fontSize:14,color:"#a89050",fontFamily:"monospace",minWidth:56,flexShrink:0}}>{kd.d}</div>
+              <div style={{fontSize:13,color:"#ffe080",minWidth:68,flexShrink:0}}>{kd.stars}</div>
+              <div style={{fontSize:14,color:bC[kd.bias]||"#ddd",flex:1,lineHeight:1.35}}>{kd.label}</div>
               <div style={{fontSize:9,color:bC[kd.bias]||"#888",opacity:.7,textTransform:"uppercase"}}>{kd.bias}</div>
             </div>
           ))}
@@ -891,7 +891,7 @@ function MapaView() {
 
       {/* Bayer Phase */}
       <div style={{background:"rgba(80,200,160,.04)",border:"1px solid rgba(80,200,160,.15)",borderRadius:8,padding:"14px 16px"}}>
-        <div style={{fontSize:12,color:"#50c8a0",letterSpacing:2,marginBottom:8,textTransform:"uppercase"}}>🍽️ Bayer Dinner Table + Wyckoff Phase</div>
+        <div style={{fontSize:13,color:"#50c8a0",letterSpacing:2,marginBottom:8,textTransform:"uppercase"}}>🍽️ Bayer Dinner Table + Wyckoff Phase</div>
         <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8}}>
           {[
             ["Bayer 2025–2026","Fase DISPOSAL — após champagne/nut do ATH Oct 2025"],
@@ -902,8 +902,8 @@ function MapaView() {
             ["Saturn square natal","Saturno a fazer square ao Plutão natal BTC = transformação estrutural máxima"],
           ].map(([k,v],i)=>(
             <div key={i} style={{background:"rgba(255,255,255,.03)",borderRadius:4,padding:"7px 10px"}}>
-              <div style={{fontSize:10,color:"#50c8a0",marginBottom:2}}>{k}</div>
-              <div style={{fontSize:11,color:"#c0e0d0",lineHeight:1.4}}>{v}</div>
+              <div style={{fontSize:11,color:"#50c8a0",marginBottom:2}}>{k}</div>
+              <div style={{fontSize:13,color:"#c0e0d0",lineHeight:1.4}}>{v}</div>
             </div>
           ))}
         </div>
@@ -911,8 +911,8 @@ function MapaView() {
 
       {/* Jensen Key Days compact */}
       <div style={{background:"rgba(255,255,255,.02)",border:"1px solid rgba(255,255,255,.07)",borderRadius:8,padding:"14px 16px"}}>
-        <div style={{fontSize:12,color:"#ffe080",letterSpacing:2,marginBottom:8,textTransform:"uppercase"}}>📐 Jensen Key Days Críticos + Graus Críticos 2026</div>
-        <div style={{fontSize:11,color:"#888",marginBottom:10,lineHeight:1.6}}>
+        <div style={{fontSize:13,color:"#ffe080",letterSpacing:2,marginBottom:8,textTransform:"uppercase"}}>📐 Jensen Key Days Críticos + Graus Críticos 2026</div>
+        <div style={{fontSize:13,color:"#888",marginBottom:10,lineHeight:1.6}}>
           Key Days = Lua square Mercúrio/Marte/Vénus. Se mercado faz H/L num key day → mantém nova tendência até ao próximo key day.
         </div>
         <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:6}}>
@@ -927,8 +927,8 @@ function MapaView() {
             ["Dec 8","FIM do Santa Claus (não Dez 20). Gap Dec 8–20 = neutro"],
           ].map(([k,v],i)=>(
             <div key={i} style={{background:"rgba(255,255,255,.03)",borderRadius:4,padding:"7px 10px"}}>
-              <div style={{fontSize:10,color:"#ffc832",marginBottom:2}}>{k}</div>
-              <div style={{fontSize:11,color:"#ddd8c8",lineHeight:1.4}}>{v}</div>
+              <div style={{fontSize:11,color:"#ffc832",marginBottom:2}}>{k}</div>
+              <div style={{fontSize:13,color:"#ddd8c8",lineHeight:1.4}}>{v}</div>
             </div>
           ))}
         </div>
@@ -936,7 +936,7 @@ function MapaView() {
 
       {/* Seasonal windows */}
       <div style={{background:"rgba(80,200,80,.03)",border:"1px solid rgba(80,200,80,.15)",borderRadius:8,padding:"14px 16px"}}>
-        <div style={{fontSize:12,color:"#50c850",letterSpacing:2,marginBottom:10,textTransform:"uppercase"}}>📅 Seasonals Pesavento (108+ anos de dados)</div>
+        <div style={{fontSize:13,color:"#50c850",letterSpacing:2,marginBottom:10,textTransform:"uppercase"}}>📅 Seasonals Pesavento (108+ anos de dados)</div>
         {[
           ["Feb 2 – Mar 28","BEARISH","Ides of March"],
           ["Mar 28 – Apr 16","BULLISH","April Earnings Rally"],
@@ -950,8 +950,8 @@ function MapaView() {
           const c = bias==="BULLISH"?"#50e870":bias.includes("CRASH")?"#ff5030":bias==="NEUTRO"?"#888":"#ff5050";
           return (
             <div key={i} style={{display:"flex",alignItems:"center",gap:10,padding:"5px 0",borderBottom:"1px solid rgba(255,255,255,.04)"}}>
-              <div style={{fontSize:11,color:"#a89050",fontFamily:"monospace",minWidth:120,flexShrink:0}}>{dates}</div>
-              <div style={{fontSize:11,color:c,minWidth:80,flexShrink:0}}>{bias}</div>
+              <div style={{fontSize:13,color:"#a89050",fontFamily:"monospace",minWidth:130,flexShrink:0}}>{dates}</div>
+              <div style={{fontSize:13,color:c,minWidth:90,flexShrink:0}}>{bias}</div>
               <div style={{fontSize:11,color:"#888"}}>{label}</div>
             </div>
           );
@@ -976,10 +976,10 @@ export default function App() {
     <div style={{minHeight:"100vh",background:"#060710",fontFamily:"Georgia,serif",color:"#e0d8cc",display:"flex",flexDirection:"column"}}>
       <div style={{position:"fixed",inset:0,zIndex:0,background:"radial-gradient(ellipse at 15% 20%,rgba(40,18,80,.65),transparent 50%),radial-gradient(ellipse at 85% 80%,rgba(8,28,58,.65),transparent 50%)",pointerEvents:"none"}}/>
       <header style={{position:"relative",zIndex:1,textAlign:"center",padding:"24px 16px 10px"}}>
-        <p style={{fontSize:11,letterSpacing:2,color:"#a89050",margin:"0 0 5px",textTransform:"uppercase"}}>Gann · Jensen · Pesavento · Bayer · Fibonacci · NASA/JPL · ATH Oct 6, 2025</p>
+        <p style={{fontSize:12,letterSpacing:2,color:"#a89050",margin:"0 0 5px",textTransform:"uppercase"}}>Gann · Jensen · Pesavento · Bayer · Fibonacci · NASA/JPL · ATH Oct 6, 2025</p>
         <h1 style={{fontSize:"clamp(22px,5vw,40px)",fontWeight:"normal",letterSpacing:2,margin:0,background:"linear-gradient(120deg,#ffe080,#c8b060,#ffcce0,#90e0f0)",WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent"}}>BTC Astro-Timing 2026</h1>
         <div style={{width:40,height:1,background:"linear-gradient(90deg,transparent,#c8b060,transparent)",margin:"6px auto"}}/>
-        <p style={{fontSize:11,color:"#ffe08066",margin:0}}>Click any event · source · reasoning · historical bias</p>
+        <p style={{fontSize:12,color:"#ffe08066",margin:0}}>Click any event · source · reasoning · historical bias</p>
       </header>
       <nav style={{position:"relative",zIndex:1,display:"flex",flexWrap:"wrap",justifyContent:"center",gap:4,padding:"8px 10px 3px"}}>
         {MONTHS.map(m=>{
@@ -1001,7 +1001,7 @@ export default function App() {
         </div>
       )}
       {active!=="MAPA"&&<div style={{position:"relative",zIndex:1,textAlign:"center",marginBottom:10}}>
-        <span style={{fontSize:active==="VISAO"?20:26,letterSpacing:3,color:active==="CONF"?"#ffb432":active==="VISAO"?"#90e0f0":"#c8b060",fontWeight:"normal"}}>{month.l}</span>
+        <span style={{fontSize:active==="VISAO"?22:28,letterSpacing:3,color:active==="CONF"?"#ffb432":active==="VISAO"?"#90e0f0":"#c8b060",fontWeight:"normal"}}>{month.l}</span>
         {!isSpecial&&<span style={{fontSize:12,color:"#444",marginLeft:10}}>{events.length} events</span>}
       </div>}
       {active==="MAPA" && <MapaView/>}
@@ -1023,34 +1023,34 @@ export default function App() {
                 <div style={{minWidth:8,height:8,borderRadius:"50%",background:dc,marginTop:6,boxShadow:`0 0 6px ${dc}`,flexShrink:0}}/>
                 <div style={{flex:1,minWidth:0}}>
                   <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",flexWrap:"wrap",gap:4,marginBottom:4}}>
-                    <span style={{fontSize:12,color:dc,letterSpacing:1,textTransform:"uppercase",fontWeight:"bold"}}>{ev.w}</span>
+                    <span style={{fontSize:14,color:dc,letterSpacing:1,textTransform:"uppercase",fontWeight:"bold"}}>{ev.w}</span>
                     <div style={{display:"flex",gap:5,alignItems:"center"}}>
-                      <span style={{fontSize:10,color:bias.color,background:bias.bg,border:`1px solid ${bias.color}44`,borderRadius:3,padding:"1px 7px",fontFamily:"sans-serif"}}>
+                      <span style={{fontSize:13,color:bias.color,background:bias.bg,border:`1px solid ${bias.color}44`,borderRadius:3,padding:"1px 7px",fontFamily:"sans-serif"}}>
                         {bias.icon} {bias.label}
                       </span>
-                      <span style={{fontSize:10,color:cfg.b,opacity:.5}}>{cfg.l}</span>
+                      <span style={{fontSize:11,color:cfg.b,opacity:.5}}>{cfg.l}</span>
                       <span style={{fontSize:12,color:"#555"}}>{isOpen?"▲":"▼"}</span>
                     </div>
                   </div>
-                  <p style={{fontSize:14,color:confl?"#ffe0b0":ev.t==="g"?"#ffe080cc":"#ddd8c8",margin:"0 0 4px",lineHeight:1.45}}>{ev.e}</p>
-                  <p style={{fontSize:12,color:"#5a5850",margin:0,lineHeight:1.55}}>{ev.c}</p>
+                  <p style={{fontSize:16,color:confl?"#ffe0b0":ev.t==="g"?"#ffe080cc":"#ddd8c8",margin:"0 0 4px",lineHeight:1.45}}>{ev.e}</p>
+                  <p style={{fontSize:13,color:"#5a5850",margin:0,lineHeight:1.55}}>{ev.c}</p>
                 </div>
               </div>
               {isOpen&&(
                 <div style={{marginTop:14,marginLeft:18,borderTop:"1px solid rgba(255,255,255,.07)",paddingTop:14,display:"flex",flexDirection:"column",gap:12}}>
                   <div style={{display:"flex",gap:10,alignItems:"flex-start"}}>
-                    <span style={{fontSize:11,color:"#90e0f0",minWidth:76,flexShrink:0,paddingTop:1}}>📚 SOURCE</span>
-                    <span style={{fontSize:12,color:"#a0b8c8",lineHeight:1.6}}>{ev.src}</span>
+                    <span style={{fontSize:12,color:"#90e0f0",minWidth:76,flexShrink:0,paddingTop:1}}>📚 SOURCE</span>
+                    <span style={{fontSize:13,color:"#a0b8c8",lineHeight:1.6}}>{ev.src}</span>
                   </div>
                   <div style={{display:"flex",gap:10,alignItems:"flex-start"}}>
-                    <span style={{fontSize:11,color:"#90e0f0",minWidth:76,flexShrink:0,paddingTop:4}}>📊 HISTORY</span>
-                    <span style={{fontSize:12,color:bias.color,background:bias.bg,border:`1px solid ${bias.color}33`,borderRadius:4,padding:"4px 12px",fontFamily:"sans-serif",lineHeight:1.5}}>
+                    <span style={{fontSize:12,color:"#90e0f0",minWidth:76,flexShrink:0,paddingTop:4}}>📊 HISTORY</span>
+                    <span style={{fontSize:13,color:bias.color,background:bias.bg,border:`1px solid ${bias.color}33`,borderRadius:4,padding:"4px 12px",fontFamily:"sans-serif",lineHeight:1.5}}>
                       {bias.icon} {bias.label} — {ev.bias==="bull"?"Market historically rises around this event.":ev.bias==="bear"?"Market historically falls around this event.":ev.bias==="warn"?"Historically associated with crashes or major dislocations.":ev.bias==="turn"?"Historical turning point — direction depends on context and trend.":"Neutral signal — amplifies the existing trend."}
                     </span>
                   </div>
                   <div style={{display:"flex",gap:10,alignItems:"flex-start"}}>
-                    <span style={{fontSize:11,color:"#90e0f0",minWidth:76,flexShrink:0,paddingTop:3}}>💡 REASONING</span>
-                    <p style={{fontSize:13,color:"#c0c8d0",margin:0,lineHeight:1.7}}>{ev.why}</p>
+                    <span style={{fontSize:12,color:"#90e0f0",minWidth:76,flexShrink:0,paddingTop:3}}>💡 REASONING</span>
+                    <p style={{fontSize:15,color:"#c0c8d0",margin:0,lineHeight:1.7}}>{ev.why}</p>
                   </div>
                 </div>
               )}
@@ -1059,7 +1059,7 @@ export default function App() {
         })}
       </div>}
       <footer style={{position:"relative",zIndex:1,borderTop:"1px solid rgba(255,255,255,.04)",padding:"12px",display:"flex",flexWrap:"wrap",justifyContent:"center",gap:10}}>
-        {Object.entries(TC).map(([k,v])=><div key={k} style={{display:"flex",alignItems:"center",gap:4}}><div style={{width:7,height:7,borderRadius:"50%",background:v.d,boxShadow:`0 0 4px ${v.d}`}}/><span style={{fontSize:11,color:"#4a4840"}}>{v.l}</span></div>)}
+        {Object.entries(TC).map(([k,v])=><div key={k} style={{display:"flex",alignItems:"center",gap:4}}><div style={{width:7,height:7,borderRadius:"50%",background:v.d,boxShadow:`0 0 4px ${v.d}`}}/><span style={{fontSize:12,color:"#4a4840"}}>{v.l}</span></div>)}
         <div style={{width:"100%",display:"flex",justifyContent:"center",gap:14,marginTop:6,flexWrap:"wrap"}}>
           {Object.entries(BIAS).map(([k,v])=><span key={k} style={{fontSize:11,color:v.color}}>{v.icon} {v.label}</span>)}
         </div>
@@ -1067,4 +1067,4 @@ export default function App() {
     </div>
   );
 }
-function ps(a,c){return{padding:"3px 10px",background:a?`${c}18`:"transparent",border:a?`1px solid ${c}44`:"1px solid rgba(255,255,255,.04)",borderRadius:20,color:a?c:"#4a4840",fontSize:11,cursor:"pointer",fontFamily:"inherit"};}
+function ps(a,c){return{padding:"4px 13px",background:a?`${c}18`:"transparent",border:a?`1px solid ${c}44`:"1px solid rgba(255,255,255,.04)",borderRadius:20,color:a?c:"#4a4840",fontSize:13,cursor:"pointer",fontFamily:"inherit"};}
