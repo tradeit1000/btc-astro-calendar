@@ -239,10 +239,10 @@ export default function App() {
       <div style={{position:"fixed",inset:0,zIndex:0,background:"radial-gradient(ellipse at 15% 20%,rgba(40,18,80,.65),transparent 50%),radial-gradient(ellipse at 85% 80%,rgba(8,28,58,.65),transparent 50%)",pointerEvents:"none"}}/>
 
       <header style={{position:"relative",zIndex:1,textAlign:"center",padding:"22px 16px 8px"}}>
-        <p style={{fontSize:8,letterSpacing:3,color:"#a89050",margin:"0 0 4px",textTransform:"uppercase"}}>NASA · JPL · Gann · Jensen · Pesavento · Bayer · Fibonacci · ATH 6 Out 2025</p>
-        <h1 style={{fontSize:"clamp(15px,4vw,28px)",fontWeight:"normal",letterSpacing:2,margin:0,background:"linear-gradient(120deg,#ffe080,#c8b060,#ffcce0,#90e0f0)",WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent"}}>BTC Astro-Timing 2026</h1>
-        <div style={{width:40,height:1,background:"linear-gradient(90deg,transparent,#c8b060,transparent)",margin:"5px auto"}}/>
-        <p style={{fontSize:7,color:"#ffe08044",margin:0}}>⭐ confluência · ✏️ corrigido · ➕ adicionado · ⚡ extremo · ⚠️ risco</p>
+        <p style={{fontSize:11,letterSpacing:2,color:"#a89050",margin:"0 0 5px",textTransform:"uppercase"}}>NASA · JPL · Gann · Jensen · Pesavento · Bayer · Fibonacci · ATH 6 Out 2025</p>
+        <h1 style={{fontSize:"clamp(22px,5vw,38px)",fontWeight:"normal",letterSpacing:2,margin:0,background:"linear-gradient(120deg,#ffe080,#c8b060,#ffcce0,#90e0f0)",WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent"}}>BTC Astro-Timing 2026</h1>
+        <div style={{width:40,height:1,background:"linear-gradient(90deg,transparent,#c8b060,transparent)",margin:"6px auto"}}/>
+        <p style={{fontSize:11,color:"#ffe08066",margin:0}}>⭐ confluência · ✏️ corrigido · ➕ adicionado · ⚡ extremo · ⚠️ risco</p>
       </header>
 
       <nav style={{position:"relative",zIndex:1,display:"flex",flexWrap:"wrap",justifyContent:"center",gap:3,padding:"6px 8px 2px"}}>
@@ -253,8 +253,8 @@ export default function App() {
           const bd = isA?(isV?"#64c8dc":isC?"#ffb432":"#ffc832"):hC?"rgba(255,200,50,.3)":"rgba(255,255,255,.06)";
           const cl = isA?(isV?"#90e0f0":isC?"#ffb432":"#ffe080"):isV?"#64c8dc88":isC?"#ffb43255":"#555";
           return <button key={m} onClick={()=>{setActive(m);setFilter("all");}}
-            style={{padding:"3px 8px",background:bg,border:`1px solid ${bd}`,borderRadius:4,color:cl,fontSize:8,letterSpacing:1,cursor:"pointer",fontFamily:"inherit"}}>
-            {ML[m]}{hC&&<span style={{color:"#ffe080",fontSize:6,marginLeft:1}}>★</span>}
+            style={{padding:"5px 12px",background:bg,border:`1px solid ${bd}`,borderRadius:4,color:cl,fontSize:12,letterSpacing:1,cursor:"pointer",fontFamily:"inherit"}}>
+            {ML[m]}{hC&&<span style={{color:"#ffe080",fontSize:9,marginLeft:2}}>★</span>}
           </button>;
         })}
       </nav>
@@ -267,8 +267,8 @@ export default function App() {
       )}
 
       <div style={{position:"relative",zIndex:1,textAlign:"center",marginBottom:8}}>
-        <span style={{fontSize:active==="VISAO"?16:20,letterSpacing:3,color:active==="CONF"?"#ffb432":active==="VISAO"?"#90e0f0":"#c8b060",fontWeight:"normal"}}>{month.l}</span>
-        {!isSpecial&&<span style={{fontSize:9,color:"#333",marginLeft:8}}>{events.length} eventos</span>}
+        <span style={{fontSize:active==="VISAO"?22:28,letterSpacing:3,color:active==="CONF"?"#ffb432":active==="VISAO"?"#90e0f0":"#c8b060",fontWeight:"normal"}}>{month.l}</span>
+        {!isSpecial&&<span style={{fontSize:13,color:"#444",marginLeft:10}}>{events.length} eventos</span>}
       </div>
 
       <div style={{position:"relative",zIndex:1,maxWidth:700,width:"100%",margin:"0 auto",padding:"0 10px 56px",display:"flex",flexDirection:"column",gap:6}}>
@@ -284,15 +284,15 @@ export default function App() {
               <div style={{minWidth:6,height:6,borderRadius:"50%",background:dc,marginTop:5,boxShadow:`0 0 5px ${dc}`,flexShrink:0}}/>
               <div style={{flex:1,minWidth:0}}>
                 <div style={{display:"flex",justifyContent:"space-between",flexWrap:"wrap",gap:2,marginBottom:2}}>
-                  <span style={{fontSize:9,color:dc,letterSpacing:1.2,textTransform:"uppercase"}}>{ev.w}</span>
-                  <div style={{display:"flex",gap:3}}>
-                    {confl&&<span style={{fontSize:7,color:"#ffe080",border:"1px solid #ffe08044",borderRadius:2,padding:"0 3px"}}>⭐ CONFLUÊNCIA</span>}
-                    {fix&&<span style={{fontSize:7,color:"#ffa032",border:"1px solid #ffa03233",borderRadius:2,padding:"0 3px"}}>CORRIGIDO/ADD</span>}
-                    <span style={{fontSize:7,color:cfg.b,opacity:.5}}>{cfg.l}</span>
+                  <span style={{fontSize:12,color:dc,letterSpacing:1.2,textTransform:"uppercase"}}>{ev.w}</span>
+                  <div style={{display:"flex",gap:4}}>
+                    {confl&&<span style={{fontSize:10,color:"#ffe080",border:"1px solid #ffe08044",borderRadius:2,padding:"1px 5px"}}>⭐ CONFLUÊNCIA</span>}
+                    {fix&&<span style={{fontSize:10,color:"#ffa032",border:"1px solid #ffa03233",borderRadius:2,padding:"1px 5px"}}>CORRIGIDO/ADD</span>}
+                    <span style={{fontSize:10,color:cfg.b,opacity:.5}}>{cfg.l}</span>
                   </div>
                 </div>
-                <p style={{fontSize:11,color:confl?"#ffe0b0":ev.t==="g"?"#ffe080cc":"#ddd8c8",margin:"0 0 3px",lineHeight:1.4}}>{ev.e}</p>
-                <p style={{fontSize:9,color:"#4a4840",margin:0,lineHeight:1.55}}>{ev.c}</p>
+                <p style={{fontSize:15,color:confl?"#ffe0b0":ev.t==="g"?"#ffe080cc":"#ddd8c8",margin:"0 0 5px",lineHeight:1.45}}>{ev.e}</p>
+                <p style={{fontSize:12,color:"#5a5850",margin:0,lineHeight:1.6}}>{ev.c}</p>
               </div>
             </div>
           );
@@ -300,9 +300,9 @@ export default function App() {
       </div>
 
       <footer style={{position:"relative",zIndex:1,borderTop:"1px solid rgba(255,255,255,.04)",padding:"8px",display:"flex",flexWrap:"wrap",justifyContent:"center",gap:8}}>
-        {Object.entries(TC).map(([k,v])=><div key={k} style={{display:"flex",alignItems:"center",gap:3}}><div style={{width:5,height:5,borderRadius:"50%",background:v.d}}/><span style={{fontSize:7,color:"#3a3830"}}>{v.l}</span></div>)}
+        {Object.entries(TC).map(([k,v])=><div key={k} style={{display:"flex",alignItems:"center",gap:4}}><div style={{width:7,height:7,borderRadius:"50%",background:v.d}}/><span style={{fontSize:11,color:"#4a4840"}}>{v.l}</span></div>)}
       </footer>
     </div>
   );
 }
-function ps(a,c){return{padding:"2px 6px",background:a?`${c}18`:"transparent",border:a?`1px solid ${c}44`:"1px solid rgba(255,255,255,.04)",borderRadius:20,color:a?c:"#3a3830",fontSize:7,cursor:"pointer",fontFamily:"inherit"};}
+function ps(a,c){return{padding:"3px 10px",background:a?`${c}18`:"transparent",border:a?`1px solid ${c}44`:"1px solid rgba(255,255,255,.04)",borderRadius:20,color:a?c:"#4a4840",fontSize:11,cursor:"pointer",fontFamily:"inherit"};}
