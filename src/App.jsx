@@ -22,6 +22,7 @@ const BIAS = {
 
 const D = {
 
+MAPA:{l:"📊 Referência Rápida",e:[]},
 VISAO:{l:"Annual Overview",e:[
   {w:"ANNUAL BACKDROP",t:"g",bias:"warn",src:"Jensen — Astro-Cycles and Speculative Markets (1978) p.79",
    e:"⚠️ North Node 270° Square to 9° Gemini (Jensen) — Entire Year",
@@ -741,15 +742,232 @@ CONF:{l:"Confluences ⭐",e:[
 ]},
 };
 
-const MONTHS = ["VISAO","JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC","CONF"];
-const ML = {VISAO:"🗺 Overview",JAN:"Jan",FEB:"Feb",MAR:"Mar",APR:"Apr",MAY:"May",JUN:"Jun",JUL:"Jul",AUG:"Aug",SEP:"Sep",OCT:"Oct",NOV:"Nov",DEC:"Dec",CONF:"⭐ Confluences"};
+const MONTHS = ["MAPA","VISAO","JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC","CONF"];
+const ML = {MAPA:"📊 Mapa",VISAO:"🗺 Overview",JAN:"Jan",FEB:"Feb",MAR:"Mar",APR:"Apr",MAY:"May",JUN:"Jun",JUL:"Jul",AUG:"Aug",SEP:"Sep",OCT:"Oct",NOV:"Nov",DEC:"Dec",CONF:"⭐ Confluences"};
+
+function MapaView() {
+  const ATH = 126272;
+  const CURRENT = 82000; // update manually
+
+  const s9 = [
+    {p:126272,label:"ATH",c:"#ff6060",note:"6 Out 2025"},
+    {p:99444,label:"$99,444 — S9 10×",c:"#ff8040",note:"resistência forte"},
+    {p:80286,label:"$80,286 — S9 18×",c:"#ff9930",note:"resistência"},
+    {p:73630,label:"$73,630 — S9 21×",c:"#ffc040",note:"resistência"},
+    {p:72000,label:"$72,000 — 0°Áries ×200",c:"#ffe060",note:"0°Áries EXACT"},
+    {p:69352,label:"$69,352 — S9 23×",c:"#90e890",note:"suporte actual"},
+    {p:67261,label:"$67,261 — S9 24×",c:"#60d060",note:"próximo suporte"},
+    {p:64800,label:"$64,800 — 0°Áries ×180",c:"#40c060",note:"0°Áries EXACT"},
+    {p:63136,label:"$63,136 — ATH × 50%",c:"#30b0b0",note:"Gann 50% crítico"},
+    {p:61200,label:"$61,200 — 0°Áries ×170",c:"#30a0c0",note:"0°Áries EXACT"},
+    {p:55389,label:"$55,389 — S9 30×",c:"#5080e0",note:"low de ciclo"},
+    {p:54000,label:"$54,000 — 0°Áries ×150",c:"#6060ff",note:"MÍNIMO CICLO"},
+  ];
+
+  const angles = [
+    {a:90,pct:25,p:94704,label:"90° (−25%)",c:"#ff7040"},
+    {a:135,pct:37.5,p:78920,label:"135° (−37.5%)",c:"#ff9030"},
+    {a:162,pct:45,p:69450,label:"162° ACTUAL = Jensen Bull Angle",c:"#90f080"},
+    {a:180,pct:50,p:63136,label:"180° (−50%) = Gann 50%",c:"#60c0ff"},
+    {a:225,pct:62.5,p:47352,label:"225° (−62.5%)",c:"#8060ff"},
+  ];
+
+  const maxP = ATH * 1.02;
+  const minP = 45000;
+  const range = maxP - minP;
+  const pct = p => 100 - ((p - minP) / range * 100);
+
+  const keyDates = [
+    {d:"Mar 3",stars:"⭐⭐⭐",label:"Lunar Eclipse + Saturn squares ATH",bias:"turn"},
+    {d:"Apr 6",stars:"⭐⭐⭐",label:"Gann 180° + TIME=PRICE squaring",bias:"turn"},
+    {d:"Apr 20",stars:"⚠️",label:"Triple conjunction bearish",bias:"bear"},
+    {d:"Jun 15",stars:"⭐⭐⭐⭐⭐⭐",label:"Bottom signal máximo — 6 frameworks",bias:"bull"},
+    {d:"Sep 1",stars:"⭐⭐⭐",label:"J-S trine exacto + Fall Crash abre",bias:"turn"},
+    {d:"Sep 22",stars:"⚠️",label:"Sun entra Libra = crash signal US chart",bias:"bear"},
+    {d:"Oct 6",stars:"⭐⭐⭐⭐",label:"Gann 360° + Fall Crash + Venus Retro",bias:"bear"},
+    {d:"Nov 9",stars:"⭐⭐⭐",label:"NM Escorpião — Triple Bottom",bias:"bull"},
+    {d:"Dec 21",stars:"⭐⭐⭐⭐",label:"Gann 7×9w = Jensen 5×88d = Solstício",bias:"turn"},
+  ];
+
+  const bC = {bull:"#50e870",bear:"#ff5050",turn:"#ffe080",warn:"#ff5030"};
+
+  return (
+    <div style={{position:"relative",zIndex:1,maxWidth:720,width:"100%",margin:"0 auto",padding:"0 12px 60px",display:"flex",flexDirection:"column",gap:16}}>
+
+      {/* Squaring Summary */}
+      <div style={{background:"rgba(255,200,50,.05)",border:"1px solid rgba(255,200,50,.2)",borderRadius:8,padding:"14px 16px"}}>
+        <div style={{fontSize:12,color:"#ffc832",letterSpacing:2,marginBottom:10,textTransform:"uppercase"}}>📐 Squaring de Preço — Contexto Actual</div>
+        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8}}>
+          {[
+            ["ATH","$126,272 = 272° = 2°Capricórnio"],
+            ["Posição zodiacal actual","$69,000 = 240° = 0°Sagitário"],
+            ["Declínio angular","163° ≈ 162° = Jensen BULL angle"],
+            ["Square of Nine","−184 steps × 45° = 23 rotações abaixo ATH"],
+            ["Gann temporal","HOJE = 180° midpoint do ATH"],
+            ["Squaring simultâneo","TEMPO 180° + PREÇO 162° + S9 23×"],
+          ].map(([k,v],i)=>(
+            <div key={i} style={{background:"rgba(255,255,255,.03)",borderRadius:4,padding:"7px 10px"}}>
+              <div style={{fontSize:10,color:"#a89050",marginBottom:2}}>{k}</div>
+              <div style={{fontSize:12,color:"#ffe080",lineHeight:1.4}}>{v}</div>
+            </div>
+          ))}
+        </div>
+        <div style={{marginTop:10,padding:"8px 12px",background:"rgba(144,240,128,.06)",border:"1px solid rgba(144,240,128,.2)",borderRadius:4,fontSize:12,color:"#90f080"}}>
+          Saturno a 2°Áries em 3 Mar 2026 (orb 0.03°) = Saturno a fazer square EXACTO do grau zodiacal do ATH + Total Lunar Eclipse Blood Moon
+        </div>
+      </div>
+
+      {/* Price Ladder */}
+      <div style={{background:"rgba(255,255,255,.02)",border:"1px solid rgba(255,255,255,.07)",borderRadius:8,padding:"14px 16px"}}>
+        <div style={{fontSize:12,color:"#90c0e0",letterSpacing:2,marginBottom:14,textTransform:"uppercase"}}>📊 Escada de Preços Square of Nine + 0°Áries</div>
+        <div style={{position:"relative"}}>
+          {/* Price bar */}
+          <div style={{position:"absolute",left:140,right:0,top:0,bottom:0}}>
+            <div style={{position:"relative",height:"100%",background:"rgba(255,255,255,.02)",borderRadius:4}}>
+              {s9.map((lv,i)=>{
+                const top = pct(lv.p);
+                const isCurrent = Math.abs(lv.p - 69352) < 1000 || Math.abs(lv.p - 67261) < 1000;
+                const isATH = lv.p === ATH;
+                return (
+                  <div key={i} style={{position:"absolute",left:0,right:0,top:`${top}%`,transform:"translateY(-50%)",display:"flex",alignItems:"center",gap:6}}>
+                    <div style={{flex:1,height:isCurrent?2:1,background:lv.c,opacity:isCurrent?1:0.5,boxShadow:isCurrent?`0 0 8px ${lv.c}`:""}}/>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+          {/* Labels */}
+          <div style={{display:"flex",flexDirection:"column",gap:0}}>
+            {s9.map((lv,i)=>{
+              const isCurrent = Math.abs(lv.p - 69000) < 3000;
+              return (
+                <div key={i} style={{display:"flex",alignItems:"center",gap:8,padding:"4px 0",borderBottom:"1px solid rgba(255,255,255,.04)",background:isCurrent?"rgba(144,240,128,.05)":"transparent"}}>
+                  <div style={{width:8,height:8,borderRadius:"50%",background:lv.c,flexShrink:0,boxShadow:isCurrent?`0 0 8px ${lv.c}`:"none"}}/>
+                  <div style={{fontSize:11,color:lv.c,minWidth:100,fontFamily:"monospace"}}>{lv.label.split(" — ")[0]}</div>
+                  <div style={{fontSize:11,color:"#666",flex:1}}>{lv.label.split(" — ")[1]}</div>
+                  <div style={{fontSize:10,color:"#444"}}>{lv.note}</div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      {/* Gann Angular Declines */}
+      <div style={{background:"rgba(255,255,255,.02)",border:"1px solid rgba(255,255,255,.07)",borderRadius:8,padding:"14px 16px"}}>
+        <div style={{fontSize:12,color:"#c8b478",letterSpacing:2,marginBottom:12,textTransform:"uppercase"}}>🌕 Ângulos de Preço Gann (desde ATH $126,272)</div>
+        <div style={{display:"flex",flexDirection:"column",gap:6}}>
+          {angles.map((a,i)=>{
+            const isCurrent = Math.abs(a.p - 69000) < 3000;
+            return (
+              <div key={i} style={{display:"flex",alignItems:"center",gap:10,padding:"6px 10px",background:isCurrent?"rgba(144,240,128,.06)":"rgba(255,255,255,.02)",borderRadius:4,border:isCurrent?"1px solid rgba(144,240,128,.3)":"1px solid rgba(255,255,255,.04)"}}>
+                <div style={{fontSize:12,color:a.c,fontFamily:"monospace",minWidth:50}}>{a.a}°</div>
+                <div style={{fontSize:13,color:a.c,fontFamily:"monospace",minWidth:90}}>${a.p.toLocaleString()}</div>
+                <div style={{fontSize:12,color:isCurrent?"#90f080":"#888",flex:1}}>{a.label}</div>
+                {isCurrent && <div style={{fontSize:11,color:"#90f080",fontWeight:"bold"}}>◄ ACTUAL</div>}
+              </div>
+            );
+          })}
+        </div>
+        <div style={{marginTop:10,fontSize:11,color:"#555",lineHeight:1.6}}>
+          Fórmula: ATH × (1 − ângulo/360) | $54K/$72K/$108K = 0°Áries exactos (múltiplos de 360)
+        </div>
+      </div>
+
+      {/* Key Dates Timeline */}
+      <div style={{background:"rgba(255,255,255,.02)",border:"1px solid rgba(255,255,255,.07)",borderRadius:8,padding:"14px 16px"}}>
+        <div style={{fontSize:12,color:"#ffb0d0",letterSpacing:2,marginBottom:12,textTransform:"uppercase"}}>📅 Datas Chave 2026 — Confluências Máximas</div>
+        <div style={{display:"flex",flexDirection:"column",gap:6}}>
+          {keyDates.map((kd,i)=>(
+            <div key={i} style={{display:"flex",alignItems:"center",gap:10,padding:"7px 10px",background:"rgba(255,255,255,.02)",borderRadius:4,border:"1px solid rgba(255,255,255,.04)"}}>
+              <div style={{fontSize:13,color:"#a89050",fontFamily:"monospace",minWidth:52,flexShrink:0}}>{kd.d}</div>
+              <div style={{fontSize:12,color:"#ffe080",minWidth:64,flexShrink:0}}>{kd.stars}</div>
+              <div style={{fontSize:12,color:bC[kd.bias]||"#ddd",flex:1,lineHeight:1.35}}>{kd.label}</div>
+              <div style={{fontSize:9,color:bC[kd.bias]||"#888",opacity:.7,textTransform:"uppercase"}}>{kd.bias}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Bayer Phase */}
+      <div style={{background:"rgba(80,200,160,.04)",border:"1px solid rgba(80,200,160,.15)",borderRadius:8,padding:"14px 16px"}}>
+        <div style={{fontSize:12,color:"#50c8a0",letterSpacing:2,marginBottom:8,textTransform:"uppercase"}}>🍽️ Bayer Dinner Table + Wyckoff Phase</div>
+        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8}}>
+          {[
+            ["Bayer 2025–2026","Fase DISPOSAL — após champagne/nut do ATH Oct 2025"],
+            ["Wyckoff 2026","Fase IV: MARKING DOWN — desde ATH"],
+            ["Venus Synodic","SC: 6 Jan 2026 → IC: 24 Out 2026 (291 dias = meio ciclo)"],
+            ["Duração bear típica","365–376 dias → mínimo: Out 2026 – Abr 2027"],
+            ["Natal BTC","Plutão: 1°Cap (natal) | ATH: 2°Cap | Sun natal: 13°Cap"],
+            ["Saturn square natal","Saturno a fazer square ao Plutão natal BTC = transformação estrutural máxima"],
+          ].map(([k,v],i)=>(
+            <div key={i} style={{background:"rgba(255,255,255,.03)",borderRadius:4,padding:"7px 10px"}}>
+              <div style={{fontSize:10,color:"#50c8a0",marginBottom:2}}>{k}</div>
+              <div style={{fontSize:11,color:"#c0e0d0",lineHeight:1.4}}>{v}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Jensen Key Days compact */}
+      <div style={{background:"rgba(255,255,255,.02)",border:"1px solid rgba(255,255,255,.07)",borderRadius:8,padding:"14px 16px"}}>
+        <div style={{fontSize:12,color:"#ffe080",letterSpacing:2,marginBottom:8,textTransform:"uppercase"}}>📐 Jensen Key Days Críticos + Graus Críticos 2026</div>
+        <div style={{fontSize:11,color:"#888",marginBottom:10,lineHeight:1.6}}>
+          Key Days = Lua square Mercúrio/Marte/Vénus. Se mercado faz H/L num key day → mantém nova tendência até ao próximo key day.
+        </div>
+        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:6}}>
+          {[
+            ["Mar 10–13","TRIPLA Key Day (Lua sq Marte+Mercúrio+Vénus) = extremely critical"],
+            ["Feb 26","Saturno 1°Áries = Cardinal Critical (5 dias antes do eclipse)"],
+            ["Jun 11","TRIPLA Critical Degrees: Sat 13°Ari + Jup 26°Can + Mer 13°Can"],
+            ["Nov 15–16","DUPLA Key Day (sq Vénus+Mercúrio) = confirma Nov 9 bottom"],
+            ["Aug 13","Marte 1°Cancer = Cardinal Critical (cluster Aug 15 bullish)"],
+            ["Oct 15","Júpiter 21°Leo + Marte 9°Leo = dupla Fixed Critical"],
+            ["Dec 8 (orb 0.1°)","Lua sq Marte near-exact = Jensen 5×88d cluster"],
+            ["Dec 8","FIM do Santa Claus (não Dez 20). Gap Dec 8–20 = neutro"],
+          ].map(([k,v],i)=>(
+            <div key={i} style={{background:"rgba(255,255,255,.03)",borderRadius:4,padding:"7px 10px"}}>
+              <div style={{fontSize:10,color:"#ffc832",marginBottom:2}}>{k}</div>
+              <div style={{fontSize:11,color:"#ddd8c8",lineHeight:1.4}}>{v}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Seasonal windows */}
+      <div style={{background:"rgba(80,200,80,.03)",border:"1px solid rgba(80,200,80,.15)",borderRadius:8,padding:"14px 16px"}}>
+        <div style={{fontSize:12,color:"#50c850",letterSpacing:2,marginBottom:10,textTransform:"uppercase"}}>📅 Seasonals Pesavento (108+ anos de dados)</div>
+        {[
+          ["Feb 2 – Mar 28","BEARISH","Ides of March"],
+          ["Mar 28 – Apr 16","BULLISH","April Earnings Rally"],
+          ["Apr 16 – Jun 26","BEARISH","Sell in May and Go Away"],
+          ["Jun 26 – Sep 4","BULLISH","Summer Rally"],
+          ["Sep 4 – Oct 27","⚠️ CRASH","Fall Crash Cycle"],
+          ["Oct 27 – Dec 8","BULLISH","Santa Claus Rally"],
+          ["Dec 8 – Dec 20","NEUTRO","Gap (sem seasonal definido)"],
+          ["Dec 20 – Jan 7","BULLISH","January Effect"],
+        ].map(([dates,bias,label],i)=>{
+          const c = bias==="BULLISH"?"#50e870":bias.includes("CRASH")?"#ff5030":bias==="NEUTRO"?"#888":"#ff5050";
+          return (
+            <div key={i} style={{display:"flex",alignItems:"center",gap:10,padding:"5px 0",borderBottom:"1px solid rgba(255,255,255,.04)"}}>
+              <div style={{fontSize:11,color:"#a89050",fontFamily:"monospace",minWidth:120,flexShrink:0}}>{dates}</div>
+              <div style={{fontSize:11,color:c,minWidth:80,flexShrink:0}}>{bias}</div>
+              <div style={{fontSize:11,color:"#888"}}>{label}</div>
+            </div>
+          );
+        })}
+      </div>
+
+    </div>
+  );
+}
 
 export default function App() {
-  const [active, setActive] = useState("VISAO");
+  const [active, setActive] = useState("MAPA");
   const [filter, setFilter] = useState("all");
   const [expanded, setExpanded] = useState(null);
   const month = D[active];
-  const isSpecial = active==="VISAO"||active==="CONF";
+  const isSpecial = active==="MAPA"||active==="VISAO"||active==="CONF";
   const events = filter==="all"?month.e:month.e.filter(e=>e.t===filter);
   const isConfl = e => e.e.startsWith("⭐");
   const toggle = i => setExpanded(expanded===i?null:i);
@@ -782,11 +1000,12 @@ export default function App() {
           {Object.entries(TC).map(([k,v])=><button key={k} onClick={()=>setFilter(k)} style={ps(filter===k,v.d)}>{v.l}</button>)}
         </div>
       )}
-      <div style={{position:"relative",zIndex:1,textAlign:"center",marginBottom:10}}>
+      {active!=="MAPA"&&<div style={{position:"relative",zIndex:1,textAlign:"center",marginBottom:10}}>
         <span style={{fontSize:active==="VISAO"?20:26,letterSpacing:3,color:active==="CONF"?"#ffb432":active==="VISAO"?"#90e0f0":"#c8b060",fontWeight:"normal"}}>{month.l}</span>
         {!isSpecial&&<span style={{fontSize:12,color:"#444",marginLeft:10}}>{events.length} events</span>}
-      </div>
-      <div style={{position:"relative",zIndex:1,maxWidth:720,width:"100%",margin:"0 auto",padding:"0 12px 60px",display:"flex",flexDirection:"column",gap:7}}>
+      </div>}
+      {active==="MAPA" && <MapaView/>}
+      {active!=="MAPA" && <div style={{position:"relative",zIndex:1,maxWidth:720,width:"100%",margin:"0 auto",padding:"0 12px 60px",display:"flex",flexDirection:"column",gap:7}}>
         {events.length===0&&<p style={{textAlign:"center",color:"#333",padding:32}}>No events of this type.</p>}
         {events.map((ev,i)=>{
           const cfg=TC[ev.t]||TC.n;
@@ -838,7 +1057,7 @@ export default function App() {
             </div>
           );
         })}
-      </div>
+      </div>}
       <footer style={{position:"relative",zIndex:1,borderTop:"1px solid rgba(255,255,255,.04)",padding:"12px",display:"flex",flexWrap:"wrap",justifyContent:"center",gap:10}}>
         {Object.entries(TC).map(([k,v])=><div key={k} style={{display:"flex",alignItems:"center",gap:4}}><div style={{width:7,height:7,borderRadius:"50%",background:v.d,boxShadow:`0 0 4px ${v.d}`}}/><span style={{fontSize:11,color:"#4a4840"}}>{v.l}</span></div>)}
         <div style={{width:"100%",display:"flex",justifyContent:"center",gap:14,marginTop:6,flexWrap:"wrap"}}>
