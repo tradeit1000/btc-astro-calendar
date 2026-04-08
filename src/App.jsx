@@ -1111,6 +1111,17 @@ const LOCAL_TRENDS = [
   {d:"Dec 27",b:"key",l:"📐 Key Day: Lua sq Vénus",dir:"🟢 WATCH LONG",prob:"BAIXA",note:"Key Day + Jan Effect bullish",seas:"Jan Effect"},
   {d:"Dec 28",b:"peak",l:"🟢 Moon Virgem = Peak QE",dir:"🟡 WATCH",prob:"BAIXA",note:"Peak QE + Jan Effect → topo local suave",seas:"Jan Effect"},
   {d:"Dec 30",b:"key",l:"📐 Key Day: Lua sq Mercúrio",dir:"🟢 WATCH LONG",prob:"BAIXA",note:"Key Day + Jan Effect bullish → fim do ano",seas:"Jan Effect"},
+  // ── MAJOR CALENDAR EVENTS (from CONF + VISAO) ──
+  {d:"Apr 06",b:"conf",l:"Gann 180° + Time=Price Squaring",dir:"🔴 SHORT",prob:"MÉDIA",note:"182 dias do ATH = Gann 180° (metade do ciclo anual). Price=Time squaring potencial. Sell in May contextualiza como topo local.",seas:"Sell in May"},
+  {d:"Apr 20",b:"conf",l:"⭐ TRIPLA CONJUNÇÃO — Saturn+Neptune+Sol",dir:"🔴 SHORT",prob:"ALTA",note:"Máximo bearish do ano. Saturn+Neptune+Sol conjuntos em Áries. Raridade de ~36 anos. Sell in May + conjunção triple = TOPO MAJOR → short máxima confiança. Pesavento: Saturn=contracção, Neptune=confusão, Sol=trigger.",seas:"Sell in May"},
+  {d:"Jun 10",b:"conf",l:"Venus-Jupiter Conjunção (99 ciclos bullish) + Saturn cap",dir:"🟢 BOUNCE",prob:"MÉDIA",note:"Venus-Jupiter = sinal bullish verificado em 99 ciclos (Pesavento). Mercury-Saturn simultâneo = cap ao optimismo. Bounce técnico dentro Sell in May → alívio, não bottom major.",seas:"Sell in May"},
+  {d:"Jun 15",b:"conf",l:"⭐⭐⭐⭐⭐⭐ BOTTOM SIGNAL — 6 Frameworks",dir:"🟢 LONG",prob:"ALTA",note:"Sinal mais importante do ano. 6 sistemas convergem: (1) NM em Gemini 730 ciclos Pesavento, (2) Jupiter Quintile Uranus 0.04° Jensen action trigger, (3) Summer Rally aproxima-se, (4) Moon Gemini = absolute low long-term, (5) Hurst 40-day trough, (6) Gann squaring. BOTTOM INTERMÉDIO → long de alta confiança.",seas:"Sell in May→Summer"},
+  {d:"Sep 01",b:"conf",l:"⭐ J-S Trine Exacto 0.029° + Fall Crash Abre",dir:"🔴 SHORT",prob:"ALTA",note:"Jupiter-Saturn trine exacto (Jensen bullish estrutural). Mas Fall Crash abre hoje. Jensen (1978): trine durante Node bearish = bottom 15-18 meses à frente. Gann 360° a 35 dias. PICO do rally de verão antes da queda de outono → short.",seas:"Fall Crash"},
+  {d:"Sep 24",b:"conf",l:"Jupiter-Saturn Trine 120° confirmado (Jensen)",dir:"🟡 WATCH",prob:"MÉDIA",note:"J-S trine exacto JPL confirmado. Jensen: bullish estrutural. Mas Fall Crash Zone sobrepõe-se. Conflito → turning point bottom intermédio, confirmar com price action antes de entrar long.",seas:"Fall Crash"},
+  {d:"Oct 06",b:"conf",l:"⭐ GANN 360° — Ciclo Anual + Crash Zone",dir:"🔴 SHORT",prob:"ALTA",note:"364-366 dias exactos do ATH (Oct 6, 2025). Gann: ciclo anual completo = turning point mais poderoso. Fall Crash Zone + Zeus conjunct Vulcanus (guerra/disrupção). Data mais crítica do ano para shorts.",seas:"Fall Crash"},
+  {d:"Oct 24",b:"conf",l:"☿ Mercury Retrograde + ♀ Venus IC (Bayer)",dir:"🔴 SHORT",prob:"ALTA",note:"Venus Inferior Conjunction = 291 dias do Venus SC de Jan 6 = turning point exacto de Bayer. Simultâneo com Mercury Retrograde. Ambos planetas interiores em confusão. Fall Crash Zone → short.",seas:"Fall Crash"},
+  {d:"Nov 08",b:"conf",l:"⭐⭐⭐ TRIPLO BOTTOM — NM + Escorpião Low QE + Santa Claus",dir:"🟢 LONG",prob:"ALTA",note:"Tripla confluência máxima: (1) Lua Nova = turning point, (2) Moon Escorpião = Low QE absoluto, (3) Santa Claus rally activo desde Oct 27. Pesavento 4 Steps todos apontam LONG. J-S trine bullish backdrop. BOTTOM DO CICLO → long máxima confiança.",seas:"Santa Claus"},
+  {d:"Dec 21",b:"conf",l:"⭐ Gann 7×9w = Jensen 5×88d = Solstício Inverno",dir:"🟢 LONG",prob:"ALTA",note:"Tripla convergência temporal: Gann 7×9 semanas = 63 semanas do ATH; Jensen 5×88 dias Mercúrio = 440 dias do ATH; Solstício Inverno (Sun entra Cap = oposição natal EUA = January Effect). Bottom intermédio → long.",seas:"Jan Effect"},
 ];
 
 function LocalTrendsView() {
@@ -1118,14 +1129,24 @@ function LocalTrendsView() {
   const today = new Date();
   const todayStr = today.toLocaleDateString("en-US",{month:"short",day:"2-digit"}).replace(",","");
 
-  const filtered = tf==="all"?LOCAL_TRENDS:LOCAL_TRENDS.filter(e=>
+  const filtered = (tf==="all"?LOCAL_TRENDS:LOCAL_TRENDS.filter(e=>
     tf==="short"?e.dir.includes("SHORT"):
     tf==="long"?e.dir.includes("LONG"):
     tf==="alta"?e.prob==="ALTA":
+    tf==="conf"?e.b==="conf":
     e.b===tf
-  );
+  )).sort((a,b)=>{
+    const months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    const [am,ad]=a.d.split(" "); const [bm,bd]=b.d.split(" ");
+    const av=months.indexOf(am)*100+parseInt(ad);
+    const bv=months.indexOf(bm)*100+parseInt(bd);
+    return av-bv;
+  });
 
-  const dirCfg = (dir) => {
+  const dirCfg = (dir, typ) => {
+    if(typ==="conf"&&dir.includes("LONG")) return {bg:"rgba(255,224,80,.08)",bc:"rgba(255,224,80,.4)",color:"#ffe080"};
+    if(typ==="conf"&&dir.includes("SHORT")) return {bg:"rgba(255,60,60,.1)",bc:"rgba(255,60,60,.5)",color:"#ff4040"};
+    if(typ==="conf") return {bg:"rgba(255,224,80,.05)",bc:"rgba(255,224,80,.3)",color:"#ffcc60"};
     if(dir.includes("SHORT")&&!dir.includes("WATCH")) return {bg:"rgba(255,60,60,.08)",bc:"rgba(255,60,60,.35)",color:"#ff5060"};
     if(dir.includes("LONG")&&!dir.includes("WATCH")) return {bg:"rgba(80,232,120,.08)",bc:"rgba(80,232,120,.35)",color:"#50e878"};
     if(dir.includes("BOUNCE")) return {bg:"rgba(80,200,100,.06)",bc:"rgba(80,200,100,.25)",color:"#60d080"};
@@ -1149,6 +1170,7 @@ function LocalTrendsView() {
     {k:"alta",l:"⭐ Alta conf."},
     {k:"short",l:"🔴 Short"},
     {k:"long",l:"🟢 Long"},
+    {k:"conf",l:"🌟 Confluências"},
     {k:"peak",l:"Virgem Peak"},
     {k:"low",l:"Escorpião Low"},
   ];
@@ -1180,21 +1202,23 @@ function LocalTrendsView() {
           </div>
           <div style={{display:"flex",flexDirection:"column",gap:6}}>
             {evs.map((ev,i)=>{
-              const dc = dirCfg(ev.dir);
+              const dc = dirCfg(ev.dir, ev.b);
               const isToday = ev.d===todayStr;
               const isHigh = ev.prob==="ALTA";
+              const isConf = ev.b==="conf";
               return (
                 <div key={i} style={{
                   display:"flex",gap:10,alignItems:"flex-start",
                   padding:"10px 12px",borderRadius:6,
-                  background:isHigh?"rgba(255,224,80,.04)":dc.bg,
-                  border:`1px solid ${isToday?"#c8b060":isHigh?"rgba(255,224,80,.25)":dc.bc}`,
-                  borderLeft:`3px solid ${isHigh?"#ffe080":dc.color}`,
+                  background:isConf?"rgba(255,200,50,.06)":isHigh?"rgba(255,224,80,.03)":dc.bg,
+                  border:`1px solid ${isToday?"#c8b060":isConf?"#ffb43266":isHigh?"rgba(255,224,80,.2)":dc.bc}`,
+                  borderLeft:`3px solid ${isConf?"#ffb432":isHigh?"#ffe080":dc.color}`,
                 }}>
                   <div style={{minWidth:44,flexShrink:0}}>
                     <div style={{fontSize:12,color:"#888",fontFamily:"sans-serif"}}>{ev.d.split(" ")[1]} {ev.d.split(" ")[0].substring(0,3)}</div>
                     {isToday&&<div style={{fontSize:9,color:"#ffe080"}}>HOJE</div>}
-                    {isHigh&&<div style={{fontSize:9,color:"#ffe080"}}>⭐ ALTA</div>}
+                    {isConf&&<div style={{fontSize:9,color:"#ffb432",fontWeight:"bold"}}>⭐ CONF</div>}
+                    {isHigh&&!isConf&&<div style={{fontSize:9,color:"#ffe080"}}>⭐ ALTA</div>}
                   </div>
                   <div style={{flex:1,minWidth:0}}>
                     <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",flexWrap:"wrap",gap:4,marginBottom:4}}>
