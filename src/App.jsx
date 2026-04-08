@@ -1246,7 +1246,7 @@ export default function App() {
       <nav style={{position:"relative",zIndex:1,display:"flex",flexWrap:"wrap",justifyContent:"center",gap:4,padding:"8px 10px 3px"}}>
         {MONTHS.map(m=>{
           const isA=active===m,isV=m==="VISAO",isC=m==="CONF";
-          const hC=!isV&&!isC&&D[m].e.some(e=>isConfl(e));
+          const hC=!isV&&!isC&&D[m]&&D[m].e.some(e=>isConfl(e));
           const bg=isA?(isV?"rgba(100,200,220,.18)":isC?"rgba(255,180,50,.18)":"rgba(255,200,50,.14)"):"rgba(255,255,255,.03)";
           const bd=isA?(isV?"#64c8dc":isC?"#ffb432":"#ffc832"):hC?"rgba(255,200,50,.3)":"rgba(255,255,255,.06)";
           const cl=isA?(isV?"#90e0f0":isC?"#ffb432":"#ffe080"):isV?"#64c8dc88":isC?"#ffb43255":"#555";
