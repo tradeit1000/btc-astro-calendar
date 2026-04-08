@@ -1262,13 +1262,13 @@ export default function App() {
           {Object.entries(TC).map(([k,v])=><button key={k} onClick={()=>setFilter(k)} style={ps(filter===k,v.d)}>{v.l}</button>)}
         </div>
       )}
-      {active!=="MAPA"&&<div style={{position:"relative",zIndex:1,textAlign:"center",marginBottom:10}}>
+      {active!=="MAPA"&&active!=="TREND"&&<div style={{position:"relative",zIndex:1,textAlign:"center",marginBottom:10}}>
         <span style={{fontSize:active==="VISAO"?22:28,letterSpacing:3,color:active==="CONF"?"#ffb432":active==="VISAO"?"#90e0f0":"#c8b060",fontWeight:"normal"}}>{month.l}</span>
         {!isSpecial&&<span style={{fontSize:12,color:"#444",marginLeft:10}}>{events.length} events</span>}
       </div>}
       {active==="MAPA" && <MapaView/>}
       {active==="TREND" && <LocalTrendsView/>}
-      {active!=="MAPA" && <div style={{position:"relative",zIndex:1,maxWidth:720,width:"100%",margin:"0 auto",padding:"0 12px 60px",display:"flex",flexDirection:"column",gap:7}}>
+      {active!=="MAPA"&&active!=="TREND" && <div style={{position:"relative",zIndex:1,maxWidth:720,width:"100%",margin:"0 auto",padding:"0 12px 60px",display:"flex",flexDirection:"column",gap:7}}>
         {events.length===0&&<p style={{textAlign:"center",color:"#333",padding:32}}>No events of this type.</p>}
         {events.map((ev,i)=>{
           const cfg=TC[ev.t]||TC.n;
