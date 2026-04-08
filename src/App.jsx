@@ -809,9 +809,22 @@ CONF:{l:"Confluences ⭐",e:[
 const MONTHS = ["MAPA","S144","TREND","VISAO","JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC","CONF"];
 const ML = {MAPA:"📊 Mapa",S144:"📐 S144 Live",TREND:"📈 Local Trends",VISAO:"🗺 Overview",JAN:"Jan",FEB:"Feb",MAR:"Mar",APR:"Apr",MAY:"May",JUN:"Jun",JUL:"Jul",AUG:"Aug",SEP:"Sep",OCT:"Oct",NOV:"Nov",DEC:"Dec",CONF:"⭐ Confluences"};
 
+function useBtcPrice() {
+  const [price, setPrice] = useState(null);
+  useEffect(() => {
+    const go = () => fetch("https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT")
+      .then(r=>r.json()).then(d=>setPrice(parseFloat(d.price))).catch(()=>{});
+    go();
+    const iv = setInterval(go, 20000);
+    return ()=>clearInterval(iv);
+  }, []);
+  return price;
+}
+
 function MapaView() {
+  const livePrice = useBtcPrice();
   const ATH = 126272;
-  const CURRENT = 82000; // update manually
+  const CURRENT = livePrice || 71560;
 
   const s9 = [
     {p:126272,label:"ATH",c:"#ff6060",note:"6 Out 2025"},
@@ -1246,6 +1259,158 @@ function LocalTrendsView() {
   );
 }
 
+
+
+const ATH_PRICE = 126272;
+const LOW_PRICE = 60001;
+const S144_UNIT = (ATH_PRICE - LOW_PRICE) / 144; // $460.22/unit
+
+const S144_LEVELS = [];
+for(let n=0;n<=144;n+=6){
+  S144_LEVELS.push({
+    n,
+    price: Math.round(ATH_PRICE - n * S144_UNIT),
+    major: n%18===0,
+    frac: n===0?"ATH":n===144?"LOW":n===72?"½":n===36?"¼":n===108?"¾":
+          n===18?"⅛":n===126?"⅞":n===54?"⅜":n===90?"⅝":`${n}/144`,
+  });
+}
+
+function ChartS144View() {
+  const btc = useBtcPrice();
+  const [change24h, setChange24h] = useState(null);
+  const [lastUpd, setLastUpd] = useState(null);
+
+  useEffect(()=>{
+    const go = ()=>fetch("https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT")
+      .then(r=>r.json())
+      .then(d=>{setChange24h(parseFloat(d.priceChangePercent));setLastUpd(new Date().toLocaleTimeString("pt-PT"));})
+      .catch(()=>{});
+    go();
+    const iv = setInterval(go,20000);
+    return ()=>clearInterval(iv);
+  },[]);
+
+  const price = btc || 71560;
+  const unitsFromLow = (price-LOW_PRICE)/S144_UNIT;
+  const pctATH = ((ATH_PRICE-price)/ATH_PRICE*100).toFixed(1);
+  const pctLow = ((price-LOW_PRICE)/LOW_PRICE*100).toFixed(1);
+  const timeLag = (40-unitsFromLow).toFixed(1);
+  const below = S144_LEVELS.filter(l=>l.price<=price).sort((a,b)=>b.price-a.price)[0]||S144_LEVELS[S144_LEVELS.length-1];
+  const above = S144_LEVELS.filter(l=>l.price>price).sort((a,b)=>a.price-b.price)[0]||S144_LEVELS[0];
+  const up = (change24h||0)>=0;
+
+  const SH=380,SW=290,PT=24,PB=24,PL=48,PR=48;
+  const toY=p=>PT+(ATH_PRICE-p)/(ATH_PRICE-LOW_PRICE)*(SH-PT-PB);
+  const cy=toY(price);
+
+  return(
+    <div style={{position:"relative",zIndex:1,maxWidth:720,width:"100%",margin:"0 auto",padding:"0 12px 60px"}}>
+      <div style={{textAlign:"center",marginBottom:20}}>
+        <div style={{fontSize:11,letterSpacing:3,color:"#a89050",textTransform:"uppercase",marginBottom:8}}>Square of 144 · BTC Live</div>
+        <div style={{display:"flex",alignItems:"baseline",justifyContent:"center",gap:12,marginBottom:4}}>
+          <span style={{fontSize:42,color:"#ffe080",letterSpacing:-1,fontWeight:"normal"}}>${price.toLocaleString("en",{maximumFractionDigits:0})}</span>
+          <span style={{fontSize:18,color:up?"#50e878":"#ff5060",fontFamily:"sans-serif"}}>{up?"+":""}{change24h?.toFixed(2)||"..."}%</span>
+        </div>
+        <div style={{fontSize:11,color:"#444",letterSpacing:1}}>BTC/USDT · Binance · {lastUpd?`${lastUpd}`:"a carregar..."} · cada 20s</div>
+      </div>
+
+      <div style={{display:"flex",gap:16,alignItems:"flex-start",justifyContent:"center",flexWrap:"wrap"}}>
+        <svg width={SW} height={SH} style={{flexShrink:0}}>
+          <rect width={SW} height={SH} rx={8} fill="rgba(6,7,16,0.85)" stroke="rgba(200,176,96,.15)" strokeWidth={1}/>
+          <text x={SW/2} y={14} fill="#a89050" fontSize={9} textAnchor="middle" letterSpacing={2}>SQUARE OF 144</text>
+          {S144_LEVELS.map(l=>{
+            const y=toY(l.price);
+            const isA=l.n===0,isL=l.n===144,isM=l.n===72;
+            const col=isA?"#ffe080":isL?"#ff4060":isM?"#90e0f0":l.major?"#c8b06066":"#33333355";
+            const th=isA||isL||isM?1.5:l.major?0.8:0.3;
+            const da=isA||isL?"":isM?"6,3":l.major?"4,4":"2,6";
+            return(
+              <g key={l.n}>
+                <line x1={PL} y1={y} x2={SW-PR} y2={y} stroke={col} strokeWidth={th} strokeDasharray={da}/>
+                {l.major&&<>
+                  <text x={PL-4} y={y+3.5} fill={col} fontSize={8} textAnchor="end">${Math.round(l.price/1000)}K</text>
+                  <text x={SW-PR+4} y={y+3.5} fill={col} fontSize={8}>{l.frac}</text>
+                </>}
+              </g>
+            );
+          })}
+          <rect x={PL} y={toY(above.price)} width={SW-PL-PR} height={toY(below.price)-toY(above.price)} fill="rgba(255,224,128,0.05)"/>
+          <line x1={PL} y1={cy} x2={SW-PR} y2={cy} stroke="#ffe080" strokeWidth={2}/>
+          <circle cx={PL} cy={cy} r={4} fill="#ffe080"/>
+          <circle cx={SW-PR} cy={cy} r={4} fill="#ffe080"/>
+          <rect x={PL+(SW-PL-PR)/2-28} y={cy-13} width={56} height={14} rx={3} fill="#ffe08022" stroke="#ffe08055"/>
+          <text x={PL+(SW-PL-PR)/2} y={cy-3} fill="#ffe080" fontSize={9} textAnchor="middle" fontWeight="bold">${Math.round(price/1000)}K</text>
+          <text x={PL+4} y={PT+5} fill="#ffe08088" fontSize={8}>ATH $126K — Oct 6 2025</text>
+          <text x={PL+4} y={SH-PB+3} fill="#ff406088" fontSize={8}>LOW $60K — Feb 27 2026 (dia 144)</text>
+        </svg>
+
+        <div style={{flex:1,minWidth:190,display:"flex",flexDirection:"column",gap:10}}>
+          <div style={{background:"rgba(255,224,128,.06)",border:"1px solid rgba(255,224,128,.2)",borderRadius:6,padding:"12px 14px"}}>
+            <div style={{fontSize:10,color:"#a89050",letterSpacing:2,marginBottom:8,textTransform:"uppercase"}}>Posição S144</div>
+            <div style={{fontSize:13,color:"#ffe080",marginBottom:4}}>Nível <strong>{unitsFromLow.toFixed(1)}/144</strong> do LOW</div>
+            <div style={{fontSize:12,color:"#c8b060",marginBottom:6}}>Zona: {below.frac} → {above.frac}</div>
+            <div style={{background:"rgba(0,0,0,.4)",borderRadius:4,height:8,overflow:"hidden"}}>
+              <div style={{width:`${Math.min(100,unitsFromLow/144*100).toFixed(1)}%`,height:"100%",background:"linear-gradient(90deg,#ff4060,#ffe080)",borderRadius:4}}/>
+            </div>
+            <div style={{display:"flex",justifyContent:"space-between",fontSize:9,color:"#555",marginTop:3}}>
+              <span>LOW $60K</span><span>ATH $126K</span>
+            </div>
+          </div>
+
+          <div style={{background:"rgba(255,255,255,.02)",border:"1px solid rgba(255,255,255,.06)",borderRadius:6,padding:"12px 14px",display:"flex",flexDirection:"column",gap:6}}>
+            <div style={{fontSize:10,color:"#a89050",letterSpacing:2,marginBottom:2,textTransform:"uppercase"}}>Níveis Chave</div>
+            <div style={{display:"flex",justifyContent:"space-between"}}>
+              <span style={{fontSize:12,color:"#90e0f0"}}>▲ Resist.</span>
+              <span style={{fontSize:13,color:"#90e0f0",fontFamily:"sans-serif"}}>${above.price.toLocaleString()} <span style={{fontSize:10,color:"#555"}}>({above.frac})</span></span>
+            </div>
+            <div style={{height:1,background:"rgba(255,255,255,.05)"}}/>
+            <div style={{display:"flex",justifyContent:"space-between"}}>
+              <span style={{fontSize:12,color:"#ffe080"}}>● BTC</span>
+              <span style={{fontSize:13,color:"#ffe080",fontFamily:"sans-serif"}}>${price.toLocaleString()}</span>
+            </div>
+            <div style={{height:1,background:"rgba(255,255,255,.05)"}}/>
+            <div style={{display:"flex",justifyContent:"space-between"}}>
+              <span style={{fontSize:12,color:"#ff5060"}}>▼ Suporte</span>
+              <span style={{fontSize:13,color:"#ff5060",fontFamily:"sans-serif"}}>${below.price.toLocaleString()} <span style={{fontSize:10,color:"#555"}}>({below.frac})</span></span>
+            </div>
+          </div>
+
+          <div style={{background:"rgba(255,80,60,.04)",border:"1px solid rgba(255,80,60,.15)",borderRadius:6,padding:"12px 14px"}}>
+            <div style={{fontSize:10,color:"#a89050",letterSpacing:2,marginBottom:6,textTransform:"uppercase"}}>Price = Time (Gann)</div>
+            <div style={{fontSize:12,color:"#c0c8d0",lineHeight:1.7}}>
+              <div>📅 Dias desde LOW: <strong style={{color:"#90e0f0"}}>40</strong></div>
+              <div>📐 Unidades preço: <strong style={{color:"#90e0f0"}}>{unitsFromLow.toFixed(1)}</strong></div>
+              <div>⚠️ Time lag: <strong style={{color:"#ff7050"}}>{timeLag} dias</strong></div>
+            </div>
+            <div style={{fontSize:11,color:"#ff7050",marginTop:6,lineHeight:1.5}}>Tempo move mais rápido que preço → BEARISH em Gann</div>
+          </div>
+
+          <div style={{background:"rgba(255,255,255,.02)",border:"1px solid rgba(255,255,255,.06)",borderRadius:6,padding:"12px 14px",display:"flex",flexDirection:"column",gap:4}}>
+            <div style={{fontSize:10,color:"#a89050",letterSpacing:2,marginBottom:4,textTransform:"uppercase"}}>Distâncias</div>
+            <div style={{fontSize:12,color:"#888"}}>Do ATH: <span style={{color:"#ff5060"}}>−${(ATH_PRICE-price).toLocaleString()} (−{pctATH}%)</span></div>
+            <div style={{fontSize:12,color:"#888"}}>Do LOW: <span style={{color:"#50e878"}}>+${(price-LOW_PRICE).toLocaleString()} (+{pctLow}%)</span></div>
+            <div style={{fontSize:12,color:"#888"}}>Unidade S144: <span style={{color:"#c8b060"}}>$460</span></div>
+            <div style={{fontSize:12,color:"#888"}}>↑ até {above.frac}: <span style={{color:"#90e0f0"}}>+${(above.price-price).toLocaleString()}</span></div>
+            <div style={{fontSize:12,color:"#888"}}>↓ até {below.frac}: <span style={{color:"#ff5060"}}>−${(price-below.price).toLocaleString()}</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div style={{marginTop:20,borderRadius:8,overflow:"hidden",border:"1px solid rgba(200,176,96,.15)"}}>
+        <div style={{fontSize:10,color:"#a89050",letterSpacing:2,textAlign:"center",padding:"8px 0 4px",textTransform:"uppercase",background:"rgba(6,7,16,.9)"}}>TradingView — BTCUSDT Daily</div>
+        <iframe src="https://s.tradingview.com/widgetembed/?symbol=BINANCE%3ABTCUSDT&interval=D&theme=dark&style=1&locale=pt&timezone=Europe%2FLisbon" style={{width:"100%",height:420,border:"none",display:"block"}}/>
+      </div>
+
+      <div style={{marginTop:14,padding:"12px 14px",background:"rgba(255,255,255,.02)",border:"1px solid rgba(255,255,255,.04)",borderRadius:6}}>
+        <div style={{fontSize:10,color:"#a89050",letterSpacing:2,marginBottom:6,textTransform:"uppercase"}}>Metodologia S144</div>
+        <div style={{fontSize:11,color:"#5a5850",lineHeight:1.8}}>
+          144 = 12² · Fibonacci · Ancora: ATH $126,272 (Oct 6 2025) → LOW $60,001 (Feb 27 2026) · 144 dias exactos = 144 unidades $460 · <strong style={{color:"#c8b060"}}>Price=Time confirmado</strong> · Unidade: $460.22
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function App() {
   const [active, setActive] = useState("MAPA");
