@@ -806,8 +806,8 @@ CONF:{l:"Confluences ⭐",e:[
 ]},
 };
 
-const MONTHS = ["MAPA","TREND","VISAO","JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC","CONF"];
-const ML = {MAPA:"📊 Mapa",TREND:"📈 Local Trends",VISAO:"🗺 Overview",JAN:"Jan",FEB:"Feb",MAR:"Mar",APR:"Apr",MAY:"May",JUN:"Jun",JUL:"Jul",AUG:"Aug",SEP:"Sep",OCT:"Oct",NOV:"Nov",DEC:"Dec",CONF:"⭐ Confluences"};
+const MONTHS = ["MAPA","S144","TREND","VISAO","JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC","CONF"];
+const ML = {MAPA:"📊 Mapa",S144:"📐 S144 Live",TREND:"📈 Local Trends",VISAO:"🗺 Overview",JAN:"Jan",FEB:"Feb",MAR:"Mar",APR:"Apr",MAY:"May",JUN:"Jun",JUL:"Jul",AUG:"Aug",SEP:"Sep",OCT:"Oct",NOV:"Nov",DEC:"Dec",CONF:"⭐ Confluences"};
 
 function MapaView() {
   const ATH = 126272;
@@ -1224,12 +1224,178 @@ function LocalTrendsView() {
   );
 }
 
+
+const ATH_PRICE = 126272;
+const LOW_PRICE = 60001;
+const S144_UNIT = (ATH_PRICE - LOW_PRICE) / 144;
+
+const S144_LEVELS = [];
+for(let n=0;n<=144;n+=6){
+  S144_LEVELS.push({
+    n,
+    price: Math.round(ATH_PRICE - n * S144_UNIT),
+    major: n % 18 === 0,
+    frac: n===0?"ATH":n===144?"LOW":n===72?"½":n===36?"¼":n===108?"¾":
+          n===18?"⅛":n===126?"⅞":n===54?"⅜":n===90?"⅝":`${n}/144`,
+  });
+}
+
+function ChartS144View() {
+  const [btc, setBtc] = useState(null);
+  const [change24h, setChange24h] = useState(null);
+  const [lastUpdate, setLastUpdate] = useState(null);
+  const [err, setErr] = useState(false);
+
+  useEffect(() => {
+    const fetchPrice = () => {
+      fetch("https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT")
+        .then(r => r.json())
+        .then(d => {
+          setBtc(parseFloat(d.lastPrice));
+          setChange24h(parseFloat(d.priceChangePercent));
+          setLastUpdate(new Date().toLocaleTimeString("pt-PT"));
+          setErr(false);
+        })
+        .catch(() => setErr(true));
+    };
+    fetchPrice();
+    const iv = setInterval(fetchPrice, 15000);
+    return () => clearInterval(iv);
+  }, []);
+
+  const price = btc || 71560;
+  const unitsFromLow = (price - LOW_PRICE) / S144_UNIT;
+  const pctFromATH = ((ATH_PRICE - price) / ATH_PRICE * 100).toFixed(1);
+  const pctFromLow = ((price - LOW_PRICE) / LOW_PRICE * 100).toFixed(1);
+  const daysFromLow = 40;
+  const timeLag = (daysFromLow - unitsFromLow).toFixed(1);
+  const below = S144_LEVELS.filter(l=>l.price<=price).sort((a,b)=>b.price-a.price)[0]||S144_LEVELS[S144_LEVELS.length-1];
+  const above = S144_LEVELS.filter(l=>l.price>price).sort((a,b)=>a.price-b.price)[0]||S144_LEVELS[0];
+  const up = change24h >= 0;
+  const changeColor = up ? "#50e878" : "#ff5060";
+
+  const SH=380,SW=290,PT=24,PB=24,PL=48,PR=48;
+  const toY = p => PT + (ATH_PRICE - p) / (ATH_PRICE - LOW_PRICE) * (SH-PT-PB);
+  const currentY = toY(price);
+
+  return (
+    <div style={{position:"relative",zIndex:1,maxWidth:720,width:"100%",margin:"0 auto",padding:"0 12px 60px"}}>
+      <div style={{textAlign:"center",marginBottom:20}}>
+        <div style={{fontSize:11,letterSpacing:3,color:"#a89050",textTransform:"uppercase",marginBottom:8}}>Square of 144 · BTC Live</div>
+        {err&&<div style={{fontSize:11,color:"#ff6060",marginBottom:6}}>⚠️ Binance offline — último valor guardado</div>}
+        <div style={{display:"flex",alignItems:"baseline",justifyContent:"center",gap:12,marginBottom:4}}>
+          <span style={{fontSize:42,color:"#ffe080",letterSpacing:-1,fontWeight:"normal"}}>${price.toLocaleString("en",{maximumFractionDigits:0})}</span>
+          <span style={{fontSize:18,color:changeColor,fontFamily:"sans-serif"}}>{up?"+":""}{change24h?.toFixed(2)||"..."}%</span>
+        </div>
+        <div style={{fontSize:11,color:"#444",letterSpacing:1}}>BTC/USDT · Binance · {lastUpdate?`actualizado ${lastUpdate}`:"a carregar..."} · cada 15s</div>
+      </div>
+
+      <div style={{display:"flex",gap:16,alignItems:"flex-start",justifyContent:"center",flexWrap:"wrap"}}>
+        <svg width={SW} height={SH} style={{flexShrink:0}}>
+          <rect width={SW} height={SH} rx={8} fill="rgba(6,7,16,0.8)" stroke="rgba(200,176,96,.15)" strokeWidth={1}/>
+          <text x={SW/2} y={14} fill="#a89050" fontSize={9} textAnchor="middle" letterSpacing={2}>SQUARE OF 144</text>
+          {S144_LEVELS.map(l=>{
+            const y=toY(l.price);
+            const isATH=l.n===0,isLOW=l.n===144,isMid=l.n===72;
+            const col=isATH?"#ffe080":isLOW?"#ff4060":isMid?"#90e0f0":l.major?"#c8b06066":"#33333355";
+            const thick=isATH||isLOW||isMid?1.5:l.major?0.8:0.3;
+            const dash=isATH||isLOW?"":isMid?"6,3":l.major?"4,4":"2,6";
+            return(
+              <g key={l.n}>
+                <line x1={PL} y1={y} x2={SW-PR} y2={y} stroke={col} strokeWidth={thick} strokeDasharray={dash}/>
+                {l.major&&<>
+                  <text x={PL-4} y={y+3.5} fill={col} fontSize={8} textAnchor="end">${Math.round(l.price/1000)}K</text>
+                  <text x={SW-PR+4} y={y+3.5} fill={col} fontSize={8}>{l.frac}</text>
+                </>}
+              </g>
+            );
+          })}
+          <rect x={PL} y={toY(above.price)} width={SW-PL-PR} height={toY(below.price)-toY(above.price)} fill="rgba(255,224,128,0.05)"/>
+          <line x1={PL} y1={currentY} x2={SW-PR} y2={currentY} stroke="#ffe080" strokeWidth={2}/>
+          <circle cx={PL} cy={currentY} r={4} fill="#ffe080"/>
+          <circle cx={SW-PR} cy={currentY} r={4} fill="#ffe080"/>
+          <rect x={PL+(SW-PL-PR)/2-28} y={currentY-13} width={56} height={14} rx={3} fill="#ffe08022" stroke="#ffe08055"/>
+          <text x={PL+(SW-PL-PR)/2} y={currentY-3} fill="#ffe080" fontSize={9} textAnchor="middle" fontWeight="bold">${Math.round(price/1000)}K</text>
+          <text x={PL+4} y={PT+5} fill="#ffe08088" fontSize={8}>ATH $126K — Oct 6 2025</text>
+          <text x={PL+4} y={SH-PB+3} fill="#ff406088" fontSize={8}>LOW $60K — Feb 27 2026 (dia 144)</text>
+        </svg>
+
+        <div style={{flex:1,minWidth:190,display:"flex",flexDirection:"column",gap:10}}>
+          <div style={{background:"rgba(255,224,128,.06)",border:"1px solid rgba(255,224,128,.2)",borderRadius:6,padding:"12px 14px"}}>
+            <div style={{fontSize:10,color:"#a89050",letterSpacing:2,marginBottom:8,textTransform:"uppercase"}}>Posição S144</div>
+            <div style={{fontSize:13,color:"#ffe080",marginBottom:4}}>Nível: <strong>{unitsFromLow.toFixed(1)}/144</strong> do LOW</div>
+            <div style={{fontSize:12,color:"#c8b060",marginBottom:6}}>Zona: {below.frac} → {above.frac}</div>
+            <div style={{background:"rgba(0,0,0,.4)",borderRadius:4,height:8,overflow:"hidden"}}>
+              <div style={{width:`${Math.min(100,(unitsFromLow/144*100)).toFixed(1)}%`,height:"100%",background:"linear-gradient(90deg,#ff4060,#ffe080)",borderRadius:4}}/>
+            </div>
+            <div style={{display:"flex",justifyContent:"space-between",fontSize:9,color:"#555",marginTop:3}}>
+              <span>LOW $60K</span><span>ATH $126K</span>
+            </div>
+          </div>
+
+          <div style={{background:"rgba(255,255,255,.02)",border:"1px solid rgba(255,255,255,.06)",borderRadius:6,padding:"12px 14px",display:"flex",flexDirection:"column",gap:6}}>
+            <div style={{fontSize:10,color:"#a89050",letterSpacing:2,marginBottom:2,textTransform:"uppercase"}}>Níveis Chave</div>
+            <div style={{display:"flex",justifyContent:"space-between"}}>
+              <span style={{fontSize:12,color:"#90e0f0"}}>▲ Resist.</span>
+              <span style={{fontSize:13,color:"#90e0f0",fontFamily:"sans-serif"}}>${above.price.toLocaleString()} <span style={{fontSize:10,color:"#555"}}>({above.frac})</span></span>
+            </div>
+            <div style={{height:1,background:"rgba(255,255,255,.05)"}}/>
+            <div style={{display:"flex",justifyContent:"space-between"}}>
+              <span style={{fontSize:12,color:"#ffe080"}}>● BTC</span>
+              <span style={{fontSize:13,color:"#ffe080",fontFamily:"sans-serif"}}>${price.toLocaleString()}</span>
+            </div>
+            <div style={{height:1,background:"rgba(255,255,255,.05)"}}/>
+            <div style={{display:"flex",justifyContent:"space-between"}}>
+              <span style={{fontSize:12,color:"#ff5060"}}>▼ Suporte</span>
+              <span style={{fontSize:13,color:"#ff5060",fontFamily:"sans-serif"}}>${below.price.toLocaleString()} <span style={{fontSize:10,color:"#555"}}>({below.frac})</span></span>
+            </div>
+          </div>
+
+          <div style={{background:"rgba(255,80,60,.04)",border:"1px solid rgba(255,80,60,.15)",borderRadius:6,padding:"12px 14px"}}>
+            <div style={{fontSize:10,color:"#a89050",letterSpacing:2,marginBottom:6,textTransform:"uppercase"}}>Price = Time</div>
+            <div style={{fontSize:12,color:"#c0c8d0",lineHeight:1.7}}>
+              <div>📅 Dias desde LOW: <strong style={{color:"#90e0f0"}}>{daysFromLow}</strong></div>
+              <div>📐 Unidades preço: <strong style={{color:"#90e0f0"}}>{unitsFromLow.toFixed(1)}</strong></div>
+              <div>⚠️ Lag: <strong style={{color:"#ff7050"}}>{timeLag} dias</strong></div>
+            </div>
+            <div style={{fontSize:11,color:"#ff7050",marginTop:6,lineHeight:1.5}}>Tempo move mais rápido que o preço → BEARISH</div>
+          </div>
+
+          <div style={{background:"rgba(255,255,255,.02)",border:"1px solid rgba(255,255,255,.06)",borderRadius:6,padding:"12px 14px",display:"flex",flexDirection:"column",gap:4}}>
+            <div style={{fontSize:10,color:"#a89050",letterSpacing:2,marginBottom:4,textTransform:"uppercase"}}>Distâncias</div>
+            <div style={{fontSize:12,color:"#888"}}>Do ATH: <span style={{color:"#ff5060"}}>−${(ATH_PRICE-price).toLocaleString()} (−{pctFromATH}%)</span></div>
+            <div style={{fontSize:12,color:"#888"}}>Do LOW: <span style={{color:"#50e878"}}>+${(price-LOW_PRICE).toLocaleString()} (+{pctFromLow}%)</span></div>
+            <div style={{fontSize:12,color:"#888"}}>Unidade: <span style={{color:"#c8b060"}}>$460/unit</span></div>
+            <div style={{fontSize:12,color:"#888"}}>↑ Resist: <span style={{color:"#90e0f0"}}>+${(above.price-price).toLocaleString()}</span></div>
+            <div style={{fontSize:12,color:"#888"}}>↓ Suporte: <span style={{color:"#ff5060"}}>−${(price-below.price).toLocaleString()}</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div style={{marginTop:20,borderRadius:8,overflow:"hidden",border:"1px solid rgba(200,176,96,.15)"}}>
+        <div style={{fontSize:10,color:"#a89050",letterSpacing:2,textAlign:"center",padding:"8px 0 4px",textTransform:"uppercase",background:"rgba(6,7,16,.8)"}}>TradingView — BTCUSDT Daily</div>
+        <iframe
+          src="https://s.tradingview.com/widgetembed/?frameElementId=btc_s144&symbol=BINANCE%3ABTCUSDT&interval=D&hidesidetoolbar=0&symboledit=0&saveimage=0&toolbarbg=060710&theme=dark&style=1&timezone=Europe%2FLisbon&locale=pt"
+          style={{width:"100%",height:420,border:"none",display:"block"}}
+        />
+      </div>
+
+      <div style={{marginTop:14,padding:"12px 14px",background:"rgba(255,255,255,.02)",border:"1px solid rgba(255,255,255,.04)",borderRadius:6}}>
+        <div style={{fontSize:10,color:"#a89050",letterSpacing:2,marginBottom:6,textTransform:"uppercase"}}>Metodologia S144</div>
+        <div style={{fontSize:11,color:"#5a5850",lineHeight:1.8}}>
+          144 = 12² · Fibonacci · Ancora: ATH $126,272 (Oct 6, 2025) → LOW $60,001 (Feb 27, 2026) · 
+          144 dias exactos = 144 unidades de preço ($460/unit) · <strong style={{color:"#c8b060"}}>Price = Time squaring confirmado</strong>
+        </div>
+      </div>
+    </div>
+  );
+}
 export default function App() {
   const [active, setActive] = useState("MAPA");
   const [filter, setFilter] = useState("all");
   const [expanded, setExpanded] = useState(null);
   const month = D[active] || {l:"Local Trends",e:[]};
-  const isSpecial = active==="MAPA"||active==="TREND"||active==="VISAO"||active==="CONF";
+  const isSpecial = active==="MAPA"||active==="S144"||active==="TREND"||active==="VISAO"||active==="CONF";
   const events = filter==="all"?month.e:month.e.filter(e=>e.t===filter);
   const isConfl = e => e.e.startsWith("⭐");
   const toggle = i => setExpanded(expanded===i?null:i);
@@ -1246,7 +1412,7 @@ export default function App() {
       <nav style={{position:"relative",zIndex:1,display:"flex",flexWrap:"wrap",justifyContent:"center",gap:4,padding:"8px 10px 3px"}}>
         {MONTHS.map(m=>{
           const isA=active===m,isV=m==="VISAO",isC=m==="CONF";
-          const hC=!isV&&!isC&&D[m]&&D[m].e.some(e=>isConfl(e));
+          const hC=!isV&&!isC&&D[m]&&D[m].e&&D[m].e.some(e=>isConfl(e));
           const bg=isA?(isV?"rgba(100,200,220,.18)":isC?"rgba(255,180,50,.18)":"rgba(255,200,50,.14)"):"rgba(255,255,255,.03)";
           const bd=isA?(isV?"#64c8dc":isC?"#ffb432":"#ffc832"):hC?"rgba(255,200,50,.3)":"rgba(255,255,255,.06)";
           const cl=isA?(isV?"#90e0f0":isC?"#ffb432":"#ffe080"):isV?"#64c8dc88":isC?"#ffb43255":"#555";
@@ -1262,13 +1428,14 @@ export default function App() {
           {Object.entries(TC).map(([k,v])=><button key={k} onClick={()=>setFilter(k)} style={ps(filter===k,v.d)}>{v.l}</button>)}
         </div>
       )}
-      {active!=="MAPA"&&active!=="TREND"&&<div style={{position:"relative",zIndex:1,textAlign:"center",marginBottom:10}}>
+      {active!=="MAPA"&&active!=="S144"&&active!=="TREND"&&<div style={{position:"relative",zIndex:1,textAlign:"center",marginBottom:10}}>
         <span style={{fontSize:active==="VISAO"?22:28,letterSpacing:3,color:active==="CONF"?"#ffb432":active==="VISAO"?"#90e0f0":"#c8b060",fontWeight:"normal"}}>{month.l}</span>
         {!isSpecial&&<span style={{fontSize:12,color:"#444",marginLeft:10}}>{events.length} events</span>}
       </div>}
       {active==="MAPA" && <MapaView/>}
+      {active==="S144" && <ChartS144View/>}
       {active==="TREND" && <LocalTrendsView/>}
-      {active!=="MAPA"&&active!=="TREND" && <div style={{position:"relative",zIndex:1,maxWidth:720,width:"100%",margin:"0 auto",padding:"0 12px 60px",display:"flex",flexDirection:"column",gap:7}}>
+      {active!=="MAPA"&&active!=="S144"&&active!=="TREND" && <div style={{position:"relative",zIndex:1,maxWidth:720,width:"100%",margin:"0 auto",padding:"0 12px 60px",display:"flex",flexDirection:"column",gap:7}}>
         {events.length===0&&<p style={{textAlign:"center",color:"#333",padding:32}}>No events of this type.</p>}
         {events.map((ev,i)=>{
           const cfg=TC[ev.t]||TC.n;
