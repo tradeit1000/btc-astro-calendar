@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const TC = {
   g:{l:"📐 Gann·Fib·Jensen",bg:"rgba(255,200,50,.08)",b:"#ffc832",d:"#ffe080"},
@@ -1028,89 +1028,89 @@ function MapaView() {
 
 
 const LOCAL_TRENDS = [
-  {d:"Apr 08",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Marte"},
-  {d:"Apr 12",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Vénus"},
-  {d:"Apr 16",b:"turn",t:"n",l:"Lua Nova — turning point (bear=top?)"},
-  {d:"Apr 22",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Mercúrio + Marte"},
-  {d:"Apr 26",b:"peak",t:"n",l:"Moon entra Virgem (QE Peak)"},
-  {d:"Apr 26",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Vénus"},
-  {d:"Apr 30",b:"turn",t:"n",l:"Lua Cheia — turning point (bear=bottom?)"},
-  {d:"May 01",b:"low",t:"n",l:"Moon entra Escorpião (QE Low absoluto)"},
-  {d:"May 07",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Marte"},
-  {d:"May 09",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Mercúrio"},
-  {d:"May 12",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Vénus"},
-  {d:"May 15",b:"turn",t:"n",l:"Lua Nova — turning point (bear=top?)"},
-  {d:"May 21",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Marte"},
-  {d:"May 23",b:"peak",t:"n",l:"Moon entra Virgem (QE Peak)"},
-  {d:"May 24",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Mercúrio"},
-  {d:"May 26",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Vénus"},
-  {d:"May 28",b:"low",t:"n",l:"Moon entra Escorpião (QE Low absoluto)"},
-  {d:"May 30",b:"turn",t:"n",l:"Lua Cheia — turning point (bear=bottom?)"},
-  {d:"Jun 05",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Marte"},
-  {d:"Jun 10",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Mercúrio"},
-  {d:"Jun 11",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Vénus"},
-  {d:"Jun 14",b:"turn",t:"n",l:"Lua Nova — turning point (bear=top?)"},
-  {d:"Jun 20",b:"peak",t:"n",l:"Moon entra Virgem (QE Peak)"},
-  {d:"Jun 23",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Mercúrio"},
-  {d:"Jun 24",b:"low",t:"n",l:"Moon entra Escorpião (QE Low absoluto)"},
-  {d:"Jun 25",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Vénus"},
-  {d:"Jun 28",b:"turn",t:"n",l:"Lua Cheia — turning point (bear=bottom?)"},
-  {d:"Jul 04",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Marte"},
-  {d:"Jul 08",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Mercúrio"},
-  {d:"Jul 13",b:"turn",t:"n",l:"Lua Nova — turning point (bear=top?)"},
-  {d:"Jul 17",b:"peak",t:"n",l:"Moon entra Virgem (QE Peak)"},
-  {d:"Jul 20",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Mercúrio"},
-  {d:"Jul 22",b:"low",t:"n",l:"Moon entra Escorpião (QE Low absoluto)"},
-  {d:"Jul 25",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Vénus"},
-  {d:"Jul 28",b:"turn",t:"n",l:"Lua Cheia — turning point (bear=bottom?)"},
-  {d:"Aug 02",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Marte"},
-  {d:"Aug 04",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Mercúrio"},
-  {d:"Aug 09",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Vénus"},
-  {d:"Aug 11",b:"turn",t:"n",l:"Lua Nova — turning point (bear=top?)"},
-  {d:"Aug 13",b:"peak",t:"n",l:"Moon entra Virgem (QE Peak)"},
-  {d:"Aug 15",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Marte"},
-  {d:"Aug 18",b:"low",t:"n",l:"Moon entra Escorpião (QE Low absoluto)"},
-  {d:"Aug 19",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Mercúrio"},
-  {d:"Aug 24",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Vénus"},
-  {d:"Aug 26",b:"turn",t:"n",l:"Lua Cheia — turning point (bear=bottom?)"},
-  {d:"Sep 04",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Mercúrio"},
-  {d:"Sep 07",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Vénus"},
-  {d:"Sep 10",b:"peak",t:"n",l:"Moon entra Virgem (QE Peak)"},
-  {d:"Sep 10",b:"turn",t:"n",l:"Lua Nova — turning point (bear=top?)"},
-  {d:"Sep 13",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Marte"},
-  {d:"Sep 14",b:"low",t:"n",l:"Moon entra Escorpião (QE Low absoluto)"},
-  {d:"Sep 20",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Mercúrio"},
-  {d:"Sep 22",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Vénus"},
-  {d:"Sep 25",b:"turn",t:"n",l:"Lua Cheia — turning point (bear=bottom?)"},
-  {d:"Sep 28",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Marte"},
-  {d:"Oct 05",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Mercúrio + Vénus"},
-  {d:"Oct 07",b:"peak",t:"n",l:"Moon entra Virgem (QE Peak)"},
-  {d:"Oct 09",b:"turn",t:"n",l:"Lua Nova — turning point (bear=top?)"},
-  {d:"Oct 12",b:"low",t:"n",l:"Moon entra Escorpião (QE Low absoluto)"},
-  {d:"Oct 12",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Marte"},
-  {d:"Oct 19",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Vénus"},
-  {d:"Oct 20",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Mercúrio"},
-  {d:"Oct 25",b:"turn",t:"n",l:"Lua Cheia — turning point (bear=bottom?)"},
-  {d:"Nov 02",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Mercúrio"},
-  {d:"Nov 03",b:"peak",t:"n",l:"Moon entra Virgem (QE Peak)"},
-  {d:"Nov 08",b:"low",t:"n",l:"Moon entra Escorpião (QE Low absoluto)"},
-  {d:"Nov 08",b:"turn",t:"n",l:"Lua Nova — turning point (bear=top?)"},
-  {d:"Nov 09",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Marte"},
-  {d:"Nov 14",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Vénus"},
-  {d:"Nov 15",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Mercúrio"},
-  {d:"Nov 23",b:"turn",t:"n",l:"Lua Cheia — turning point (bear=bottom?)"},
-  {d:"Nov 24",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Marte"},
-  {d:"Nov 28",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Vénus"},
-  {d:"Dec 01",b:"peak",t:"n",l:"Moon entra Virgem (QE Peak)"},
-  {d:"Dec 05",b:"low",t:"n",l:"Moon entra Escorpião (QE Low absoluto)"},
-  {d:"Dec 07",b:"turn",t:"n",l:"Lua Nova — turning point (bear=top?)"},
-  {d:"Dec 13",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Vénus"},
-  {d:"Dec 16",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Mercúrio"},
-  {d:"Dec 22",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Marte"},
-  {d:"Dec 23",b:"turn",t:"n",l:"Lua Cheia — turning point (bear=bottom?)"},
-  {d:"Dec 27",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Vénus"},
-  {d:"Dec 28",b:"peak",t:"n",l:"Moon entra Virgem (QE Peak)"},
-  {d:"Dec 30",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Mercúrio"},
+  {d:"Apr 08",b:"key",l:"📐 Key Day: Lua sq Marte",dir:"🟢 WATCH LONG",prob:"BAIXA",note:"Key Day Marte + Apr Rally bullish → favorecer long se já em alta",seas:"Apr Rally"},
+  {d:"Apr 12",b:"key",l:"📐 Key Day: Lua sq Vénus",dir:"🟢 WATCH LONG",prob:"BAIXA",note:"Key Day Vénus + Apr Rally bullish → favorecer long se já em alta",seas:"Apr Rally"},
+  {d:"Apr 16",b:"lnova",l:"🌑 Lua Nova",dir:"🟢 LONG",prob:"MÉDIA",note:"Lua Nova + Apr Rally bullish → bottom clássico",seas:"Apr Rally"},
+  {d:"Apr 22",b:"key",l:"📐 Key Day: Lua sq Merc+Marte",dir:"🔴 WATCH SHORT",prob:"BAIXA",note:"Key Day duplo + Sell in May bearish → pico volatilidade, favorecer short",seas:"Sell in May"},
+  {d:"Apr 26",b:"peak",l:"🟢 Moon Virgem = Peak QE",dir:"🔴 SHORT",prob:"MÉDIA",note:"Peak QE + Sell in May bearish → TOPO LOCAL → short oportunidade",seas:"Sell in May"},
+  {d:"Apr 26",b:"key",l:"📐 Key Day: Lua sq Vénus",dir:"🔴 WATCH SHORT",prob:"BAIXA",note:"Key Day Vénus + Sell in May → confirma pressão baixista",seas:"Sell in May"},
+  {d:"Apr 30",b:"lcheia",l:"🌕 Lua Cheia",dir:"🟢 BOUNCE",prob:"MÉDIA",note:"Lua Cheia + Sell in May + inversão bear → FUNDO LOCAL → bounce técnico",seas:"Sell in May"},
+  {d:"May 01",b:"low",l:"🔴 Moon Escorpião = Low QE",dir:"🟡 BOUNCE",prob:"MÉDIA",note:"Low QE absoluto + Sell in May → bounce possível mas trend negativo",seas:"Sell in May"},
+  {d:"May 07",b:"key",l:"📐 Key Day: Lua sq Marte",dir:"🔴 WATCH SHORT",prob:"BAIXA",note:"Key Day + Sell in May → confirma pressão baixista",seas:"Sell in May"},
+  {d:"May 09",b:"key",l:"📐 Key Day: Lua sq Mercúrio",dir:"🔴 WATCH SHORT",prob:"BAIXA",note:"Key Day + Sell in May bearish",seas:"Sell in May"},
+  {d:"May 12",b:"key",l:"📐 Key Day: Lua sq Vénus",dir:"🔴 WATCH SHORT",prob:"BAIXA",note:"Key Day + Sell in May bearish",seas:"Sell in May"},
+  {d:"May 15",b:"lnova",l:"🌑 Lua Nova",dir:"🔴 SHORT",prob:"MÉDIA",note:"Lua Nova + Sell in May + bear inversion → TOP LOCAL → short",seas:"Sell in May"},
+  {d:"May 21",b:"key",l:"📐 Key Day: Lua sq Marte",dir:"🔴 WATCH SHORT",prob:"BAIXA",note:"Key Day + Sell in May bearish",seas:"Sell in May"},
+  {d:"May 23",b:"peak",l:"🟢 Moon Virgem = Peak QE",dir:"🔴 SHORT",prob:"MÉDIA",note:"Peak QE + Sell in May bearish → TOPO LOCAL → short",seas:"Sell in May"},
+  {d:"May 24",b:"key",l:"📐 Key Day: Lua sq Mercúrio",dir:"🔴 WATCH SHORT",prob:"BAIXA",note:"Key Day + Sell in May bearish",seas:"Sell in May"},
+  {d:"May 26",b:"key",l:"📐 Key Day: Lua sq Vénus",dir:"🔴 WATCH SHORT",prob:"BAIXA",note:"Key Day + Sell in May bearish",seas:"Sell in May"},
+  {d:"May 28",b:"low",l:"🔴 Moon Escorpião = Low QE",dir:"🟡 BOUNCE",prob:"MÉDIA",note:"Low QE + Sell in May → bounce técnico possível, trend negativo",seas:"Sell in May"},
+  {d:"May 30",b:"lcheia",l:"🌕 Lua Cheia",dir:"🟢 BOUNCE",prob:"MÉDIA",note:"Lua Cheia + Sell in May + bear inversion → FUNDO LOCAL → bounce",seas:"Sell in May"},
+  {d:"Jun 05",b:"key",l:"📐 Key Day: Lua sq Marte",dir:"🔴 WATCH SHORT",prob:"BAIXA",note:"Key Day + Sell in May bearish",seas:"Sell in May"},
+  {d:"Jun 10",b:"key",l:"📐 Key Day: Lua sq Mercúrio",dir:"🔴 WATCH SHORT",prob:"BAIXA",note:"Key Day + Sell in May bearish",seas:"Sell in May"},
+  {d:"Jun 11",b:"key",l:"📐 Key Day: Lua sq Vénus",dir:"🔴 WATCH SHORT",prob:"BAIXA",note:"Key Day + Sell in May bearish → perto do fim do seasonal",seas:"Sell in May"},
+  {d:"Jun 14",b:"lnova",l:"🌑 Lua Nova",dir:"🔴 SHORT",prob:"MÉDIA",note:"Lua Nova + Sell in May (último) + bear inversion → TOP LOCAL → short",seas:"Sell in May"},
+  {d:"Jun 20",b:"peak",l:"🟢 Moon Virgem = Peak QE",dir:"🔴 SHORT",prob:"MÉDIA",note:"Peak QE no final do Sell in May → TOPO LOCAL → short antes do Summer Rally",seas:"Sell in May"},
+  {d:"Jun 23",b:"key",l:"📐 Key Day: Lua sq Mercúrio",dir:"🔴 WATCH SHORT",prob:"BAIXA",note:"Key Day final do Sell in May",seas:"Sell in May"},
+  {d:"Jun 24",b:"low",l:"🔴 Moon Escorpião = Low QE",dir:"🟡 BOUNCE",prob:"MÉDIA",note:"Low QE + Sell in May ending → bounce técnico, possível início Summer Rally",seas:"Sell in May"},
+  {d:"Jun 25",b:"key",l:"📐 Key Day: Lua sq Vénus",dir:"🔴 WATCH SHORT",prob:"BAIXA",note:"Key Day final Sell in May",seas:"Sell in May"},
+  {d:"Jun 28",b:"lcheia",l:"🌕 Lua Cheia",dir:"🔴 PEAK",prob:"MÉDIA",note:"Lua Cheia em Summer Rally bullish → peak do rally, tomar lucros em longs",seas:"Summer Rally"},
+  {d:"Jul 04",b:"key",l:"📐 Key Day: Lua sq Marte",dir:"🟢 WATCH LONG",prob:"BAIXA",note:"Key Day + Summer Rally bullish → favorecer long",seas:"Summer Rally"},
+  {d:"Jul 08",b:"key",l:"📐 Key Day: Lua sq Mercúrio",dir:"🟢 WATCH LONG",prob:"BAIXA",note:"Key Day + Summer Rally bullish → favorecer long",seas:"Summer Rally"},
+  {d:"Jul 13",b:"lnova",l:"🌑 Lua Nova",dir:"🟢 LONG",prob:"MÉDIA",note:"Lua Nova + Summer Rally bullish → BOTTOM LOCAL → long",seas:"Summer Rally"},
+  {d:"Jul 17",b:"peak",l:"🟢 Moon Virgem = Peak QE",dir:"🟡 WATCH",prob:"BAIXA",note:"Peak QE mas Summer Rally bullish → topo local ligeiro, pullback suave",seas:"Summer Rally"},
+  {d:"Jul 20",b:"key",l:"📐 Key Day: Lua sq Mercúrio",dir:"🟢 WATCH LONG",prob:"BAIXA",note:"Key Day + Summer Rally bullish",seas:"Summer Rally"},
+  {d:"Jul 22",b:"low",l:"🔴 Moon Escorpião = Low QE",dir:"🟢 LONG",prob:"ALTA",note:"Low QE + Summer Rally bullish → BOTTOM SÓLIDO → long de alta confiança",seas:"Summer Rally"},
+  {d:"Jul 25",b:"key",l:"📐 Key Day: Lua sq Vénus",dir:"🟢 WATCH LONG",prob:"BAIXA",note:"Key Day + Summer Rally bullish",seas:"Summer Rally"},
+  {d:"Jul 28",b:"lcheia",l:"🌕 Lua Cheia",dir:"🔴 PEAK",prob:"MÉDIA",note:"Lua Cheia + Summer Rally → peak do rally, tomar lucros em longs",seas:"Summer Rally"},
+  {d:"Aug 02",b:"key",l:"📐 Key Day: Lua sq Marte",dir:"🟢 WATCH LONG",prob:"BAIXA",note:"Key Day + Summer Rally bullish",seas:"Summer Rally"},
+  {d:"Aug 04",b:"key",l:"📐 Key Day: Lua sq Mercúrio",dir:"🟢 WATCH LONG",prob:"BAIXA",note:"Key Day + Summer Rally bullish",seas:"Summer Rally"},
+  {d:"Aug 09",b:"key",l:"📐 Key Day: Lua sq Vénus",dir:"🟢 WATCH LONG",prob:"BAIXA",note:"Key Day + Summer Rally bullish",seas:"Summer Rally"},
+  {d:"Aug 11",b:"lnova",l:"🌑 Lua Nova",dir:"🟢 LONG",prob:"MÉDIA",note:"Lua Nova + Summer Rally → BOTTOM LOCAL → long",seas:"Summer Rally"},
+  {d:"Aug 13",b:"peak",l:"🟢 Moon Virgem = Peak QE",dir:"🟡 WATCH",prob:"BAIXA",note:"Peak QE + Summer Rally → topo local suave, pullback breve",seas:"Summer Rally"},
+  {d:"Aug 15",b:"key",l:"📐 Key Day: Lua sq Marte",dir:"🟢 WATCH LONG",prob:"BAIXA",note:"Key Day + Summer Rally bullish",seas:"Summer Rally"},
+  {d:"Aug 18",b:"low",l:"🔴 Moon Escorpião = Low QE",dir:"🟢 LONG",prob:"ALTA",note:"Low QE + Summer Rally bullish → BOTTOM SÓLIDO → long de alta confiança",seas:"Summer Rally"},
+  {d:"Aug 19",b:"key",l:"📐 Key Day: Lua sq Mercúrio",dir:"🟢 WATCH LONG",prob:"BAIXA",note:"Key Day + Summer Rally bullish",seas:"Summer Rally"},
+  {d:"Aug 24",b:"key",l:"📐 Key Day: Lua sq Vénus",dir:"🟢 WATCH LONG",prob:"BAIXA",note:"Key Day + Summer Rally → perto do fim, considerar reduzir longs",seas:"Summer Rally"},
+  {d:"Aug 26",b:"lcheia",l:"🌕 Lua Cheia",dir:"🔴 PEAK",prob:"MÉDIA",note:"Lua Cheia + fim Summer Rally → PEAK ALTO → tomar lucros, preparar short",seas:"Summer Rally"},
+  {d:"Sep 04",b:"key",l:"📐 Key Day: Lua sq Mercúrio",dir:"🟢 WATCH LONG",prob:"BAIXA",note:"Key Day + últimos dias Summer Rally → cautela crescente",seas:"Summer Rally"},
+  {d:"Sep 07",b:"key",l:"📐 Key Day: Lua sq Vénus",dir:"🔴 WATCH SHORT",prob:"BAIXA",note:"Key Day + Fall Crash abre → primeiros sinais bearish",seas:"Fall Crash"},
+  {d:"Sep 10",b:"peak",l:"🟢 Moon Virgem = Peak QE",dir:"🔴 SHORT",prob:"ALTA",note:"Peak QE + Fall Crash + LN mesmo dia → TOPO MÁXIMO → short de alta confiança",seas:"Fall Crash"},
+  {d:"Sep 10",b:"lnova",l:"🌑 Lua Nova",dir:"🔴 SHORT",prob:"ALTA",note:"Lua Nova + Fall Crash + Peak QE → DUPLA CONFLUÊNCIA TOP → short",seas:"Fall Crash"},
+  {d:"Sep 13",b:"key",l:"📐 Key Day: Lua sq Marte",dir:"🔴 WATCH SHORT",prob:"BAIXA",note:"Key Day + Fall Crash → confirma pressão baixista",seas:"Fall Crash"},
+  {d:"Sep 14",b:"low",l:"🔴 Moon Escorpião = Low QE",dir:"🟡 BOUNCE",prob:"MÉDIA",note:"Low QE + Fall Crash → bounce técnico possível mas trend é DOWN",seas:"Fall Crash"},
+  {d:"Sep 20",b:"key",l:"📐 Key Day: Lua sq Mercúrio",dir:"🔴 WATCH SHORT",prob:"BAIXA",note:"Key Day + Fall Crash bearish",seas:"Fall Crash"},
+  {d:"Sep 22",b:"key",l:"📐 Key Day: Lua sq Vénus",dir:"🔴 WATCH SHORT",prob:"BAIXA",note:"Key Day + Fall Crash bearish",seas:"Fall Crash"},
+  {d:"Sep 25",b:"lcheia",l:"🌕 Lua Cheia",dir:"🟢 BOUNCE",prob:"MÉDIA",note:"Lua Cheia + Fall Crash + bear inversion → FUNDO LOCAL → bounce técnico",seas:"Fall Crash"},
+  {d:"Sep 28",b:"key",l:"📐 Key Day: Lua sq Marte",dir:"🔴 WATCH SHORT",prob:"BAIXA",note:"Key Day + Fall Crash bearish",seas:"Fall Crash"},
+  {d:"Oct 05",b:"key",l:"📐 Key Day: Lua sq Merc+Vénus",dir:"🔴 WATCH SHORT",prob:"BAIXA",note:"Key Day duplo + Fall Crash bearish → pico volatilidade baixista",seas:"Fall Crash"},
+  {d:"Oct 07",b:"peak",l:"🟢 Moon Virgem = Peak QE",dir:"🔴 SHORT",prob:"ALTA",note:"Peak QE + Fall Crash → TOPO LOCAL CRASH ZONE → short máxima confiança",seas:"Fall Crash"},
+  {d:"Oct 09",b:"lnova",l:"🌑 Lua Nova",dir:"🔴 SHORT",prob:"ALTA",note:"Lua Nova + Fall Crash + bear inversion → TOP LOCAL CRASH → short",seas:"Fall Crash"},
+  {d:"Oct 12",b:"low",l:"🔴 Moon Escorpião = Low QE",dir:"🟡 BOUNCE",prob:"MÉDIA",note:"Low QE + Fall Crash → bounce técnico, mas Gann 360° próximo = cautela",seas:"Fall Crash"},
+  {d:"Oct 12",b:"key",l:"📐 Key Day: Lua sq Marte",dir:"🔴 WATCH SHORT",prob:"BAIXA",note:"Key Day + Fall Crash bearish → confirma pressão",seas:"Fall Crash"},
+  {d:"Oct 19",b:"key",l:"📐 Key Day: Lua sq Vénus",dir:"🔴 WATCH SHORT",prob:"BAIXA",note:"Key Day + Fall Crash (final) bearish",seas:"Fall Crash"},
+  {d:"Oct 20",b:"key",l:"📐 Key Day: Lua sq Mercúrio",dir:"🔴 WATCH SHORT",prob:"BAIXA",note:"Key Day + Fall Crash bearish → últimos dias crash zone",seas:"Fall Crash"},
+  {d:"Oct 25",b:"lcheia",l:"🌕 Lua Cheia",dir:"🟢 BOUNCE",prob:"MÉDIA",note:"Lua Cheia + fim Fall Crash + bear inversion → FUNDO IMPORTANTE → bounce/long",seas:"Fall Crash"},
+  {d:"Nov 02",b:"key",l:"📐 Key Day: Lua sq Mercúrio",dir:"🟢 WATCH LONG",prob:"BAIXA",note:"Key Day + Santa Claus bullish → favorecer long",seas:"Santa Claus"},
+  {d:"Nov 03",b:"peak",l:"🟢 Moon Virgem = Peak QE",dir:"🟡 WATCH",prob:"BAIXA",note:"Peak QE + Santa Claus bullish → topo local suave, pullback breve",seas:"Santa Claus"},
+  {d:"Nov 08",b:"low",l:"🔴 Moon Escorpião = Low QE",dir:"🟢 LONG",prob:"ALTA",note:"Low QE + Santa Claus + NM mesmo dia → BOTTOM MÁXIMO CONFIRMADO → long",seas:"Santa Claus"},
+  {d:"Nov 08",b:"lnova",l:"🌑 Lua Nova",dir:"🟢 LONG",prob:"ALTA",note:"Lua Nova + Santa Claus + Low QE Escorpião → TRIPLA CONFLUÊNCIA BOTTOM → long",seas:"Santa Claus"},
+  {d:"Nov 09",b:"key",l:"📐 Key Day: Lua sq Marte",dir:"🟢 WATCH LONG",prob:"BAIXA",note:"Key Day + Santa Claus → pico volatilidade bullish",seas:"Santa Claus"},
+  {d:"Nov 14",b:"key",l:"📐 Key Day: Lua sq Vénus",dir:"🟢 WATCH LONG",prob:"BAIXA",note:"Key Day + Santa Claus bullish",seas:"Santa Claus"},
+  {d:"Nov 15",b:"key",l:"📐 Key Day: Lua sq Mercúrio",dir:"🟢 WATCH LONG",prob:"BAIXA",note:"Key Day + Santa Claus bullish",seas:"Santa Claus"},
+  {d:"Nov 23",b:"lcheia",l:"🌕 Lua Cheia",dir:"🔴 PEAK",prob:"MÉDIA",note:"Lua Cheia + Santa Claus → peak do rally, considerar tomar lucros parciais",seas:"Santa Claus"},
+  {d:"Nov 24",b:"key",l:"📐 Key Day: Lua sq Marte",dir:"🟢 WATCH LONG",prob:"BAIXA",note:"Key Day + Santa Claus bullish",seas:"Santa Claus"},
+  {d:"Nov 28",b:"key",l:"📐 Key Day: Lua sq Vénus",dir:"🟢 WATCH LONG",prob:"BAIXA",note:"Key Day + Santa Claus bullish",seas:"Santa Claus"},
+  {d:"Dec 01",b:"peak",l:"🟢 Moon Virgem = Peak QE",dir:"🟡 WATCH",prob:"BAIXA",note:"Peak QE + Santa Claus → topo local suave",seas:"Santa Claus"},
+  {d:"Dec 05",b:"low",l:"🔴 Moon Escorpião = Low QE",dir:"🟢 LONG",prob:"ALTA",note:"Low QE + Santa Claus bullish → BOTTOM SÓLIDO → long",seas:"Santa Claus"},
+  {d:"Dec 07",b:"lnova",l:"🌑 Lua Nova",dir:"🟢 LONG",prob:"MÉDIA",note:"Lua Nova + Santa Claus bullish → bottom local → long",seas:"Santa Claus"},
+  {d:"Dec 13",b:"key",l:"📐 Key Day: Lua sq Vénus",dir:"🟡 VOLATIL.",prob:"BAIXA",note:"Key Day + Dec Gap neutro → spike volatilidade, aguardar direcção",seas:"Dec Gap"},
+  {d:"Dec 16",b:"key",l:"📐 Key Day: Lua sq Mercúrio",dir:"🟡 VOLATIL.",prob:"BAIXA",note:"Key Day + Dec Gap neutro → aguardar direcção",seas:"Dec Gap"},
+  {d:"Dec 22",b:"key",l:"📐 Key Day: Lua sq Marte",dir:"🟢 WATCH LONG",prob:"BAIXA",note:"Key Day + Jan Effect bullish + Solstício → favorecer long",seas:"Jan Effect"},
+  {d:"Dec 23",b:"lcheia",l:"🌕 Lua Cheia",dir:"🔴 PEAK",prob:"MÉDIA",note:"Lua Cheia + Jan Effect → peak local, considerar tomar lucros",seas:"Jan Effect"},
+  {d:"Dec 27",b:"key",l:"📐 Key Day: Lua sq Vénus",dir:"🟢 WATCH LONG",prob:"BAIXA",note:"Key Day + Jan Effect bullish",seas:"Jan Effect"},
+  {d:"Dec 28",b:"peak",l:"🟢 Moon Virgem = Peak QE",dir:"🟡 WATCH",prob:"BAIXA",note:"Peak QE + Jan Effect → topo local suave",seas:"Jan Effect"},
+  {d:"Dec 30",b:"key",l:"📐 Key Day: Lua sq Mercúrio",dir:"🟢 WATCH LONG",prob:"BAIXA",note:"Key Day + Jan Effect bullish → fim do ano",seas:"Jan Effect"},
 ];
 
 function LocalTrendsView() {
@@ -1118,95 +1118,94 @@ function LocalTrendsView() {
   const today = new Date();
   const todayStr = today.toLocaleDateString("en-US",{month:"short",day:"2-digit"}).replace(",","");
 
-  const filtered = tf === "all" ? LOCAL_TRENDS : LOCAL_TRENDS.filter(e => e.b === tf);
+  const filtered = tf==="all"?LOCAL_TRENDS:LOCAL_TRENDS.filter(e=>
+    tf==="short"?e.dir.includes("SHORT"):
+    tf==="long"?e.dir.includes("LONG"):
+    tf==="alta"?e.prob==="ALTA":
+    e.b===tf
+  );
 
-  const bCfg = {
-    peak: {icon:"🟢", label:"PEAK QE", color:"#50e878", bg:"rgba(80,232,120,.10)", border:"rgba(80,232,120,.35)"},
-    low:  {icon:"🔴", label:"LOW QE",  color:"#ff5060", bg:"rgba(255,80,96,.10)",  border:"rgba(255,80,96,.35)"},
-    turn: {icon:"⚪", label:"TURN",    color:"#a0b8d0", bg:"rgba(160,184,208,.08)", border:"rgba(160,184,208,.25)"},
+  const dirCfg = (dir) => {
+    if(dir.includes("SHORT")&&!dir.includes("WATCH")) return {bg:"rgba(255,60,60,.08)",bc:"rgba(255,60,60,.35)",color:"#ff5060"};
+    if(dir.includes("LONG")&&!dir.includes("WATCH")) return {bg:"rgba(80,232,120,.08)",bc:"rgba(80,232,120,.35)",color:"#50e878"};
+    if(dir.includes("BOUNCE")) return {bg:"rgba(80,200,100,.06)",bc:"rgba(80,200,100,.25)",color:"#60d080"};
+    if(dir.includes("PEAK")) return {bg:"rgba(255,80,60,.06)",bc:"rgba(255,80,60,.25)",color:"#ff7060"};
+    if(dir.includes("WATCH SHORT")) return {bg:"rgba(255,100,60,.05)",bc:"rgba(255,100,60,.2)",color:"#ff8060"};
+    if(dir.includes("WATCH LONG")) return {bg:"rgba(80,200,120,.05)",bc:"rgba(80,200,120,.2)",color:"#70d090"};
+    return {bg:"rgba(160,180,200,.05)",bc:"rgba(160,180,200,.2)",color:"#a0b8d0"};
   };
 
-  // Group by month label
+  const probColor = p => p==="ALTA"?"#ffe080":p==="MÉDIA"?"#c8b060":"#555";
+
   const months = {};
-  filtered.forEach(e => {
+  filtered.forEach(e=>{
     const mo = e.d.split(" ")[0];
-    if(!months[mo]) months[mo] = [];
+    if(!months[mo]) months[mo]=[];
     months[mo].push(e);
   });
 
   const tBtns = [
-    {k:"all",  l:"Todos", c:"#c8b060"},
-    {k:"peak", l:"🟢 Peak", c:"#50e878"},
-    {k:"low",  l:"🔴 Low",  c:"#ff5060"},
-    {k:"turn", l:"⚪ Turn", c:"#a0b8d0"},
+    {k:"all",l:"Todos"},
+    {k:"alta",l:"⭐ Alta conf."},
+    {k:"short",l:"🔴 Short"},
+    {k:"long",l:"🟢 Long"},
+    {k:"peak",l:"Virgem Peak"},
+    {k:"low",l:"Escorpião Low"},
   ];
 
   return (
-    <div style={{position:"relative",zIndex:1,maxWidth:680,width:"100%",margin:"0 auto",padding:"0 12px 60px"}}>
-      {/* Header */}
+    <div style={{position:"relative",zIndex:1,maxWidth:720,width:"100%",margin:"0 auto",padding:"0 12px 60px"}}>
       <div style={{textAlign:"center",marginBottom:16}}>
-        <div style={{fontSize:22,letterSpacing:3,color:"#c8b060",fontWeight:"normal",marginBottom:4}}>Local Trends</div>
-        <div style={{fontSize:11,color:"#888",letterSpacing:1}}>Moon Sign QE + Lunar Phase + Jensen Key Days · Swing Trades 2026</div>
-        <div style={{fontSize:10,color:"#555",marginTop:3}}>Bear market activo — sinais invertidos: 🔴 Low=bottom real · 🟢 Peak=topo local · ⚪ Turn=virar</div>
+        <div style={{fontSize:22,letterSpacing:3,color:"#c8b060",fontWeight:"normal",marginBottom:4}}>Local Trends 2026</div>
+        <div style={{fontSize:11,color:"#666",letterSpacing:1}}>Moon Sign QE + Lua Nova/Cheia + Jensen Key Days · contexto direcional</div>
+        <div style={{fontSize:10,color:"#444",marginTop:3}}>Bear market activo · Inversão LN/LC aplicada · Seasonal integrado</div>
       </div>
 
-      {/* Filter buttons */}
-      <div style={{display:"flex",gap:6,justifyContent:"center",marginBottom:18,flexWrap:"wrap"}}>
-        {tBtns.map(b => (
+      <div style={{display:"flex",gap:5,justifyContent:"center",marginBottom:14,flexWrap:"wrap"}}>
+        {tBtns.map(b=>(
           <button key={b.k} onClick={()=>setTf(b.k)}
-            style={{padding:"5px 14px",background:tf===b.k?"rgba(200,176,96,.15)":"rgba(255,255,255,.03)",
-              border:`1px solid ${tf===b.k?b.c:"rgba(255,255,255,.08)"}`,borderRadius:4,
-              color:tf===b.k?b.c:"#555",fontSize:12,cursor:"pointer",fontFamily:"inherit",letterSpacing:.5}}>
+            style={{padding:"4px 12px",background:tf===b.k?"rgba(200,176,96,.15)":"rgba(255,255,255,.03)",
+              border:`1px solid ${tf===b.k?"#c8b060":"rgba(255,255,255,.07)"}`,borderRadius:4,
+              color:tf===b.k?"#c8b060":"#555",fontSize:11,cursor:"pointer",fontFamily:"inherit"}}>
             {b.l}
           </button>
         ))}
       </div>
 
-      {/* Legend */}
-      <div style={{display:"flex",gap:14,justifyContent:"center",marginBottom:18,fontSize:10,color:"#555",flexWrap:"wrap"}}>
-        <span>🟢 Moon Virgem = Peak QE</span>
-        <span>🔴 Moon Escorpião = Low QE</span>
-        <span>🌑🌕 Lua Nova/Cheia = Turning</span>
-        <span>📐 Jensen Key Day</span>
-      </div>
-
-      {/* Timeline by month */}
-      {Object.entries(months).map(([mo, evs]) => (
+      {Object.entries(months).map(([mo,evs])=>(
         <div key={mo} style={{marginBottom:18}}>
-          <div style={{fontSize:11,letterSpacing:3,color:"#a89050",textTransform:"uppercase",
-            borderBottom:"1px solid rgba(200,176,96,.15)",paddingBottom:5,marginBottom:10}}>
-            ── {mo} ──────────────
+          <div style={{fontSize:10,letterSpacing:3,color:"#a89050",textTransform:"uppercase",
+            borderBottom:"1px solid rgba(200,176,96,.12)",paddingBottom:4,marginBottom:8}}>
+            ── {mo} ({evs.length} sinais) ──────────────
           </div>
-          <div style={{display:"flex",flexDirection:"column",gap:5}}>
-            {evs.map((ev,i) => {
-              const cfg = bCfg[ev.b] || bCfg.turn;
-              const isKey = ev.l.startsWith("Jensen");
-              const isToday = ev.d === todayStr;
+          <div style={{display:"flex",flexDirection:"column",gap:6}}>
+            {evs.map((ev,i)=>{
+              const dc = dirCfg(ev.dir);
+              const isToday = ev.d===todayStr;
+              const isHigh = ev.prob==="ALTA";
               return (
                 <div key={i} style={{
-                  display:"flex",alignItems:"center",gap:10,
-                  padding:"8px 12px",borderRadius:5,
-                  background:isToday?"rgba(200,176,96,.12)":cfg.bg,
-                  border:`1px solid ${isToday?"#c8b060":cfg.border}`,
-                  borderLeft:`3px solid ${cfg.color}`,
+                  display:"flex",gap:10,alignItems:"flex-start",
+                  padding:"10px 12px",borderRadius:6,
+                  background:isHigh?"rgba(255,224,80,.04)":dc.bg,
+                  border:`1px solid ${isToday?"#c8b060":isHigh?"rgba(255,224,80,.25)":dc.bc}`,
+                  borderLeft:`3px solid ${isHigh?"#ffe080":dc.color}`,
                 }}>
-                  <div style={{fontSize:11,color:"#888",minWidth:48,fontFamily:"sans-serif",flexShrink:0}}>
-                    {ev.d.split(" ")[1]}
-                    {isToday && <span style={{color:"#ffe080",fontSize:9,display:"block"}}>HOJE</span>}
-                  </div>
-                  <div style={{fontSize:13,minWidth:18,textAlign:"center",flexShrink:0}}>
-                    {ev.b==="peak"?"🟢":ev.b==="low"?"🔴":"⚪"}
+                  <div style={{minWidth:44,flexShrink:0}}>
+                    <div style={{fontSize:12,color:"#888",fontFamily:"sans-serif"}}>{ev.d.split(" ")[1]} {ev.d.split(" ")[0].substring(0,3)}</div>
+                    {isToday&&<div style={{fontSize:9,color:"#ffe080"}}>HOJE</div>}
+                    {isHigh&&<div style={{fontSize:9,color:"#ffe080"}}>⭐ ALTA</div>}
                   </div>
                   <div style={{flex:1,minWidth:0}}>
-                    <div style={{fontSize:12,color:cfg.color,lineHeight:1.3}}>
-                      {isKey && <span style={{fontSize:10,color:"#7090a0",marginRight:4}}>📐</span>}
-                      {ev.l}
+                    <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",flexWrap:"wrap",gap:4,marginBottom:4}}>
+                      <span style={{fontSize:12,color:"#ccc"}}>{ev.l}</span>
+                      <div style={{display:"flex",gap:6,alignItems:"center",flexShrink:0}}>
+                        <span style={{fontSize:11,color:probColor(ev.prob),background:"rgba(0,0,0,.3)",borderRadius:3,padding:"1px 6px"}}>{ev.prob}</span>
+                        <span style={{fontSize:11,color:dc.color,fontWeight:"bold"}}>{ev.dir}</span>
+                      </div>
                     </div>
-                    <div style={{fontSize:10,color:"#444",marginTop:2}}>
-                      {ev.b==="peak"?"Topo local — short opportunity em bear market":
-                       ev.b==="low"?"Bottom local — bounce play em bear market":
-                       "Turning point — aguardar confirmação de direcção"}
-                    </div>
+                    <div style={{fontSize:11,color:"#5a5850",lineHeight:1.5}}>{ev.note}</div>
+                    <div style={{fontSize:10,color:"#3a3830",marginTop:3}}>Seasonal: {ev.seas}</div>
                   </div>
                 </div>
               );
@@ -1215,181 +1214,15 @@ function LocalTrendsView() {
         </div>
       ))}
 
-      {/* Footer note */}
-      <div style={{fontSize:10,color:"#333",textAlign:"center",marginTop:10,lineHeight:1.6,padding:"12px 0"}}>
-        Fontes: Pesavento Cap.11 (Moon vs Sign QE, 61 ciclos 2009-present) · Jensen (1978) Key Days<br/>
-        Em bear market: 🔴 = bottom real · 🟢 = short · ⚪ = aguardar confirmação
+      <div style={{fontSize:10,color:"#2a2820",textAlign:"center",marginTop:8,lineHeight:1.7,padding:"10px 0"}}>
+        Fontes: Pesavento Cap.11 (Moon vs Sign QE) · Jensen (1978) Key Days · Bear Market Inversion (Pesavento p.20)<br/>
+        ⭐ Alta conf. = múltiplos frameworks alinham na mesma direcção
       </div>
     </div>
   );
 }
 
 
-const ATH_PRICE = 126272;
-const LOW_PRICE = 60001;
-const S144_UNIT = (ATH_PRICE - LOW_PRICE) / 144;
-
-const S144_LEVELS = [];
-for(let n=0;n<=144;n+=6){
-  S144_LEVELS.push({
-    n,
-    price: Math.round(ATH_PRICE - n * S144_UNIT),
-    major: n % 18 === 0,
-    frac: n===0?"ATH":n===144?"LOW":n===72?"½":n===36?"¼":n===108?"¾":
-          n===18?"⅛":n===126?"⅞":n===54?"⅜":n===90?"⅝":`${n}/144`,
-  });
-}
-
-function ChartS144View() {
-  const [btc, setBtc] = useState(null);
-  const [change24h, setChange24h] = useState(null);
-  const [lastUpdate, setLastUpdate] = useState(null);
-  const [err, setErr] = useState(false);
-
-  useEffect(() => {
-    const fetchPrice = () => {
-      fetch("https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT")
-        .then(r => r.json())
-        .then(d => {
-          setBtc(parseFloat(d.lastPrice));
-          setChange24h(parseFloat(d.priceChangePercent));
-          setLastUpdate(new Date().toLocaleTimeString("pt-PT"));
-          setErr(false);
-        })
-        .catch(() => setErr(true));
-    };
-    fetchPrice();
-    const iv = setInterval(fetchPrice, 15000);
-    return () => clearInterval(iv);
-  }, []);
-
-  const price = btc || 71560;
-  const unitsFromLow = (price - LOW_PRICE) / S144_UNIT;
-  const pctFromATH = ((ATH_PRICE - price) / ATH_PRICE * 100).toFixed(1);
-  const pctFromLow = ((price - LOW_PRICE) / LOW_PRICE * 100).toFixed(1);
-  const daysFromLow = 40;
-  const timeLag = (daysFromLow - unitsFromLow).toFixed(1);
-  const below = S144_LEVELS.filter(l=>l.price<=price).sort((a,b)=>b.price-a.price)[0]||S144_LEVELS[S144_LEVELS.length-1];
-  const above = S144_LEVELS.filter(l=>l.price>price).sort((a,b)=>a.price-b.price)[0]||S144_LEVELS[0];
-  const up = change24h >= 0;
-  const changeColor = up ? "#50e878" : "#ff5060";
-
-  const SH=380,SW=290,PT=24,PB=24,PL=48,PR=48;
-  const toY = p => PT + (ATH_PRICE - p) / (ATH_PRICE - LOW_PRICE) * (SH-PT-PB);
-  const currentY = toY(price);
-
-  return (
-    <div style={{position:"relative",zIndex:1,maxWidth:720,width:"100%",margin:"0 auto",padding:"0 12px 60px"}}>
-      <div style={{textAlign:"center",marginBottom:20}}>
-        <div style={{fontSize:11,letterSpacing:3,color:"#a89050",textTransform:"uppercase",marginBottom:8}}>Square of 144 · BTC Live</div>
-        {err&&<div style={{fontSize:11,color:"#ff6060",marginBottom:6}}>⚠️ Binance offline — último valor guardado</div>}
-        <div style={{display:"flex",alignItems:"baseline",justifyContent:"center",gap:12,marginBottom:4}}>
-          <span style={{fontSize:42,color:"#ffe080",letterSpacing:-1,fontWeight:"normal"}}>${price.toLocaleString("en",{maximumFractionDigits:0})}</span>
-          <span style={{fontSize:18,color:changeColor,fontFamily:"sans-serif"}}>{up?"+":""}{change24h?.toFixed(2)||"..."}%</span>
-        </div>
-        <div style={{fontSize:11,color:"#444",letterSpacing:1}}>BTC/USDT · Binance · {lastUpdate?`actualizado ${lastUpdate}`:"a carregar..."} · cada 15s</div>
-      </div>
-
-      <div style={{display:"flex",gap:16,alignItems:"flex-start",justifyContent:"center",flexWrap:"wrap"}}>
-        <svg width={SW} height={SH} style={{flexShrink:0}}>
-          <rect width={SW} height={SH} rx={8} fill="rgba(6,7,16,0.8)" stroke="rgba(200,176,96,.15)" strokeWidth={1}/>
-          <text x={SW/2} y={14} fill="#a89050" fontSize={9} textAnchor="middle" letterSpacing={2}>SQUARE OF 144</text>
-          {S144_LEVELS.map(l=>{
-            const y=toY(l.price);
-            const isATH=l.n===0,isLOW=l.n===144,isMid=l.n===72;
-            const col=isATH?"#ffe080":isLOW?"#ff4060":isMid?"#90e0f0":l.major?"#c8b06066":"#33333355";
-            const thick=isATH||isLOW||isMid?1.5:l.major?0.8:0.3;
-            const dash=isATH||isLOW?"":isMid?"6,3":l.major?"4,4":"2,6";
-            return(
-              <g key={l.n}>
-                <line x1={PL} y1={y} x2={SW-PR} y2={y} stroke={col} strokeWidth={thick} strokeDasharray={dash}/>
-                {l.major&&<>
-                  <text x={PL-4} y={y+3.5} fill={col} fontSize={8} textAnchor="end">${Math.round(l.price/1000)}K</text>
-                  <text x={SW-PR+4} y={y+3.5} fill={col} fontSize={8}>{l.frac}</text>
-                </>}
-              </g>
-            );
-          })}
-          <rect x={PL} y={toY(above.price)} width={SW-PL-PR} height={toY(below.price)-toY(above.price)} fill="rgba(255,224,128,0.05)"/>
-          <line x1={PL} y1={currentY} x2={SW-PR} y2={currentY} stroke="#ffe080" strokeWidth={2}/>
-          <circle cx={PL} cy={currentY} r={4} fill="#ffe080"/>
-          <circle cx={SW-PR} cy={currentY} r={4} fill="#ffe080"/>
-          <rect x={PL+(SW-PL-PR)/2-28} y={currentY-13} width={56} height={14} rx={3} fill="#ffe08022" stroke="#ffe08055"/>
-          <text x={PL+(SW-PL-PR)/2} y={currentY-3} fill="#ffe080" fontSize={9} textAnchor="middle" fontWeight="bold">${Math.round(price/1000)}K</text>
-          <text x={PL+4} y={PT+5} fill="#ffe08088" fontSize={8}>ATH $126K — Oct 6 2025</text>
-          <text x={PL+4} y={SH-PB+3} fill="#ff406088" fontSize={8}>LOW $60K — Feb 27 2026 (dia 144)</text>
-        </svg>
-
-        <div style={{flex:1,minWidth:190,display:"flex",flexDirection:"column",gap:10}}>
-          <div style={{background:"rgba(255,224,128,.06)",border:"1px solid rgba(255,224,128,.2)",borderRadius:6,padding:"12px 14px"}}>
-            <div style={{fontSize:10,color:"#a89050",letterSpacing:2,marginBottom:8,textTransform:"uppercase"}}>Posição S144</div>
-            <div style={{fontSize:13,color:"#ffe080",marginBottom:4}}>Nível: <strong>{unitsFromLow.toFixed(1)}/144</strong> do LOW</div>
-            <div style={{fontSize:12,color:"#c8b060",marginBottom:6}}>Zona: {below.frac} → {above.frac}</div>
-            <div style={{background:"rgba(0,0,0,.4)",borderRadius:4,height:8,overflow:"hidden"}}>
-              <div style={{width:`${Math.min(100,(unitsFromLow/144*100)).toFixed(1)}%`,height:"100%",background:"linear-gradient(90deg,#ff4060,#ffe080)",borderRadius:4}}/>
-            </div>
-            <div style={{display:"flex",justifyContent:"space-between",fontSize:9,color:"#555",marginTop:3}}>
-              <span>LOW $60K</span><span>ATH $126K</span>
-            </div>
-          </div>
-
-          <div style={{background:"rgba(255,255,255,.02)",border:"1px solid rgba(255,255,255,.06)",borderRadius:6,padding:"12px 14px",display:"flex",flexDirection:"column",gap:6}}>
-            <div style={{fontSize:10,color:"#a89050",letterSpacing:2,marginBottom:2,textTransform:"uppercase"}}>Níveis Chave</div>
-            <div style={{display:"flex",justifyContent:"space-between"}}>
-              <span style={{fontSize:12,color:"#90e0f0"}}>▲ Resist.</span>
-              <span style={{fontSize:13,color:"#90e0f0",fontFamily:"sans-serif"}}>${above.price.toLocaleString()} <span style={{fontSize:10,color:"#555"}}>({above.frac})</span></span>
-            </div>
-            <div style={{height:1,background:"rgba(255,255,255,.05)"}}/>
-            <div style={{display:"flex",justifyContent:"space-between"}}>
-              <span style={{fontSize:12,color:"#ffe080"}}>● BTC</span>
-              <span style={{fontSize:13,color:"#ffe080",fontFamily:"sans-serif"}}>${price.toLocaleString()}</span>
-            </div>
-            <div style={{height:1,background:"rgba(255,255,255,.05)"}}/>
-            <div style={{display:"flex",justifyContent:"space-between"}}>
-              <span style={{fontSize:12,color:"#ff5060"}}>▼ Suporte</span>
-              <span style={{fontSize:13,color:"#ff5060",fontFamily:"sans-serif"}}>${below.price.toLocaleString()} <span style={{fontSize:10,color:"#555"}}>({below.frac})</span></span>
-            </div>
-          </div>
-
-          <div style={{background:"rgba(255,80,60,.04)",border:"1px solid rgba(255,80,60,.15)",borderRadius:6,padding:"12px 14px"}}>
-            <div style={{fontSize:10,color:"#a89050",letterSpacing:2,marginBottom:6,textTransform:"uppercase"}}>Price = Time</div>
-            <div style={{fontSize:12,color:"#c0c8d0",lineHeight:1.7}}>
-              <div>📅 Dias desde LOW: <strong style={{color:"#90e0f0"}}>{daysFromLow}</strong></div>
-              <div>📐 Unidades preço: <strong style={{color:"#90e0f0"}}>{unitsFromLow.toFixed(1)}</strong></div>
-              <div>⚠️ Lag: <strong style={{color:"#ff7050"}}>{timeLag} dias</strong></div>
-            </div>
-            <div style={{fontSize:11,color:"#ff7050",marginTop:6,lineHeight:1.5}}>Tempo move mais rápido que o preço → BEARISH</div>
-          </div>
-
-          <div style={{background:"rgba(255,255,255,.02)",border:"1px solid rgba(255,255,255,.06)",borderRadius:6,padding:"12px 14px",display:"flex",flexDirection:"column",gap:4}}>
-            <div style={{fontSize:10,color:"#a89050",letterSpacing:2,marginBottom:4,textTransform:"uppercase"}}>Distâncias</div>
-            <div style={{fontSize:12,color:"#888"}}>Do ATH: <span style={{color:"#ff5060"}}>−${(ATH_PRICE-price).toLocaleString()} (−{pctFromATH}%)</span></div>
-            <div style={{fontSize:12,color:"#888"}}>Do LOW: <span style={{color:"#50e878"}}>+${(price-LOW_PRICE).toLocaleString()} (+{pctFromLow}%)</span></div>
-            <div style={{fontSize:12,color:"#888"}}>Unidade: <span style={{color:"#c8b060"}}>$460/unit</span></div>
-            <div style={{fontSize:12,color:"#888"}}>↑ Resist: <span style={{color:"#90e0f0"}}>+${(above.price-price).toLocaleString()}</span></div>
-            <div style={{fontSize:12,color:"#888"}}>↓ Suporte: <span style={{color:"#ff5060"}}>−${(price-below.price).toLocaleString()}</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div style={{marginTop:20,borderRadius:8,overflow:"hidden",border:"1px solid rgba(200,176,96,.15)"}}>
-        <div style={{fontSize:10,color:"#a89050",letterSpacing:2,textAlign:"center",padding:"8px 0 4px",textTransform:"uppercase",background:"rgba(6,7,16,.8)"}}>TradingView — BTCUSDT Daily</div>
-        <iframe
-          src="https://s.tradingview.com/widgetembed/?frameElementId=btc_s144&symbol=BINANCE%3ABTCUSDT&interval=D&hidesidetoolbar=0&symboledit=0&saveimage=0&toolbarbg=060710&theme=dark&style=1&timezone=Europe%2FLisbon&locale=pt"
-          style={{width:"100%",height:420,border:"none",display:"block"}}
-        />
-      </div>
-
-      <div style={{marginTop:14,padding:"12px 14px",background:"rgba(255,255,255,.02)",border:"1px solid rgba(255,255,255,.04)",borderRadius:6}}>
-        <div style={{fontSize:10,color:"#a89050",letterSpacing:2,marginBottom:6,textTransform:"uppercase"}}>Metodologia S144</div>
-        <div style={{fontSize:11,color:"#5a5850",lineHeight:1.8}}>
-          144 = 12² · Fibonacci · Ancora: ATH $126,272 (Oct 6, 2025) → LOW $60,001 (Feb 27, 2026) · 
-          144 dias exactos = 144 unidades de preço ($460/unit) · <strong style={{color:"#c8b060"}}>Price = Time squaring confirmado</strong>
-        </div>
-      </div>
-    </div>
-  );
-}
 export default function App() {
   const [active, setActive] = useState("MAPA");
   const [filter, setFilter] = useState("all");
