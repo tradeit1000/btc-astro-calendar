@@ -91,7 +91,7 @@ VISAO:{l:"Annual Overview",e:[
   {w:"BAYER — Regras Completas Mesa de Jantar",t:"g",bias:"bear",src:"George Bayer — The Egg of Columbus (1942) p.15-18",
    e:"🍽️ BAYER COMPLETO: Regras Operacionais Exactas — TONGUE (comprar) → FISH → BIRD → NECK → CHAMPAGNE (vender) → NUT (short)",
    c:"Ciclo completo = 1-3 anos. Comprar na TONGUE (fraqueza/mínimo). Vender após CHAMPAGNE+NUT. Short após ALMONDS (discharge). BTC 2026: entre nut (ATH) e próxima tongue (Out 2026-Abr 2027). Rallies bear = fish/birds pequenos que terminam com champagne+almond.",
-   why:"BAYER (p.16-18 exactos): (1) 'Best period for BUYING = during the time the TONGUE is made.' (2) 'Best time for SELLING = AFTER CHAMPAGNE has been served and a nut or two swallowed [swallow = gap downwards].' (3) 'Use WEAKNESS to BUY and STRENGTH to SELL while direction is still the same.' (4) 'Use weakness in tongue formation — NOT when fish is already in the making.' (5) 'During resting period between fish and bird, you can buy again for the bird. When bird completed, buy for neck.' (6) 'When ALMONDS appear on top, short quickly until FULL DISCHARGE has occurred — know there are SEVERAL DISCHARGES IN SUCCESSION and hanging tongue to come thereafter.' (7) 'Complete cycle tongue-to-tongue = ONE to THREE YEARS.' (8) 'These patterns repeat all the time. Sometimes fish are longer/shorter; birds bigger/fatter/deformed.' (9) 'If you dare not buy at bottom but only get pep together and buy on TOP — it is your own fault.' APLICAÇÃO BTC 2026: A fase actual é DISPOSAL = múltiplos discharges (rallies que falham) antes da tongue final. Cada rally de bear market (ex: Mar-Apr 2026) = fish/bird pequeno → quando atinge champagne/almond (extensão máxima = exaustão de compradores) = short opportunity. Wyckoff + Bayer em conjunto: Wyckoff detecta o selling climax VOLUME na tongue → Bayer confirma a posição no padrão."},
+   why:"BAYER CICLO COMPLETO — TRIGO 1940-1941 (exemplo real): TONGUE=27Mai-16Ago1940(81dias, olives/pickles/gaps); SOUP=16-26Ago1940(10 dias, sweating for longs); FISH=26Ago-18Nov1940(83 dias, começa pelo RABO não pela cabeça, 3 bocas de mouth no final=GASPING=reacção vem); WHITE WINE=18Nov1940-17Fev1941(91 dias de declínio, 3 GULPS obrigatórios); BIRD=18Fev-27Jun1941(129 dias: FEET→BODY→WING1→RED WINE→WING2; body fica ABAIXO do fim das pernas!); HEART=18-19Jun1941(halfway exacto!); NECK=27Jun-31Ago1941; CHAMPAGNE=1-12Set1941(pop); CHEESE=20Set-2Out1941; NUT=2-3Out1941(gap down); DISPOSAL/P&S=a partir de 17Out1941. REGRAS ELLIPSES: Tongue=meia elipse; Fish=6 polegadas; Bird+neck=9 polegadas; Disposal bear=5,9,12 ou 18 polegadas (proporcional ao bull precedente). STUNTED BIRD: se após as pernas o corpo não sobe = bird deformado, EVITAR (ex: cocoa e pepper 1941). PROPORÇÕES: fish grande→bird grande→neck longo. WHITE WINE TEM 3 GULPS: nunca comprar no 1° ou 2° gulp. FRACTAL: os ciclos maiores têm exactamente a mesma forma que os menores. PI = SEGREDO DE BAYER: 3.14159 é usado nos cálculos de Venus (584 dias) e outros ciclos para determinar turning points. STOCK MARKET NATAL: NYSE=17 Mai 1792. NYSE do CRYPTO=BTC Genesis Block 3 Jan 2009. REGRA SUPREMA: 'NEVER work with points but with FORMS of the picture.' BAYER (p.16-18 exactos): (1) 'Best period for BUYING = during the time the TONGUE is made.' (2) 'Best time for SELLING = AFTER CHAMPAGNE has been served and a nut or two swallowed [swallow = gap downwards].' (3) 'Use WEAKNESS to BUY and STRENGTH to SELL while direction is still the same.' (4) 'Use weakness in tongue formation — NOT when fish is already in the making.' (5) 'During resting period between fish and bird, you can buy again for the bird. When bird completed, buy for neck.' (6) 'When ALMONDS appear on top, short quickly until FULL DISCHARGE has occurred — know there are SEVERAL DISCHARGES IN SUCCESSION and hanging tongue to come thereafter.' (7) 'Complete cycle tongue-to-tongue = ONE to THREE YEARS.' (8) 'These patterns repeat all the time. Sometimes fish are longer/shorter; birds bigger/fatter/deformed.' (9) 'If you dare not buy at bottom but only get pep together and buy on TOP — it is your own fault.' APLICAÇÃO BTC 2026: A fase actual é DISPOSAL = múltiplos discharges (rallies que falham) antes da tongue final. Cada rally de bear market (ex: Mar-Apr 2026) = fish/bird pequeno → quando atinge champagne/almond (extensão máxima = exaustão de compradores) = short opportunity. Wyckoff + Bayer em conjunto: Wyckoff detecta o selling climax VOLUME na tongue → Bayer confirma a posição no padrão."},
   {w:"BAYER CYCLE",t:"b",bias:"bear",src:"George Bayer — The Egg of Columbus (1942)",
    e:"🍽️ Bayer Dinner Table: Bear Disposal Phase",
    c:"ATH Oct 2025 = end of neck/champagne phase. 2026 = bear disposal. Complete cycle: 1-3 years.",
@@ -123,7 +123,7 @@ VISAO:{l:"Annual Overview",e:[
   {w:"MOON vs SIGN — QE Era (Pesavento)",t:"n",bias:"neut",src:"Pesavento Cap.11 Fig.11.5 — 61 ciclos QE vs 730 ciclos 1950-present",
    e:"🌕 MOON vs SIGN QE: Lua em VIRGEM = PEAK | Lua em ESCORPIÃO = LOW ABSOLUTO (ciclo a cada ~2 semanas)",
    c:"QE era (2009, 61 ciclos): Absolute LOW = Lua em Escorpião. Absolute PEAK = Lua em Virgem. Long-term (1950, 730 ciclos): LOW = Gémeos/Cap; PEAK = Libra. O QE deslocou os extremos 1 signo para a esquerda. Datas 2026: Virgem PEAK = Jan7,Feb3,Mar3,Apr1(Lua Cheia!),Apr26,May23,Jun20,Jul17,Aug13,Sep10,Oct7,Nov3,Dec1,Dec28. Escorpião LOW = Jan11,Feb8,Mar7,Apr4,May1,May28,Jun24,Jul22,Aug18,Sep14,Oct12,Nov8,Dec5.",
-   why:"Pesavento (p.150-151, Cap.11): 'Since 2009 the market tends to peak a couple of days earlier in the sign of Virgo — the peak shifted to the left by one sign. The absolute low has now shifted to the end of the sign of Scorpio.' CONFIRMAÇÕES 2026: (1) Apr 1 = Lua Cheia em VIRGEM = PEAK QE era → confirmado: queda desde Apr 3. (2) Nov 8-9 = Moon em ESCORPIÃO + NM = LOW QE ABSOLUTO → confirma triple bottom Nov 9. (3) Oct 7 = Moon entra VIRGEM = PEAK local (Fall Crash Zone) → top local antes de queda para Oct 12. (4) Oct 12 = Moon em ESCORPIÃO = LOW QE (Fall Crash + Gann 360° cluster → máxima convergência bearish da zona crash). MECANISMO: O Moon vs Sign QE adiciona uma camada de timing de ~2 semanas dentro dos ciclos mensais maiores. Usar para afinação de entradas e saídas dentro de cada seasonal."},
+   why:"BEAR MARKET INVERSION (CRÍTICO — Pesavento p.20, 1,583 ciclos): Em bear markets a polaridade INVERTE: 'In bear markets, the polarity inverts: the New Moon marks a TOP and the Full Moon marks a BOTTOM. Confirmed during the 1970-1980 bear market and the 2005-2013 period (which included the 2008-2009 bear market).' IMPLICAÇÃO 2026 (bear market): NM = TOPO LOCAL do rally, não bottom. FM = FUNDO LOCAL. NM Nov 9 em contexto bearish = topo local do rally Oct 27 – Nov 9; bottom absoluto pode vir DEPOIS (durante FM ~23 Nov). JANELA ÓPTIMA NM: Comprar 3 dias ANTES da NM, vender 14 dias APÓS (1,583 ciclos, win rate 56%). Average bottom day = 1 dia ANTES da NM (SD = 1.7 dias). Em bull market: buy NM, sell FM. Em bear market: sell NM, cover FM. Pesavento (p.150-151, Cap.11): 'Since 2009 the market tends to peak a couple of days earlier in the sign of Virgo — the peak shifted to the left by one sign. The absolute low has now shifted to the end of the sign of Scorpio.' CONFIRMAÇÕES 2026: (1) Apr 1 = Lua Cheia em VIRGEM = PEAK QE era → confirmado: queda desde Apr 3. (2) Nov 8-9 = Moon em ESCORPIÃO + NM = LOW QE ABSOLUTO → confirma triple bottom Nov 9. (3) Oct 7 = Moon entra VIRGEM = PEAK local (Fall Crash Zone) → top local antes de queda para Oct 12. (4) Oct 12 = Moon em ESCORPIÃO = LOW QE (Fall Crash + Gann 360° cluster → máxima convergência bearish da zona crash). MECANISMO: O Moon vs Sign QE adiciona uma camada de timing de ~2 semanas dentro dos ciclos mensais maiores. Usar para afinação de entradas e saídas dentro de cada seasonal."},
   {w:"MOON por SIGNO — QE Era (Pesavento)",t:"p",bias:"neut",src:"Pesavento Cap.11 — Moon vs Sign QE cycle (61 ciclos desde 2009)",
    e:"🌕 MOON POR SIGNO — Era QE: Lua em ESCORPIÃO = absolute low (comprar). Lua em VIRGEM = absolute peak (vender). Diferente do ciclo de longo prazo (1950+).",
    c:"QE era (61 ciclos): Absolute LOW = Lua em Escorpião. Absolute PEAK = Lua em Virgem. Relativo alto: Touro/Gémeos, Peixes, Sagitário. Relativo baixo: Câncer, Capricórnio. Long-term (730 ciclos 1950+): peak=Libra, low=Gémeos. O QE deslocou os picos/vales um signo para a esquerda.",
@@ -172,6 +172,10 @@ VISAO:{l:"Annual Overview",e:[
    e:"📋 4 STEPS para alta confiança: Seasonal → Planetas Exteriores → Fase Lunar → Signo da Lua",
    c:"Quando os 4 passos apontam na mesma direcção = HIGH-CONFIDENCE SIGNAL. Nov 8-9 2026: Santa Claus + J-S trine + NM turning point + Escorpião low QE → todos apontam para bottom. Abr 1 2026: Sell in May + bearish backdrop + Lua Cheia + Virgem peak → todos apontam para peak.",
    why:"Pesavento Master Summary (p.38-39): 'THE COMPLETE FRAMEWORK IN FOUR STEPS: (1) Check the annual solar seasonal — what period of the year are we in? (2) Check major outer planet aspects — what is the backdrop? Jupiter expansion or Saturn contraction? (3) Check the current lunar phase — New Moon bottom, Full Moon peak? (4) Check the Moon's sign — Gemini/Capricorn = low, Libra/Taurus = high [long-term]; Scorpio = low, Virgo = high [QE era]. When all four align in the same direction, that is a high-confidence signal.' APLICAÇÕES 2026: ─ Nov 8-9: (1)Santa Claus bullish, (2)J-S trine exacto Sep 1 ainda activo, (3)NM turning point, (4)Moon em Escorpião = low QE → BULLISH DE ALTA CONFIANÇA → bottom do ciclo. ─ Apr 1: (1)April earnings rally mas QE-era bearish shift, (2)Triple conjunction Apr 20 bearish backdrop, (3)Lua Cheia → peak (invertida em bear = bottom?), (4)Moon em Virgem = peak QE → PEAK DE ALTA CONFIANÇA → top local confirmado. ─ Oct 7-12: (1)Fall Crash bearish, (2)Gann 360° máximo bearish, (3)Moon entra Virgem Oct 7 = peak QE, (4)Moon entra Escorpião Oct 12 = low QE dentro da crash zone → turning point de máxima concentração bearish."},
+  {w:"PESAVENTO — 4-Step Framework",t:"p",bias:"neut",src:"Pesavento & Smoleny — Financial Astrology Trading Guide Master Summary (2026) p.38-39",
+   e:"📐 PESAVENTO 4 PASSOS: o processo completo de decisão — quando TODOS alinham = HIGH-CONFIDENCE SIGNAL",
+   c:"Step 1: Seasonal solar anual. Step 2: Planetas exteriores (Jupiter vs Saturn). Step 3: Fase lunar (NM/FM). Step 4: Signo da Lua. Quando TODOS apontam na mesma direcção = sinal de alta confiança.",
+   why:"Pesavento Master Summary (p.38-39): 'THE COMPLETE FRAMEWORK IN FOUR STEPS: (1) Check the ANNUAL SOLAR SEASONAL — what period of the year? (2) Check MAJOR OUTER PLANET ASPECTS — what is the backdrop? Jupiter expansion or Saturn contraction? (3) Check the current LUNAR PHASE — New Moon bottom, Full Moon peak? (4) Check the MOON's SIGN — Gemini/Capricorn = low; Libra/Taurus = high [or QE era: Scorpio = low, Virgo = peak]. When all four align in the same direction, that is a HIGH-CONFIDENCE SIGNAL.' NET FORCE PRINCIPLE: '(1) Identify all major active transits. (2) Classify each as + or -. (3) Weight by planet size: outer planets heavier. (4) Calculate net sum: more positives = bullish bias. (5) Watch for inner planet triggers (Moon, Mercury, Venus, Mars) to fire off the dominant energy.' OUTER vs INNER: 'Outer planets fill the barn with hay; inner planets are the spark that ignites it.' APLICAÇÃO BTC HOJE (7 Abr 2026): Step 1=Ides of March (BEARISH até Mar 28, depois April Rally Mar28-Apr16, agora em Sell in May bearish), Step 2=Saturn domina em Áries (BEARISH), Step 3=Lua Minguante (declínio em curso após FM 1 Abr), Step 4=Lua em Escorpião ~Apr 4 (LOW QE era). BEAR MARKET INVERSION: Em bear markets 'New Moon marks a TOP and Full Moon marks a BOTTOM.' Confirmado 1970-1980 e 2008-2009. Logo em 2026 (bear): NM 17 Abr = possível topo local. FM = fundo local. SATURNO/URANO: 'Saturn/Uranus at 45°, 90°, or 180° = VERY NEGATIVE market reactions.' 2008 = Saturn opposite Uranus → pior crise desde 1929. SUPERCONJUNÇÃO: Longitude + Declinação alinhados = máxima potência. Eclipse Lunar Blood Moon Mar 3 = superconjunção máxima."},
   {w:"OPERATIONAL RULES",t:"g",bias:"neut",src:"Gann + Pesavento + Jensen + 20 Years Studying Gann",
    e:"📐 Integrated Playbook — 7 Frameworks",
    c:"Core trading rules from all seven frameworks.",
@@ -802,8 +806,8 @@ CONF:{l:"Confluences ⭐",e:[
 ]},
 };
 
-const MONTHS = ["MAPA","VISAO","JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC","CONF"];
-const ML = {MAPA:"📊 Mapa",VISAO:"🗺 Overview",JAN:"Jan",FEB:"Feb",MAR:"Mar",APR:"Apr",MAY:"May",JUN:"Jun",JUL:"Jul",AUG:"Aug",SEP:"Sep",OCT:"Oct",NOV:"Nov",DEC:"Dec",CONF:"⭐ Confluences"};
+const MONTHS = ["MAPA","TREND","VISAO","JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC","CONF"];
+const ML = {MAPA:"📊 Mapa",TREND:"📈 Local Trends",VISAO:"🗺 Overview",JAN:"Jan",FEB:"Feb",MAR:"Mar",APR:"Apr",MAY:"May",JUN:"Jun",JUL:"Jul",AUG:"Aug",SEP:"Sep",OCT:"Oct",NOV:"Nov",DEC:"Dec",CONF:"⭐ Confluences"};
 
 function MapaView() {
   const ATH = 126272;
@@ -1022,12 +1026,210 @@ function MapaView() {
   );
 }
 
+
+const LOCAL_TRENDS = [
+  {d:"Apr 08",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Marte"},
+  {d:"Apr 12",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Vénus"},
+  {d:"Apr 16",b:"turn",t:"n",l:"Lua Nova — turning point (bear=top?)"},
+  {d:"Apr 22",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Mercúrio + Marte"},
+  {d:"Apr 26",b:"peak",t:"n",l:"Moon entra Virgem (QE Peak)"},
+  {d:"Apr 26",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Vénus"},
+  {d:"Apr 30",b:"turn",t:"n",l:"Lua Cheia — turning point (bear=bottom?)"},
+  {d:"May 01",b:"low",t:"n",l:"Moon entra Escorpião (QE Low absoluto)"},
+  {d:"May 07",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Marte"},
+  {d:"May 09",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Mercúrio"},
+  {d:"May 12",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Vénus"},
+  {d:"May 15",b:"turn",t:"n",l:"Lua Nova — turning point (bear=top?)"},
+  {d:"May 21",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Marte"},
+  {d:"May 23",b:"peak",t:"n",l:"Moon entra Virgem (QE Peak)"},
+  {d:"May 24",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Mercúrio"},
+  {d:"May 26",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Vénus"},
+  {d:"May 28",b:"low",t:"n",l:"Moon entra Escorpião (QE Low absoluto)"},
+  {d:"May 30",b:"turn",t:"n",l:"Lua Cheia — turning point (bear=bottom?)"},
+  {d:"Jun 05",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Marte"},
+  {d:"Jun 10",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Mercúrio"},
+  {d:"Jun 11",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Vénus"},
+  {d:"Jun 14",b:"turn",t:"n",l:"Lua Nova — turning point (bear=top?)"},
+  {d:"Jun 20",b:"peak",t:"n",l:"Moon entra Virgem (QE Peak)"},
+  {d:"Jun 23",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Mercúrio"},
+  {d:"Jun 24",b:"low",t:"n",l:"Moon entra Escorpião (QE Low absoluto)"},
+  {d:"Jun 25",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Vénus"},
+  {d:"Jun 28",b:"turn",t:"n",l:"Lua Cheia — turning point (bear=bottom?)"},
+  {d:"Jul 04",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Marte"},
+  {d:"Jul 08",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Mercúrio"},
+  {d:"Jul 13",b:"turn",t:"n",l:"Lua Nova — turning point (bear=top?)"},
+  {d:"Jul 17",b:"peak",t:"n",l:"Moon entra Virgem (QE Peak)"},
+  {d:"Jul 20",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Mercúrio"},
+  {d:"Jul 22",b:"low",t:"n",l:"Moon entra Escorpião (QE Low absoluto)"},
+  {d:"Jul 25",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Vénus"},
+  {d:"Jul 28",b:"turn",t:"n",l:"Lua Cheia — turning point (bear=bottom?)"},
+  {d:"Aug 02",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Marte"},
+  {d:"Aug 04",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Mercúrio"},
+  {d:"Aug 09",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Vénus"},
+  {d:"Aug 11",b:"turn",t:"n",l:"Lua Nova — turning point (bear=top?)"},
+  {d:"Aug 13",b:"peak",t:"n",l:"Moon entra Virgem (QE Peak)"},
+  {d:"Aug 15",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Marte"},
+  {d:"Aug 18",b:"low",t:"n",l:"Moon entra Escorpião (QE Low absoluto)"},
+  {d:"Aug 19",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Mercúrio"},
+  {d:"Aug 24",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Vénus"},
+  {d:"Aug 26",b:"turn",t:"n",l:"Lua Cheia — turning point (bear=bottom?)"},
+  {d:"Sep 04",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Mercúrio"},
+  {d:"Sep 07",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Vénus"},
+  {d:"Sep 10",b:"peak",t:"n",l:"Moon entra Virgem (QE Peak)"},
+  {d:"Sep 10",b:"turn",t:"n",l:"Lua Nova — turning point (bear=top?)"},
+  {d:"Sep 13",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Marte"},
+  {d:"Sep 14",b:"low",t:"n",l:"Moon entra Escorpião (QE Low absoluto)"},
+  {d:"Sep 20",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Mercúrio"},
+  {d:"Sep 22",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Vénus"},
+  {d:"Sep 25",b:"turn",t:"n",l:"Lua Cheia — turning point (bear=bottom?)"},
+  {d:"Sep 28",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Marte"},
+  {d:"Oct 05",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Mercúrio + Vénus"},
+  {d:"Oct 07",b:"peak",t:"n",l:"Moon entra Virgem (QE Peak)"},
+  {d:"Oct 09",b:"turn",t:"n",l:"Lua Nova — turning point (bear=top?)"},
+  {d:"Oct 12",b:"low",t:"n",l:"Moon entra Escorpião (QE Low absoluto)"},
+  {d:"Oct 12",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Marte"},
+  {d:"Oct 19",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Vénus"},
+  {d:"Oct 20",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Mercúrio"},
+  {d:"Oct 25",b:"turn",t:"n",l:"Lua Cheia — turning point (bear=bottom?)"},
+  {d:"Nov 02",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Mercúrio"},
+  {d:"Nov 03",b:"peak",t:"n",l:"Moon entra Virgem (QE Peak)"},
+  {d:"Nov 08",b:"low",t:"n",l:"Moon entra Escorpião (QE Low absoluto)"},
+  {d:"Nov 08",b:"turn",t:"n",l:"Lua Nova — turning point (bear=top?)"},
+  {d:"Nov 09",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Marte"},
+  {d:"Nov 14",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Vénus"},
+  {d:"Nov 15",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Mercúrio"},
+  {d:"Nov 23",b:"turn",t:"n",l:"Lua Cheia — turning point (bear=bottom?)"},
+  {d:"Nov 24",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Marte"},
+  {d:"Nov 28",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Vénus"},
+  {d:"Dec 01",b:"peak",t:"n",l:"Moon entra Virgem (QE Peak)"},
+  {d:"Dec 05",b:"low",t:"n",l:"Moon entra Escorpião (QE Low absoluto)"},
+  {d:"Dec 07",b:"turn",t:"n",l:"Lua Nova — turning point (bear=top?)"},
+  {d:"Dec 13",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Vénus"},
+  {d:"Dec 16",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Mercúrio"},
+  {d:"Dec 22",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Marte"},
+  {d:"Dec 23",b:"turn",t:"n",l:"Lua Cheia — turning point (bear=bottom?)"},
+  {d:"Dec 27",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Vénus"},
+  {d:"Dec 28",b:"peak",t:"n",l:"Moon entra Virgem (QE Peak)"},
+  {d:"Dec 30",b:"turn",t:"g",l:"Jensen Key Day: Lua sq Mercúrio"},
+];
+
+function LocalTrendsView() {
+  const [tf, setTf] = useState("all");
+  const today = new Date();
+  const todayStr = today.toLocaleDateString("en-US",{month:"short",day:"2-digit"}).replace(",","");
+
+  const filtered = tf === "all" ? LOCAL_TRENDS : LOCAL_TRENDS.filter(e => e.b === tf);
+
+  const bCfg = {
+    peak: {icon:"🟢", label:"PEAK QE", color:"#50e878", bg:"rgba(80,232,120,.10)", border:"rgba(80,232,120,.35)"},
+    low:  {icon:"🔴", label:"LOW QE",  color:"#ff5060", bg:"rgba(255,80,96,.10)",  border:"rgba(255,80,96,.35)"},
+    turn: {icon:"⚪", label:"TURN",    color:"#a0b8d0", bg:"rgba(160,184,208,.08)", border:"rgba(160,184,208,.25)"},
+  };
+
+  // Group by month label
+  const months = {};
+  filtered.forEach(e => {
+    const mo = e.d.split(" ")[0];
+    if(!months[mo]) months[mo] = [];
+    months[mo].push(e);
+  });
+
+  const tBtns = [
+    {k:"all",  l:"Todos", c:"#c8b060"},
+    {k:"peak", l:"🟢 Peak", c:"#50e878"},
+    {k:"low",  l:"🔴 Low",  c:"#ff5060"},
+    {k:"turn", l:"⚪ Turn", c:"#a0b8d0"},
+  ];
+
+  return (
+    <div style={{position:"relative",zIndex:1,maxWidth:680,width:"100%",margin:"0 auto",padding:"0 12px 60px"}}>
+      {/* Header */}
+      <div style={{textAlign:"center",marginBottom:16}}>
+        <div style={{fontSize:22,letterSpacing:3,color:"#c8b060",fontWeight:"normal",marginBottom:4}}>Local Trends</div>
+        <div style={{fontSize:11,color:"#888",letterSpacing:1}}>Moon Sign QE + Lunar Phase + Jensen Key Days · Swing Trades 2026</div>
+        <div style={{fontSize:10,color:"#555",marginTop:3}}>Bear market activo — sinais invertidos: 🔴 Low=bottom real · 🟢 Peak=topo local · ⚪ Turn=virar</div>
+      </div>
+
+      {/* Filter buttons */}
+      <div style={{display:"flex",gap:6,justifyContent:"center",marginBottom:18,flexWrap:"wrap"}}>
+        {tBtns.map(b => (
+          <button key={b.k} onClick={()=>setTf(b.k)}
+            style={{padding:"5px 14px",background:tf===b.k?"rgba(200,176,96,.15)":"rgba(255,255,255,.03)",
+              border:`1px solid ${tf===b.k?b.c:"rgba(255,255,255,.08)"}`,borderRadius:4,
+              color:tf===b.k?b.c:"#555",fontSize:12,cursor:"pointer",fontFamily:"inherit",letterSpacing:.5}}>
+            {b.l}
+          </button>
+        ))}
+      </div>
+
+      {/* Legend */}
+      <div style={{display:"flex",gap:14,justifyContent:"center",marginBottom:18,fontSize:10,color:"#555",flexWrap:"wrap"}}>
+        <span>🟢 Moon Virgem = Peak QE</span>
+        <span>🔴 Moon Escorpião = Low QE</span>
+        <span>🌑🌕 Lua Nova/Cheia = Turning</span>
+        <span>📐 Jensen Key Day</span>
+      </div>
+
+      {/* Timeline by month */}
+      {Object.entries(months).map(([mo, evs]) => (
+        <div key={mo} style={{marginBottom:18}}>
+          <div style={{fontSize:11,letterSpacing:3,color:"#a89050",textTransform:"uppercase",
+            borderBottom:"1px solid rgba(200,176,96,.15)",paddingBottom:5,marginBottom:10}}>
+            ── {mo} ──────────────
+          </div>
+          <div style={{display:"flex",flexDirection:"column",gap:5}}>
+            {evs.map((ev,i) => {
+              const cfg = bCfg[ev.b] || bCfg.turn;
+              const isKey = ev.l.startsWith("Jensen");
+              const isToday = ev.d === todayStr;
+              return (
+                <div key={i} style={{
+                  display:"flex",alignItems:"center",gap:10,
+                  padding:"8px 12px",borderRadius:5,
+                  background:isToday?"rgba(200,176,96,.12)":cfg.bg,
+                  border:`1px solid ${isToday?"#c8b060":cfg.border}`,
+                  borderLeft:`3px solid ${cfg.color}`,
+                }}>
+                  <div style={{fontSize:11,color:"#888",minWidth:48,fontFamily:"sans-serif",flexShrink:0}}>
+                    {ev.d.split(" ")[1]}
+                    {isToday && <span style={{color:"#ffe080",fontSize:9,display:"block"}}>HOJE</span>}
+                  </div>
+                  <div style={{fontSize:13,minWidth:18,textAlign:"center",flexShrink:0}}>
+                    {ev.b==="peak"?"🟢":ev.b==="low"?"🔴":"⚪"}
+                  </div>
+                  <div style={{flex:1,minWidth:0}}>
+                    <div style={{fontSize:12,color:cfg.color,lineHeight:1.3}}>
+                      {isKey && <span style={{fontSize:10,color:"#7090a0",marginRight:4}}>📐</span>}
+                      {ev.l}
+                    </div>
+                    <div style={{fontSize:10,color:"#444",marginTop:2}}>
+                      {ev.b==="peak"?"Topo local — short opportunity em bear market":
+                       ev.b==="low"?"Bottom local — bounce play em bear market":
+                       "Turning point — aguardar confirmação de direcção"}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      ))}
+
+      {/* Footer note */}
+      <div style={{fontSize:10,color:"#333",textAlign:"center",marginTop:10,lineHeight:1.6,padding:"12px 0"}}>
+        Fontes: Pesavento Cap.11 (Moon vs Sign QE, 61 ciclos 2009-present) · Jensen (1978) Key Days<br/>
+        Em bear market: 🔴 = bottom real · 🟢 = short · ⚪ = aguardar confirmação
+      </div>
+    </div>
+  );
+}
+
 export default function App() {
   const [active, setActive] = useState("MAPA");
   const [filter, setFilter] = useState("all");
   const [expanded, setExpanded] = useState(null);
-  const month = D[active];
-  const isSpecial = active==="MAPA"||active==="VISAO"||active==="CONF";
+  const month = D[active] || {l:"Local Trends",e:[]};
+  const isSpecial = active==="MAPA"||active==="TREND"||active==="VISAO"||active==="CONF";
   const events = filter==="all"?month.e:month.e.filter(e=>e.t===filter);
   const isConfl = e => e.e.startsWith("⭐");
   const toggle = i => setExpanded(expanded===i?null:i);
@@ -1065,6 +1267,7 @@ export default function App() {
         {!isSpecial&&<span style={{fontSize:12,color:"#444",marginLeft:10}}>{events.length} events</span>}
       </div>}
       {active==="MAPA" && <MapaView/>}
+      {active==="TREND" && <LocalTrendsView/>}
       {active!=="MAPA" && <div style={{position:"relative",zIndex:1,maxWidth:720,width:"100%",margin:"0 auto",padding:"0 12px 60px",display:"flex",flexDirection:"column",gap:7}}>
         {events.length===0&&<p style={{textAlign:"center",color:"#333",padding:32}}>No events of this type.</p>}
         {events.map((ev,i)=>{
