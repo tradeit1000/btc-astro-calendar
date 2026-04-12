@@ -806,8 +806,8 @@ CONF:{l:"Confluences ⭐",e:[
 ]},
 };
 
-const MONTHS = ["MAPA","S144","TREND","VISAO","JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC","CONF"];
-const ML = {MAPA:"📊 Mapa",S144:"📐 S144 Live",TREND:"📈 Local Trends",VISAO:"🗺 Overview",JAN:"Jan",FEB:"Feb",MAR:"Mar",APR:"Apr",MAY:"May",JUN:"Jun",JUL:"Jul",AUG:"Aug",SEP:"Sep",OCT:"Oct",NOV:"Nov",DEC:"Dec",CONF:"⭐ Confluences"};
+const MONTHS = ["MAPA","WEEK","S144","TREND","VISAO","JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC","CONF"];
+const ML = {MAPA:"📊 Mapa",WEEK:"📅 Esta Semana",S144:"📐 S144 Live",TREND:"📈 Local Trends",VISAO:"🗺 Overview",JAN:"Jan",FEB:"Feb",MAR:"Mar",APR:"Apr",MAY:"May",JUN:"Jun",JUL:"Jul",AUG:"Aug",SEP:"Sep",OCT:"Oct",NOV:"Nov",DEC:"Dec",CONF:"⭐ Confluences"};
 
 function useBtcPrice() {
   const [price, setPrice] = useState(null);
@@ -1412,12 +1412,186 @@ function ChartS144View() {
   );
 }
 
+// ── WEEK VIEW DATA ──────────────────────────────────────────
+const WEEK_DATA = {
+  weekLabel: "Apr 13-19, 2026",
+  seasonal: "April Rally → Sell in May (termina Apr 16)",
+  btcRef: 71500,
+  s144: {
+    resist1: {n:114, price:73807, label:"114/144 — topo rejeitado"},
+    resist2: {n:108, price:76569, label:"108/144 = ¾"},
+    support1: {n:120, price:71046, label:"120/144 — suporte imediato"},
+    support2: {n:126, price:68285, label:"126/144 — suporte major"},
+  },
+  aspects: [
+    {d:"Apr 13",wd:"Seg",aspect:"Vénus ⚹ Júpiter",icon:"🟢",
+     bias:"neut",tag:"Fade",
+     note:"Aspecto mais bullish (99 ciclos Pesavento) — EXACTO hoje às 6h UTC. Mas o rally de $68K→$73.8K já foi esse movimento. Energia consumida. Gann: dia 45 do LOW (45° = ponto de turning). Lua Peixes → sem sinal QE.",
+     s144:"Resistência $73,807 já testada e rejeitada. Suporte $71,046."},
+    {d:"Apr 14",wd:"Ter",aspect:"Mercúrio ⚹ Úrano",icon:"🟢",
+     bias:"bull",tag:"Melhor bounce",
+     note:"Mercúrio+Úrano = notícia inesperada positiva. Lua Trine Júpiter (1.9°) simultâneo. Net Force +2 — o único dia com vantagem bullish líquida clara. Bounce real mas limitado: lower high vs topo de 11 Abr.",
+     s144:"Alvo do bounce: $72,000-73,000. Não $73,807."},
+    {d:"Apr 15",wd:"Qua",aspect:"Mercúrio ingress Áries",icon:"🟡",
+     bias:"pivot",tag:"Pivot Day",
+     note:"Mercúrio muda Peixes→Áries às ~16h UTC. Pesavento: mudança de signo de Mercúrio = factor de mercado poderoso. Manhã ainda com momentum. A partir das 15-16h UTC Lua também entra Áries → energia muda de direcção.",
+     s144:"Se bounce chegou $72-73K, short entry aqui com SL acima $73,807."},
+    {d:"Apr 16",wd:"Qui",aspect:"Marte ⚹ Plutão",icon:"🟡",
+     bias:"spike",tag:"Último spike?",
+     note:"Marte+Plutão = acção de força transformadora. Único aspecto com poder bullish Qui-Dom. Último dia do April Rally seasonal. Possível spike de intraday mas Marte já sob atracção de Saturno (2.3° de orb). Lower high.",
+     s144:"Spike pode testar $72,500-73,000. Manter SL acima $73,807."},
+    {d:"Apr 17",wd:"Sex",aspect:"Mercúrio ☌ Neptuno + 🌑 LN 8h30 UTC",icon:"🔴",
+     bias:"bear",tag:"TOPO — Reversão",
+     note:"LUA NOVA exacta 8h30 UTC em Áries 27°. Bear market inversion (Pesavento, 1970-80, 2008-09): LN em bear = TOPO DO CICLO LUNAR. Mercúrio+Neptuno exacto: narrativa confusa, notícias contraditórias. Topo e reversão.",
+     s144:"Short confirmado após LN. Alvo $68,285 (126/144)."},
+    {d:"Apr 18",wd:"Sáb",aspect:"Mercúrio ⚹ Plutão",icon:"🔴",
+     bias:"bear",tag:"Queda",
+     note:"Sextil Mercúrio/Plutão tecnicamente positivo mas neutralizado por Neptuno (orb 2.1°). Marte/Saturno orb 0.9° — quase exacto. Backdrop bearish domina totalmente. Queda contínua desde sexta.",
+     s144:"Possível teste $71,046→$68,285. Manter shorts."},
+    {d:"Apr 19",wd:"Dom",aspect:"Marte ☌ Saturno EXACTO",icon:"🔴🔴",
+     bias:"bear",tag:"MÁXIMO BEARISH",
+     note:"MARTE CONJUNÇÃO SATURNO exacto (0.3°). Acção completamente bloqueada por Saturno. Lua entra Gémeos 17h UTC = LOW ABSOLUTO (Pesavento 730 ciclos). Sol+Saturno+Neptuno tripla conj amanhã. Pior dia da semana.",
+     s144:"Alvo $68,285 ou abaixo. Tripla conj 20 Abr em seguida."},
+  ]
+};
+
+const biasConfig = {
+  bull:   {bg:"rgba(80,232,120,.08)",bc:"rgba(80,232,120,.4)",  color:"#50e878", label:"BULLISH"},
+  bear:   {bg:"rgba(255,60,60,.08)", bc:"rgba(255,60,60,.4)",   color:"#ff4060", label:"BEARISH"},
+  neut:   {bg:"rgba(160,184,208,.06)",bc:"rgba(160,184,208,.3)",color:"#a0b8d0", label:"NEUTRAL"},
+  pivot:  {bg:"rgba(255,200,50,.07)",bc:"rgba(255,200,50,.35)", color:"#ffc832", label:"PIVOT"},
+  spike:  {bg:"rgba(255,160,40,.07)",bc:"rgba(255,160,40,.3)",  color:"#ffa028", label:"SPIKE"},
+};
+
+function WeekView() {
+  const [sel, setSel] = useState(null);
+  const today = new Date();
+  const todayStr = today.toLocaleDateString("en-US",{month:"short",day:"2-digit"}).replace(",","");
+  const w = WEEK_DATA;
+
+  return (
+    <div style={{position:"relative",zIndex:1,maxWidth:720,width:"100%",margin:"0 auto",padding:"0 12px 60px"}}>
+
+      {/* Header */}
+      <div style={{textAlign:"center",marginBottom:18}}>
+        <div style={{fontSize:11,letterSpacing:3,color:"#a89050",textTransform:"uppercase",marginBottom:6}}>Semana Corrente</div>
+        <div style={{fontSize:24,color:"#c8b060",letterSpacing:2,fontWeight:"normal",marginBottom:4}}>{w.weekLabel}</div>
+        <div style={{fontSize:11,color:"#555",marginBottom:3}}>Seasonal: {w.seasonal}</div>
+        <div style={{fontSize:10,color:"#444"}}>Bear market activo · Inversão LN/LC · Hurst underlying −2</div>
+      </div>
+
+      {/* S144 Quick Reference */}
+      <div style={{display:"flex",gap:6,justifyContent:"center",marginBottom:18,flexWrap:"wrap"}}>
+        {[
+          {label:"↑ $73,807",sub:"114/144 resistência",color:"#ff6060"},
+          {label:"● $71,500",sub:"BTC actual",color:"#ffe080"},
+          {label:"↓ $71,046",sub:"120/144 suporte",color:"#50e878"},
+          {label:"↓↓ $68,285",sub:"126/144 major",color:"#ff4060"},
+        ].map((l,i)=>(
+          <div key={i} style={{background:"rgba(255,255,255,.03)",border:`1px solid ${l.color}33`,borderRadius:5,padding:"5px 10px",textAlign:"center"}}>
+            <div style={{fontSize:12,color:l.color,fontFamily:"sans-serif",fontWeight:"bold"}}>{l.label}</div>
+            <div style={{fontSize:9,color:"#555"}}>{l.sub}</div>
+          </div>
+        ))}
+      </div>
+
+      {/* Daily Aspects */}
+      <div style={{display:"flex",flexDirection:"column",gap:8}}>
+        {w.aspects.map((ev,i)=>{
+          const bc = biasConfig[ev.bias]||biasConfig.neut;
+          const isToday = ev.d===todayStr;
+          const isOpen = sel===i;
+          return (
+            <div key={i} onClick={()=>setSel(isOpen?null:i)}
+              style={{
+                background:isToday?"rgba(200,176,96,.08)":bc.bg,
+                border:`1px solid ${isToday?"#c8b060":isOpen?bc.bc:bc.bc+"88"}`,
+                borderLeft:`4px solid ${bc.color}`,
+                borderRadius:7,padding:"12px 14px",cursor:"pointer",
+                transition:"border-color .15s",userSelect:"none",
+              }}>
+              {/* Row 1: date + aspect + tag */}
+              <div style={{display:"flex",alignItems:"center",gap:10,marginBottom:6,flexWrap:"wrap"}}>
+                <div style={{minWidth:70,flexShrink:0}}>
+                  <span style={{fontSize:13,color:"#888",fontFamily:"sans-serif"}}>{ev.wd} </span>
+                  <span style={{fontSize:13,color:"#c8b060",fontFamily:"sans-serif"}}>{ev.d.split(" ")[1]}</span>
+                  {isToday&&<div style={{fontSize:9,color:"#ffe080"}}>HOJE</div>}
+                </div>
+                <div style={{flex:1}}>
+                  <span style={{fontSize:14,color:bc.color,fontWeight:"bold"}}>{ev.icon} {ev.aspect}</span>
+                </div>
+                <div style={{
+                  fontSize:11,color:bc.color,background:bc.bg,
+                  border:`1px solid ${bc.bc}`,borderRadius:3,padding:"1px 8px",flexShrink:0
+                }}>{ev.tag}</div>
+              </div>
+
+              {/* Row 2: note */}
+              <div style={{fontSize:12,color:"#7a7870",lineHeight:1.55,paddingLeft:80}}>
+                {ev.note}
+              </div>
+
+              {/* Expanded: S144 */}
+              {isOpen&&(
+                <div style={{marginTop:10,paddingTop:10,borderTop:"1px solid rgba(255,255,255,.06)",paddingLeft:80}}>
+                  <div style={{fontSize:10,color:"#a89050",letterSpacing:2,marginBottom:4,textTransform:"uppercase"}}>S144 · Acção</div>
+                  <div style={{fontSize:12,color:"#c0c8d0",lineHeight:1.6}}>{ev.s144}</div>
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+
+      {/* Net Force visual */}
+      <div style={{marginTop:20,background:"rgba(255,255,255,.02)",border:"1px solid rgba(255,255,255,.05)",borderRadius:6,padding:"14px"}}>
+        <div style={{fontSize:10,color:"#a89050",letterSpacing:2,marginBottom:10,textTransform:"uppercase"}}>Net Force — Semana</div>
+        <div style={{display:"flex",gap:4,alignItems:"flex-end",justifyContent:"space-around"}}>
+          {[
+            {d:"Seg",net:1,bias:"neut"},
+            {d:"Ter",net:2,bias:"bull"},
+            {d:"Qua",net:0,bias:"pivot"},
+            {d:"Qui",net:-2,bias:"spike"},
+            {d:"Sex",net:-2,bias:"bear"},
+            {d:"Sáb",net:-3,bias:"bear"},
+            {d:"Dom",net:-4,bias:"bear"},
+          ].map((day,i)=>{
+            const bc=biasConfig[day.bias]||biasConfig.neut;
+            const h=Math.abs(day.net)*18+8;
+            const isPos=day.net>0;
+            return(
+              <div key={i} style={{display:"flex",flexDirection:"column",alignItems:"center",gap:4}}>
+                <div style={{fontSize:10,color:bc.color,fontFamily:"sans-serif"}}>{day.net>0?"+":""}{day.net}</div>
+                <div style={{
+                  width:32,height:h,
+                  background:bc.color+"44",border:`1px solid ${bc.color}`,
+                  borderRadius:3,
+                }}/>
+                <div style={{fontSize:10,color:"#666"}}>{day.d}</div>
+              </div>
+            );
+          })}
+        </div>
+        <div style={{fontSize:10,color:"#333",marginTop:8,textAlign:"center"}}>
+          Net Force positivo = bullish backdrop · negativo = bearish backbone
+        </div>
+      </div>
+
+      {/* Footer note */}
+      <div style={{fontSize:10,color:"#2a2820",textAlign:"center",marginTop:14,lineHeight:1.7}}>
+        Fontes: Pesavento (4 Steps, bear inversion) · Hurst (underlying trend −2) · Gann S144 · Jensen Key Days<br/>
+        Topo confirmado: $73,807 (114/144) — 11 Abr · Próximo evento major: Marte☌Saturno 19 Abr
+      </div>
+    </div>
+  );
+}
+
 export default function App() {
   const [active, setActive] = useState("MAPA");
   const [filter, setFilter] = useState("all");
   const [expanded, setExpanded] = useState(null);
   const month = D[active] || {l:"Local Trends",e:[]};
-  const isSpecial = active==="MAPA"||active==="S144"||active==="TREND"||active==="VISAO"||active==="CONF";
+  const isSpecial = active==="MAPA"||active==="WEEK"||active==="S144"||active==="TREND"||active==="VISAO"||active==="CONF";
   const events = filter==="all"?month.e:month.e.filter(e=>e.t===filter);
   const isConfl = e => e.e.startsWith("⭐");
   const toggle = i => setExpanded(expanded===i?null:i);
@@ -1434,7 +1608,7 @@ export default function App() {
       <nav style={{position:"relative",zIndex:1,display:"flex",flexWrap:"wrap",justifyContent:"center",gap:4,padding:"8px 10px 3px"}}>
         {MONTHS.map(m=>{
           const isA=active===m,isV=m==="VISAO",isC=m==="CONF";
-          const hC=!isV&&!isC&&D[m]&&D[m].e&&D[m].e.some(e=>isConfl(e));
+          const hC=!isV&&!isC&&D[m]&&D[m].e&&D[m].e.some&&D[m].e.some(e=>isConfl(e));
           const bg=isA?(isV?"rgba(100,200,220,.18)":isC?"rgba(255,180,50,.18)":"rgba(255,200,50,.14)"):"rgba(255,255,255,.03)";
           const bd=isA?(isV?"#64c8dc":isC?"#ffb432":"#ffc832"):hC?"rgba(255,200,50,.3)":"rgba(255,255,255,.06)";
           const cl=isA?(isV?"#90e0f0":isC?"#ffb432":"#ffe080"):isV?"#64c8dc88":isC?"#ffb43255":"#555";
@@ -1450,14 +1624,15 @@ export default function App() {
           {Object.entries(TC).map(([k,v])=><button key={k} onClick={()=>setFilter(k)} style={ps(filter===k,v.d)}>{v.l}</button>)}
         </div>
       )}
-      {active!=="MAPA"&&active!=="S144"&&active!=="TREND"&&<div style={{position:"relative",zIndex:1,textAlign:"center",marginBottom:10}}>
+      {active!=="MAPA"&&active!=="WEEK"&&active!=="S144"&&active!=="TREND"&&<div style={{position:"relative",zIndex:1,textAlign:"center",marginBottom:10}}>
         <span style={{fontSize:active==="VISAO"?22:28,letterSpacing:3,color:active==="CONF"?"#ffb432":active==="VISAO"?"#90e0f0":"#c8b060",fontWeight:"normal"}}>{month.l}</span>
         {!isSpecial&&<span style={{fontSize:12,color:"#444",marginLeft:10}}>{events.length} events</span>}
       </div>}
       {active==="MAPA" && <MapaView/>}
+      {active==="WEEK" && <WeekView/>}
       {active==="S144" && <ChartS144View/>}
       {active==="TREND" && <LocalTrendsView/>}
-      {active!=="MAPA"&&active!=="S144"&&active!=="TREND" && <div style={{position:"relative",zIndex:1,maxWidth:720,width:"100%",margin:"0 auto",padding:"0 12px 60px",display:"flex",flexDirection:"column",gap:7}}>
+      {active!=="MAPA"&&active!=="WEEK"&&active!=="S144"&&active!=="TREND" && <div style={{position:"relative",zIndex:1,maxWidth:720,width:"100%",margin:"0 auto",padding:"0 12px 60px",display:"flex",flexDirection:"column",gap:7}}>
         {events.length===0&&<p style={{textAlign:"center",color:"#333",padding:32}}>No events of this type.</p>}
         {events.map((ev,i)=>{
           const cfg=TC[ev.t]||TC.n;
