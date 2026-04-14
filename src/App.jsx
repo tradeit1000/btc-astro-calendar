@@ -1415,7 +1415,7 @@ function ChartS144View() {
 // ── WEEK VIEW DATA ──────────────────────────────────────────
 const WEEK_DATA = {
   weekLabel: "Apr 13-19, 2026",
-  seasonal: "April Rally → Sell in May (termina Apr 16)",
+  seasonal: "April Rally → termina Apr 16 · Sell in May inicia Apr 17",
   btcRef: 71500,
   s144: {
     resist1: {n:114, price:73807, label:"114/144 — topo rejeitado"},
@@ -1424,34 +1424,34 @@ const WEEK_DATA = {
     support2: {n:126, price:68285, label:"126/144 — suporte major"},
   },
   aspects: [
-    {d:"Apr 13",wd:"Seg",aspect:"Vénus ⚹ Júpiter",icon:"🟢",
-     bias:"neut",tag:"Fade",
-     note:"Aspecto mais bullish (99 ciclos Pesavento) — EXACTO hoje às 6h UTC. Mas o rally de $68K→$73.8K já foi esse movimento. Energia consumida. Gann: dia 45 do LOW (45° = ponto de turning). Lua Peixes → sem sinal QE.",
-     s144:"Resistência $73,807 já testada e rejeitada. Suporte $71,046."},
+    {d:"Apr 13",wd:"Seg",aspect:"Marte ☌ Neptuno 05:29 UTC",icon:"🔴",
+     bias:"neut",tag:"Exacto 5h29 UTC",
+     note:"Marte☌Neptuno exacto em Áries 2°39'. O rally de $68K→$73.8K foi este aspecto a trabalhar. Exacto esta manhã = pico da energia ilusória. A partir daqui separa-se. Gann: dia 45 do LOW (turning point). Vénus☌Júpiter também exacto hoje (6h UTC, 99 ciclos Pesavento) — mas já consumido pelo move anterior.",
+     s144:"Resistência $73,807 testada e rejeitada. Suporte $71,046. Zona de fade do bounce."},
     {d:"Apr 14",wd:"Ter",aspect:"Mercúrio ⚹ Úrano",icon:"🟢",
      bias:"bull",tag:"Melhor bounce",
-     note:"Mercúrio+Úrano = notícia inesperada positiva. Lua Trine Júpiter (1.9°) simultâneo. Net Force +2 — o único dia com vantagem bullish líquida clara. Bounce real mas limitado: lower high vs topo de 11 Abr.",
-     s144:"Alvo do bounce: $72,000-73,000. Não $73,807."},
-    {d:"Apr 15",wd:"Qua",aspect:"Mercúrio ingress Áries",icon:"🟡",
-     bias:"pivot",tag:"Pivot Day",
-     note:"Mercúrio muda Peixes→Áries às ~16h UTC. Pesavento: mudança de signo de Mercúrio = factor de mercado poderoso. Manhã ainda com momentum. A partir das 15-16h UTC Lua também entra Áries → energia muda de direcção.",
-     s144:"Se bounce chegou $72-73K, short entry aqui com SL acima $73,807."},
-    {d:"Apr 16",wd:"Qui",aspect:"Marte ⚹ Plutão",icon:"🟡",
-     bias:"spike",tag:"Último spike?",
-     note:"Marte+Plutão = acção de força transformadora. Único aspecto com poder bullish Qui-Dom. Último dia do April Rally seasonal. Possível spike de intraday mas Marte já sob atracção de Saturno (2.3° de orb). Lower high.",
-     s144:"Spike pode testar $72,500-73,000. Manter SL acima $73,807."},
-    {d:"Apr 17",wd:"Sex",aspect:"Mercúrio ☌ Neptuno + 🌑 LN 8h30 UTC",icon:"🔴",
-     bias:"bear",tag:"TOPO — Reversão",
-     note:"LUA NOVA exacta 8h30 UTC em Áries 27°. Bear market inversion (Pesavento, 1970-80, 2008-09): LN em bear = TOPO DO CICLO LUNAR. Mercúrio+Neptuno exacto: narrativa confusa, notícias contraditórias. Topo e reversão.",
-     s144:"Short confirmado após LN. Alvo $68,285 (126/144)."},
+     note:"Mercúrio+Úrano = notícia inesperada positiva. Lua Trine Júpiter simultâneo. Net Force +2 — único dia com vantagem bullish líquida. Mercúrio ainda em Peixes (confusão mas com abertura). Bounce real mas lower high vs $73,807.",
+     s144:"Alvo bounce: $72,000-73,000. SL curto acima $73,807."},
+    {d:"Apr 15",wd:"Qua",aspect:"Mercúrio ingress Áries 03:22 UTC",icon:"🟡",
+     bias:"pivot",tag:"Pivot — Sessão Asiática",
+     note:"CORRECÇÃO: Mercúrio entra Áries às 3:22 UTC — SESSÃO ASIÁTICA. Europa acorda já com Mercúrio em Áries. A narrativa muda de indecisa (Peixes) para agressiva (Áries) enquanto Lisboa dorme. Marte, Saturno e Neptuno estão todos em Áries à espera. Mercúrio corre directamente para o campo bearish.",
+     s144:"Se bounce chegou $72-73K durante Ter, entry short aqui ao acordar."},
+    {d:"Apr 16",wd:"Qui",aspect:"Marte ⚹ Plutão + Sol ☌ Quíron 15:10 UTC",icon:"🟡",
+     bias:"spike",tag:"Último spike + Exposição",
+     note:"Marte+Plutão (sextil) = acção transformadora — possível spike bullish. Último dia do April Rally seasonal. MAS Sol☌Quíron às 15:10 UTC (tarde europeia) expõe vulnerabilidades. Quíron = ferida, trauma, fraqueza estrutural. Sol ilumina o que estava escondido. Manhã bullish → tarde revela o tecto.",
+     s144:"Spike manhã pode testar $72,500. Sol☌Quíron 15h = viragem. Short após."},
+    {d:"Apr 17",wd:"Sex",aspect:"Merc☌Nept 02:01 · LN 11:51 UTC",icon:"🔴",
+     bias:"bear",tag:"TOPO — Meio-dia Londres",
+     note:"CORRECÇÃO: LN exacta às 11:51 UTC = MEIO-DIA DE LONDRES. Liquidez máxima europeia. Bear market inversion (Pesavento): LN = TOPO. Mercúrio☌Neptuno às 2:01 UTC (Ásia thin) cria spike de madrugada — possível último higher open. Topo efectivo: 11:30-12:30 UTC. Reversão sessão americana.",
+     s144:"Short entry 11:30-12:30 UTC. Alvo $68,285 (126/144)."},
     {d:"Apr 18",wd:"Sáb",aspect:"Mercúrio ⚹ Plutão",icon:"🔴",
-     bias:"bear",tag:"Queda",
-     note:"Sextil Mercúrio/Plutão tecnicamente positivo mas neutralizado por Neptuno (orb 2.1°). Marte/Saturno orb 0.9° — quase exacto. Backdrop bearish domina totalmente. Queda contínua desde sexta.",
-     s144:"Possível teste $71,046→$68,285. Manter shorts."},
-    {d:"Apr 19",wd:"Dom",aspect:"Marte ☌ Saturno EXACTO",icon:"🔴🔴",
-     bias:"bear",tag:"MÁXIMO BEARISH",
-     note:"MARTE CONJUNÇÃO SATURNO exacto (0.3°). Acção completamente bloqueada por Saturno. Lua entra Gémeos 17h UTC = LOW ABSOLUTO (Pesavento 730 ciclos). Sol+Saturno+Neptuno tripla conj amanhã. Pior dia da semana.",
-     s144:"Alvo $68,285 ou abaixo. Tripla conj 20 Abr em seguida."},
+     bias:"bear",tag:"Queda contínua",
+     note:"Merc+Plutão sextil tecnicamente positivo mas neutralizado por Neptuno (ainda 2.1° de orb). Marte+Saturno a 0.9° — quase exacto. Cripto não fecha ao fim de semana. Queda contínua desde sexta tarde.",
+     s144:"Teste $71,046 → $68,285. Manter shorts."},
+    {d:"Apr 19",wd:"Dom",aspect:"Marte ☌ Saturno 22:43 UTC",icon:"🔴🔴",
+     bias:"bear",tag:"Abertura Asiática Segunda",
+     note:"CORRECÇÃO: Marte☌Saturno exacto às 22:43 UTC de domingo = ABERTURA ASIÁTICA DE SEGUNDA-FEIRA. O impacto principal é Segunda Apr 20. Mas preço já em queda desde Sexta — domingo é aceleração. Lua entra Gémeos 17h UTC (LOW absoluto Pesavento 730 ciclos). Apr 20 tem ainda Merc☌Saturn 11:21 + Merc☌Marte 21:44.",
+     s144:"Alvo $68,285 ou abaixo. Apr 20 tem tripla conjunção = máximo bearish."},
   ]
 };
 
@@ -1548,11 +1548,11 @@ function WeekView() {
         <div style={{fontSize:10,color:"#a89050",letterSpacing:2,marginBottom:10,textTransform:"uppercase"}}>Net Force — Semana</div>
         <div style={{display:"flex",gap:4,alignItems:"flex-end",justifyContent:"space-around"}}>
           {[
-            {d:"Seg",net:1,bias:"neut"},
+            {d:"Seg",net:0,bias:"neut"},
             {d:"Ter",net:2,bias:"bull"},
             {d:"Qua",net:0,bias:"pivot"},
-            {d:"Qui",net:-2,bias:"spike"},
-            {d:"Sex",net:-2,bias:"bear"},
+            {d:"Qui",net:-1,bias:"spike"},
+            {d:"Sex",net:-3,bias:"bear"},
             {d:"Sáb",net:-3,bias:"bear"},
             {d:"Dom",net:-4,bias:"bear"},
           ].map((day,i)=>{
@@ -1580,7 +1580,7 @@ function WeekView() {
       {/* Footer note */}
       <div style={{fontSize:10,color:"#2a2820",textAlign:"center",marginTop:14,lineHeight:1.7}}>
         Fontes: Pesavento (4 Steps, bear inversion) · Hurst (underlying trend −2) · Gann S144 · Jensen Key Days<br/>
-        Topo confirmado: $73,807 (114/144) — 11 Abr · Próximo evento major: Marte☌Saturno 19 Abr
+        Topo: $73,807 (114/144) — 11 Abr · LN 17 Abr 11:51 UTC (meio-dia Lisboa) · Marte☌Sat 19 Abr 22:43 UTC
       </div>
     </div>
   );
