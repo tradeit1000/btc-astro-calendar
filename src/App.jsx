@@ -360,6 +360,18 @@ APR:{l:"April",e:[
    e:"♀ Venus CONJUNCT Uranus (0.095°) — Near-Exact Sudden Value Disruption",
    c:"Venus meets Uranus at near-exact 0.095° orb. Sudden unexpected shift in financial values.",
    why:"0.095° = essentially exact. Venus (money/value) + Uranus (sudden change) = unexpected financial development. Currency moves, sudden asset revaluations, or disruptive events. Within 'Sell in May' — this unexpected value disruption likely serves the bearish trend."},
+  {w:"Apr 19–20",t:"g",bias:"warn",src:"Mundane Astrology + JPL + Book of Han (111 CE)",
+   e:"⚠️ TAURUS INGRESS MALEFIC BOTTLENECK — Tripla Conjunção 7° Áries + Sol ingress Touro",
+   c:"Stellium em 7° Áries: Mars 7°57' + Saturn 7°52' + Mercury 7°17'. Sol entra Touro 1:39 UTC de Apr 20. Marte☌Saturno 22:43 UTC de Apr 19. O 'malefic container' define o início de Touro 2026.",
+   why:"Mundane astrology: Mars+Saturn = 'collision of inexorable force with immovable resistance — buildup of kinetic energy that demands release.' Book of Han (111 CE): 'Mercury conjunct Saturn: stagnation, depression, defeat of an army.' Precedentes históricos do Taurus Ingress: SF earthquake Apr 18 1906 (24h após Vesuvius eruption Apr 17 1906), Nepal M7.8 Apr 25 2015. Para o BTC: máximo de pressão bearish do ano. Marte☌Saturno exacto 22:43 UTC Apr 19 = abertura asiática segunda. Lua Gémeos 17h UTC Apr 19 = LOW absoluto 730 ciclos Pesavento."},
+  {w:"Apr 25",t:"m",bias:"warn",src:"JPL geocentric",
+   e:"☀️ Sol SQUARE Plutão (5°28') 13:11 UTC — Deep Structural Crisis",
+   c:"Sol Touro em square exacto com Plutão Aquário. Mundane astrology: Sol-Plutão squares mark deep tectonic or geopolitical structural shifts.",
+   why:"Sol (eventos visíveis) em square com Plutão (destruição/transformação profunda) = o mercado confronta a sua fraqueza estrutural. Para o BTC: crise de avaliação — o que é que o BTC realmente vale? Potencial segundo low após bottleneck Apr 20, ou confirmação da queda. Zona crítica: $60K-$65K."},
+  {w:"Apr 26",t:"g",bias:"bull",src:"Jensen (1978) Ch.5 — 84-year Uranus cycle",
+   e:"⚡ ÚRANO INGRESS GÉMEOS 21:52 UTC ⭐⭐⭐ — Turning Point Estrutural (7 Anos)",
+   c:"Úrano termina 7 anos em Touro (2018-2026) e entra Gémeos. Para o BTC: fim da narrativa 'ouro digital', início da era 'rede global'. Turning point estrutural de longo prazo.",
+   why:"Jensen (Ch.5): 'The revolution of Uranus is 84 years. When at critical degrees its effects are sudden and radical changes.' Úrano em Touro (2018-2026) = BTC como reserva de valor alternativa ao ouro. Úrano em Gémeos (2026-2033) = BTC como infra-estrutura de comunicação e rede de valor global. Historicamente: Úrano mudando de signo marca reversões de tendência de múltiplos anos. Padrão: queda/capitulação imediatamente antes do ingresso → explosão bullish depois. Curto prazo: spike de volatilidade. Estrutural: bullish secular para cripto 2026-2033. Nota: Úrano entrou brevemente em Gémeos Jul-Nov 2025 (retrógrado), entrada PERMANENTE = 26 Abr 2026."},
   {w:"Apr 27",t:"m",bias:"warn",src:"Jensen (1978) + JPL geocentric",
    e:"☿ Mercury SQUARE Jupiter (0.370°) — Narrative Overextension",
    c:"Mercury squares Jupiter. Communication becomes overoptimistic, setting up for disappointment.",
@@ -367,10 +379,10 @@ APR:{l:"April",e:[
 ]},
 
 MAY:{l:"May",e:[
-  {w:"Apr 29",t:"g",bias:"bull",src:"Jensen (1978) Ch.5 — 84-year Uranus cycle + JPL ephem",
-   e:"♅ ÚRANO ENTRA EM GÉMEOS ⭐⭐⭐ — Ciclo de 84 Anos (Permanente, 2026-2033)",
+  {w:"Apr 26",t:"g",bias:"bull",src:"Jensen (1978) Ch.5 — 84-year Uranus cycle + JPL ephem",
+   e:"♅ ÚRANO ENTRA EM GÉMEOS 21:52 UTC ⭐⭐⭐ — Ciclo de 84 Anos (Permanente, 2026-2033)",
    c:"Úrano deixa Touro (2018-2026, 8 anos) e entra em Gémeos permanentemente. Evento de 7+ anos. Gémeos = tecnologia, comunicação, redes digitais, crypto. Úrano = disrupção, inovação repentina.",
-   why:"Jensen (Ch.5): 'The revolution of Uranus is 84 years. When at critical degrees of the zodiac, its effects are sudden and radical changes, chaos, and action engendered by underlying progressiveness... Its general effects generate humanitarian and altruistic endeavors on the positive side.' Jensen identificou Úrano ao cruzar 8°-9° de Gémeos como o 'unique national hinge point' americano — cada vez que Úrano passou por estes graus (1523, 1607, 1691, 1775, 1859, 1943) coincidiu com uma transformação épica. Úrano entra em Gémeos 29 Abr 2026 — atingirá 8°-9° Gémeos ~2028-2029. Para o BTC: Úrano (planeta de Aquário + tecnologia) em Gémeos (informação + redes + Mercury = comunicação) = era de ouro para activos digitais. Fim de Úrano em Touro (2018-2026) = fim do ciclo de BTC como 'ouro digital' alternativo. Início de Úrano em Gémeos = BTC como infra-estrutura de comunicação/valor global. Curto prazo (Abr 2026): ingresso em novo signo = volatilidade de transição. Estrutural (2026-2033): bullish secular para BTC/crypto. Nota: Úrano entrou brevemente em Gémeos em Jul-Nov 2025 (retrogradu de volta), mas a entrada PERMANENTE é 29 Abr 2026."},
+   why:"Jensen (Ch.5): 'The revolution of Uranus is 84 years. When at critical degrees of the zodiac, its effects are sudden and radical changes, chaos, and action engendered by underlying progressiveness... Its general effects generate humanitarian and altruistic endeavors on the positive side.' Jensen identificou Úrano ao cruzar 8°-9° de Gémeos como o 'unique national hinge point' americano — cada vez que Úrano passou por estes graus (1523, 1607, 1691, 1775, 1859, 1943) coincidiu com uma transformação épica. Úrano entra em Gémeos 26 Abr 2026 (21:52 UTC) — atingirá 8°-9° Gémeos ~2028-2029. Para o BTC: Úrano (planeta de Aquário + tecnologia) em Gémeos (informação + redes + Mercury = comunicação) = era de ouro para activos digitais. Fim de Úrano em Touro (2018-2026) = fim do ciclo de BTC como 'ouro digital' alternativo. Início de Úrano em Gémeos = BTC como infra-estrutura de comunicação/valor global. Curto prazo (Abr 2026): ingresso em novo signo = volatilidade de transição. Estrutural (2026-2033): bullish secular para BTC/crypto. Nota: Úrano entrou brevemente em Gémeos em Jul-Nov 2025 (retrogradu de volta), mas a entrada PERMANENTE é 26 Abr 2026 às 21:52 UTC."},
   {w:"May 01",t:"n",bias:"turn",src:"Pesavento (2015) — 730 cycles + 61 QE-era cycles",
    e:"Full Moon Flower Moon 🌕 Moon in SCORPIO — QE-era ABSOLUTE LOW ⭐⭐⭐ — CONTRADICTORY SIGNAL",
    c:"Full Moon = peak signal (standard). Moon in Scorpio = QE-era ABSOLUTE LOW (61 cycles). Contradiction: peak-signal phase meets low-sign. In 'Sell in May' bearish context, Full Moon polarity INVERTS = bottom. Combined with Scorpio = low: DOUBLE BOTTOM signal.",
@@ -824,7 +836,7 @@ function useBtcPrice() {
 function MapaView() {
   const livePrice = useBtcPrice();
   const ATH = 126272;
-  const CURRENT = livePrice || 71560;
+  const CURRENT = livePrice || 83500;
 
   const s9 = [
     {p:126272,label:"ATH",c:"#ff6060",note:"6 Out 2025"},
@@ -1042,12 +1054,18 @@ function MapaView() {
 
 const LOCAL_TRENDS = [
   {d:"Apr 08",b:"key",l:"📐 Key Day: Lua sq Marte",dir:"🟢 WATCH LONG",prob:"BAIXA",note:"Key Day Marte + Apr Rally bullish → favorecer long se já em alta",seas:"Apr Rally"},
-  {d:"Apr 12",b:"key",l:"📐 Key Day: Lua sq Vénus",dir:"🟢 WATCH LONG",prob:"BAIXA",note:"Key Day Vénus + Apr Rally bullish → favorecer long se já em alta",seas:"Apr Rally"},
-  {d:"Apr 16",b:"lnova",l:"🌑 Lua Nova",dir:"🟢 LONG",prob:"MÉDIA",note:"Lua Nova + Apr Rally bullish → bottom clássico",seas:"Apr Rally"},
+  {d:"Apr 11",b:"conf",l:"⭐ p1 CONFIRMADO — $73,807 (114/144)",dir:"🔴 SHORT",prob:"ALTA",note:"BTC fez topo exacto em $73,807 = 114/144 do Square of 144. Bearish doji. p1 do padrão Bayer disposal. Hurst: peak cedo (underlying trend −2). Short entry.",seas:"Sell in May"},
+  {d:"Apr 13",b:"key",l:"Marte ☌ Neptuno EXACTO 05:29 UTC",dir:"🔴 SHORT",prob:"MÉDIA",note:"Marte☌Neptuno exacto = pico da energia ilusória que alimentou o rally. Vénus☌Júpiter também exacto. Gann dia 45 do LOW. Fade do bounce. Short activo.",seas:"Sell in May"},
+  {d:"Apr 14",b:"conf",l:"⭐ p2 CONFIRMADO — $76,127 (doji, falhou 108/144)",dir:"🔴 SHORT",prob:"ALTA",note:"BTC topo $76,127 = bearish doji a $442 do nível 108/144 ($76,569). Bear market tax: aspectos bullish (Vénus☌Júpiter + Merc⚹Úrano) produziram movimento menor que o esperado. p2 confirmado. Bayer: último 'p.' antes da grande 's.'.",seas:"Sell in May"},
+  {d:"Apr 15",b:"key",l:"Mercúrio ingress Áries 03:22 UTC",dir:"🔴 SHORT",prob:"MÉDIA",note:"Pivot: Mercúrio entra Áries na sessão asiática. Europa acorda já com nova narrativa. 6♦️ Card of Financial Responsibility: ajustamento kármico. Short entry ao acordar Europa.",seas:"Sell in May"},
+  {d:"Apr 17",b:"lnova",l:"🌑 LN 11:51 UTC em Áries 27° — TOPO CICLO",dir:"🔴 SHORT",prob:"ALTA",note:"LUA NOVA exacta 11:51 UTC = meio-dia Lisboa. Bear market inversion (Pesavento 1970-80, 2008-09): LN = TOPO. Merc☌Nept 2:01 UTC cria spike Ásia. Short entry 11:30-12:30 UTC. Alvo $68,285.",seas:"Sell in May"},
+  {d:"Apr 19",b:"conf",l:"⚠️ MALEFIC BOTTLENECK — Marte☌Saturno 22:43 UTC",dir:"🔴 SHORT",prob:"ALTA",note:"Tripla conj 7° Áries: Mars 7°57' + Saturn 7°52' + Mercury 7°17'. 'Collision of inexorable force with immovable resistance.' Lua Gémeos 17h UTC = LOW absoluto (730 ciclos Pesavento). Abertura asiática segunda. Volatilidade extrema.",seas:"Sell in May"},
+  {d:"Apr 20",b:"conf",l:"⭐ TRIPLO — Merc☌Sat 11:21 + Merc☌Marte 21:44 + Sol ingress Touro",dir:"🔴 SHORT",prob:"ALTA",note:"Três eventos: Sol→Touro 1:39 UTC, Merc☌Sat 11:21 UTC (notícias bloqueadas), Merc☌Marte 21:44 UTC (volatilidade máxima). Máximo bearish do ano — Book of Han (111 CE): 'defeat of an army.' Alvo $60,001 (144/144).",seas:"Sell in May"},
   {d:"Apr 22",b:"key",l:"📐 Key Day: Lua sq Merc+Marte",dir:"🔴 WATCH SHORT",prob:"BAIXA",note:"Key Day duplo + Sell in May bearish → pico volatilidade, favorecer short",seas:"Sell in May"},
-  {d:"Apr 26",b:"peak",l:"🟢 Moon Virgem = Peak QE",dir:"🔴 SHORT",prob:"MÉDIA",note:"Peak QE + Sell in May bearish → TOPO LOCAL → short oportunidade",seas:"Sell in May"},
-  {d:"Apr 26",b:"key",l:"📐 Key Day: Lua sq Vénus",dir:"🔴 WATCH SHORT",prob:"BAIXA",note:"Key Day Vénus + Sell in May → confirma pressão baixista",seas:"Sell in May"},
-  {d:"Apr 30",b:"lcheia",l:"🌕 Lua Cheia",dir:"🟢 BOUNCE",prob:"MÉDIA",note:"Lua Cheia + Sell in May + inversão bear → FUNDO LOCAL → bounce técnico",seas:"Sell in May"},
+  {d:"Apr 24",b:"key",l:"♀ Vénus ☌ Úrano (0.095°) — Near-Exact",dir:"🔴 WATCH SHORT",prob:"BAIXA",note:"Vénus☌Úrano quasi-exacto = disrupção inesperada de valor financeiro. Dentro Sell in May → disrupção serve trend bearish. Reacção agressiva possível.",seas:"Sell in May"},
+  {d:"Apr 25",b:"conf",l:"⭐ Sol □ Plutão 13:11 UTC (5°28') — Crise estrutural",dir:"🔴 SHORT",prob:"ALTA",note:"Sol Touro square Plutão Aquário = deep structural shift. Crise de avaliação — o mercado questiona o que os activos valem. Segundo evento de stress após bottleneck Apr 20. Potencial segundo low ou aceleração da queda.",seas:"Sell in May"},
+  {d:"Apr 26",b:"conf",l:"⚡ ÚRANO INGRESS GÉMEOS 21:52 UTC — TURNING POINT",dir:"🟡 WATCH",prob:"ALTA",note:"EVENTO HISTÓRICO: Úrano termina 7 anos em Touro e entra Gémeos. BTC: narrativa muda de 'ouro digital' para 'rede de comunicação global'. Historicamente Úrano changing signs = reversão de tendência estrutural. Potencial low de capitulação seguido de reversão explosiva.",seas:"Sell in May"},
+  {d:"Apr 30",b:"lcheia",l:"🌕 Lua Cheia — bear inversion: FUNDO LOCAL",dir:"🟢 BOUNCE",prob:"MÉDIA",note:"Lua Cheia + Sell in May + inversão bear → FUNDO LOCAL → bounce técnico",seas:"Sell in May"},
   {d:"May 01",b:"low",l:"🔴 Moon Escorpião = Low QE",dir:"🟡 BOUNCE",prob:"MÉDIA",note:"Low QE absoluto + Sell in May → bounce possível mas trend negativo",seas:"Sell in May"},
   {d:"May 07",b:"key",l:"📐 Key Day: Lua sq Marte",dir:"🔴 WATCH SHORT",prob:"BAIXA",note:"Key Day + Sell in May → confirma pressão baixista",seas:"Sell in May"},
   {d:"May 09",b:"key",l:"📐 Key Day: Lua sq Mercúrio",dir:"🔴 WATCH SHORT",prob:"BAIXA",note:"Key Day + Sell in May bearish",seas:"Sell in May"},
@@ -1126,7 +1144,7 @@ const LOCAL_TRENDS = [
   {d:"Dec 30",b:"key",l:"📐 Key Day: Lua sq Mercúrio",dir:"🟢 WATCH LONG",prob:"BAIXA",note:"Key Day + Jan Effect bullish → fim do ano",seas:"Jan Effect"},
   // ── MAJOR CALENDAR EVENTS (from CONF + VISAO) ──
   {d:"Apr 06",b:"conf",l:"Gann 180° + Time=Price Squaring",dir:"🔴 SHORT",prob:"MÉDIA",note:"182 dias do ATH = Gann 180° (metade do ciclo anual). Price=Time squaring potencial. Sell in May contextualiza como topo local.",seas:"Sell in May"},
-  {d:"Apr 20",b:"conf",l:"⭐ TRIPLA CONJUNÇÃO — Saturn+Neptune+Sol",dir:"🔴 SHORT",prob:"ALTA",note:"Máximo bearish do ano. Saturn+Neptune+Sol conjuntos em Áries. Raridade de ~36 anos. Sell in May + conjunção triple = TOPO MAJOR → short máxima confiança. Pesavento: Saturn=contracção, Neptune=confusão, Sol=trigger.",seas:"Sell in May"},
+  {d:"Apr 20",b:"conf",l:"⭐⭐ TRIPLA CONJUNÇÃO — Merc+Marte+Sat + Taurus Ingress",dir:"🔴 SHORT",prob:"ALTA",note:"MÁXIMO BEARISH DO ANO. Tripla conj 7° Áries (Merc+Marte+Sat). Sol ingress Touro 1:39 UTC. Merc☌Sat 11:21 UTC. Merc☌Marte 21:44 UTC. Book of Han 111 CE: 'defeat of an army.' Malefic Bottleneck activo Apr 19-20. S144 alvo $60,001 (144/144).",seas:"Sell in May"},
   {d:"Jun 10",b:"conf",l:"Venus-Jupiter Conjunção (99 ciclos bullish) + Saturn cap",dir:"🟢 BOUNCE",prob:"MÉDIA",note:"Venus-Jupiter = sinal bullish verificado em 99 ciclos (Pesavento). Mercury-Saturn simultâneo = cap ao optimismo. Bounce técnico dentro Sell in May → alívio, não bottom major.",seas:"Sell in May"},
   {d:"Jun 15",b:"conf",l:"⭐⭐⭐⭐⭐⭐ BOTTOM SIGNAL — 6 Frameworks",dir:"🟢 LONG",prob:"ALTA",note:"Sinal mais importante do ano. 6 sistemas convergem: (1) NM em Gemini 730 ciclos Pesavento, (2) Jupiter Quintile Uranus 0.04° Jensen action trigger, (3) Summer Rally aproxima-se, (4) Moon Gemini = absolute low long-term, (5) Hurst 40-day trough, (6) Gann squaring. BOTTOM INTERMÉDIO → long de alta confiança.",seas:"Sell in May→Summer"},
   {d:"Sep 01",b:"conf",l:"⭐ J-S Trine Exacto 0.029° + Fall Crash Abre",dir:"🔴 SHORT",prob:"ALTA",note:"Jupiter-Saturn trine exacto (Jensen bullish estrutural). Mas Fall Crash abre hoje. Jensen (1978): trine durante Node bearish = bottom 15-18 meses à frente. Gann 360° a 35 dias. PICO do rally de verão antes da queda de outono → short.",seas:"Fall Crash"},
@@ -1414,44 +1432,65 @@ function ChartS144View() {
 
 // ── WEEK VIEW DATA ──────────────────────────────────────────
 const WEEK_DATA = {
-  weekLabel: "Apr 13-19, 2026",
-  seasonal: "April Rally → termina Apr 16 · Sell in May inicia Apr 17",
-  btcRef: 71500,
-  s144: {
-    resist1: {n:114, price:73807, label:"114/144 — topo rejeitado"},
-    resist2: {n:108, price:76569, label:"108/144 = ¾"},
-    support1: {n:120, price:71046, label:"120/144 — suporte imediato"},
-    support2: {n:126, price:68285, label:"126/144 — suporte major"},
-  },
+  weekLabel: "Apr 13–26, 2026",
+  seasonal: "April Rally → terminou · Sell in May activo · Uranus ingress Gemini Apr 26",
+  btcRef: 83500,
+  tops: [{price:73807,label:"p1 — 11 Abr",n:114},{price:76127,label:"p2 — 14 Abr (doji)",n:108}],
+  s144levels: [
+    {n:108,price:76569,type:"resist",label:"108/144 — topo rejeitado"},
+    {n:114,price:73807,type:"resist",label:"114/144 — p1"},
+    {n:120,price:71046,type:"support",label:"120/144 — suporte 1"},
+    {n:126,price:68285,type:"support",label:"126/144 — alvo queda"},
+    {n:132,price:65524,type:"support",label:"132/144 — zona capitulação"},
+    {n:144,price:60001,type:"major",label:"144/144 — LOW Feb 27"},
+  ],
+  phases:[
+    {label:"FASE 1: p1+p2 feitos",days:"11-14 Abr",icon:"✅",color:"#a0b8d0",note:"Dois peaks confirmados. Bayer: disposal activo. Hurst: lower highs típicos de underlying −2."},
+    {label:"FASE 2: Malefic Bottleneck",days:"17-20 Abr",icon:"⚠️",color:"#ff4060",note:"Tripla conj 7° Áries + LN bear inversion. Sol ingress Touro. Máximo bearish do ano."},
+    {label:"FASE 3: Extensão + Sol²Plutão",days:"25 Abr",icon:"🔴",color:"#cc2040",note:"Sol square Plutão (5°28') = crise de avaliação. Segundo ponto de stress após bottleneck."},
+    {label:"FASE 4: Uranus ingress Gemini",days:"26 Abr",icon:"⚡",color:"#c8b060",note:"Turning point estrutural. 7 anos de Úrano Touro terminam. Nova narrativa cripto começa."},
+  ],
   aspects: [
     {d:"Apr 13",wd:"Seg",aspect:"Marte ☌ Neptuno 05:29 UTC",icon:"🔴",
-     bias:"neut",tag:"Exacto 5h29 UTC",
-     note:"Marte☌Neptuno exacto em Áries 2°39'. O rally de $68K→$73.8K foi este aspecto a trabalhar. Exacto esta manhã = pico da energia ilusória. A partir daqui separa-se. Gann: dia 45 do LOW (turning point). Vénus☌Júpiter também exacto hoje (6h UTC, 99 ciclos Pesavento) — mas já consumido pelo move anterior.",
-     s144:"Resistência $73,807 testada e rejeitada. Suporte $71,046. Zona de fade do bounce."},
-    {d:"Apr 14",wd:"Ter",aspect:"Mercúrio ⚹ Úrano",icon:"🟢",
-     bias:"bull",tag:"Melhor bounce",
-     note:"Mercúrio+Úrano = notícia inesperada positiva. Lua Trine Júpiter simultâneo. Net Force +2 — único dia com vantagem bullish líquida. Mercúrio ainda em Peixes (confusão mas com abertura). Bounce real mas lower high vs $73,807.",
-     s144:"Alvo bounce: $72,000-73,000. SL curto acima $73,807."},
+     bias:"neut",tag:"Energia ilusória esgota",
+     note:"Marte☌Neptuno exacto 5h29 UTC em Áries 2°39'. Pico da energia que alimentou o rally $68K→$76K. Vénus☌Júpiter (99 ciclos Pesavento) também exacto hoje. Gann: dia 45 do LOW. Ambos os aspectos bullish atingem o pico e começam a separar-se.",
+     s144:"Fade do bounce. Resistência $76,569 (108/144) já testada e rejeitada a $76,127."},
+    {d:"Apr 14",wd:"Ter",aspect:"Mercúrio ⚹ Úrano + BEARISH DOJI $76,127",icon:"🟡",
+     bias:"spike",tag:"p2 confirmado — topo local",
+     note:"Mercúrio+Úrano (notícia inesperada) + Lua Trine Júpiter = net force +2. O aspecto mais bullish da semana. Mas mercado formou bearish doji em $76,127 — a $442 do nível 108/144 ($76,569). Bear market tax: aspectos bullish produzem movimentos menores que o esperado. p2 confirmado.",
+     s144:"$76,127 = p2. Falhou 108/144 por $442. Rejeição confirmada. Short estrutural activo."},
     {d:"Apr 15",wd:"Qua",aspect:"Mercúrio ingress Áries 03:22 UTC",icon:"🟡",
-     bias:"pivot",tag:"Pivot — Sessão Asiática",
-     note:"CORRECÇÃO: Mercúrio entra Áries às 3:22 UTC — SESSÃO ASIÁTICA. Europa acorda já com Mercúrio em Áries. A narrativa muda de indecisa (Peixes) para agressiva (Áries) enquanto Lisboa dorme. Marte, Saturno e Neptuno estão todos em Áries à espera. Mercúrio corre directamente para o campo bearish.",
-     s144:"Se bounce chegou $72-73K durante Ter, entry short aqui ao acordar."},
-    {d:"Apr 16",wd:"Qui",aspect:"Marte ⚹ Plutão + Sol ☌ Quíron 15:10 UTC",icon:"🟡",
-     bias:"spike",tag:"Último spike + Exposição",
-     note:"Marte+Plutão (sextil) = acção transformadora — possível spike bullish. Último dia do April Rally seasonal. MAS Sol☌Quíron às 15:10 UTC (tarde europeia) expõe vulnerabilidades. Quíron = ferida, trauma, fraqueza estrutural. Sol ilumina o que estava escondido. Manhã bullish → tarde revela o tecto.",
-     s144:"Spike manhã pode testar $72,500. Sol☌Quíron 15h = viragem. Short após."},
-    {d:"Apr 17",wd:"Sex",aspect:"Merc☌Nept 02:01 · LN 11:51 UTC",icon:"🔴",
-     bias:"bear",tag:"TOPO — Meio-dia Londres",
-     note:"CORRECÇÃO: LN exacta às 11:51 UTC = MEIO-DIA DE LONDRES. Liquidez máxima europeia. Bear market inversion (Pesavento): LN = TOPO. Mercúrio☌Neptuno às 2:01 UTC (Ásia thin) cria spike de madrugada — possível último higher open. Topo efectivo: 11:30-12:30 UTC. Reversão sessão americana.",
-     s144:"Short entry 11:30-12:30 UTC. Alvo $68,285 (126/144)."},
+     bias:"pivot",tag:"Pivot — Ásia muda narrativa",
+     note:"Mercúrio entra Áries 3:22 UTC — sessão asiática. Europa acorda já com Mercúrio em Áries, correndo directamente para Saturno e Neptuno. Narrativa muda de hesitante (Peixes) para agressiva (Áries). 6♦️ Card of Financial Responsibility: o que se deu retorna. Ajustamento kármico financeiro.",
+     s144:"Início da grande 's.' de Bayer. Short entry ao acordar. SL acima $76,569."},
+    {d:"Apr 16",wd:"Qui",aspect:"Marte ⚹ Plutão + Sol ☌ Quíron 15:10",icon:"🟡",
+     bias:"spike",tag:"Spike manhã / Exposição tarde",
+     note:"Marte+Plutão sextil = possível spike matinal. Último dia April Rally seasonal. Mas Sol☌Quíron 15:10 UTC expõe vulnerabilidades estruturais — o mercado revela o seu tecto real. Manhã bullish, tarde bearish. Short após 15h UTC.",
+     s144:"Spike pode testar $73,807 (114/144). Sol☌Quíron = viragem."},
+    {d:"Apr 17",wd:"Sex",aspect:"🌑 LN 11:51 UTC · Merc☌Nept 02:01",icon:"🔴",
+     bias:"bear",tag:"TOPO CICLO LUNAR — Meio-dia Lisboa",
+     note:"LUA NOVA exacta 11:51 UTC em Áries 27°28' = meio-dia de Lisboa, liquidez máxima europeia. Bear market inversion (Pesavento, verificado 1970-80 e 2008-09): LN = TOPO. Mercúrio☌Neptuno 2:01 UTC (Ásia thin) cria spike de madrugada. Topo efectivo: 11:30-12:30 UTC. Reversão afternoon.",
+     s144:"Short entry 11:30-12:30 UTC. Alvo inicial $68,285 (126/144)."},
     {d:"Apr 18",wd:"Sáb",aspect:"Mercúrio ⚹ Plutão",icon:"🔴",
      bias:"bear",tag:"Queda contínua",
-     note:"Merc+Plutão sextil tecnicamente positivo mas neutralizado por Neptuno (ainda 2.1° de orb). Marte+Saturno a 0.9° — quase exacto. Cripto não fecha ao fim de semana. Queda contínua desde sexta tarde.",
-     s144:"Teste $71,046 → $68,285. Manter shorts."},
+     note:"Merc+Plutão sextil neutralizado por Neptuno (2.1° de orb). Marte+Saturno a 0.9° — bottleneck a carregar. Cripto sem fecho de semana. Queda desde sexta à tarde acelerada.",
+     s144:"Teste $71,046 → $68,285. Manter shorts abertos."},
     {d:"Apr 19",wd:"Dom",aspect:"Marte ☌ Saturno 22:43 UTC",icon:"🔴🔴",
-     bias:"bear",tag:"Abertura Asiática Segunda",
-     note:"CORRECÇÃO: Marte☌Saturno exacto às 22:43 UTC de domingo = ABERTURA ASIÁTICA DE SEGUNDA-FEIRA. O impacto principal é Segunda Apr 20. Mas preço já em queda desde Sexta — domingo é aceleração. Lua entra Gémeos 17h UTC (LOW absoluto Pesavento 730 ciclos). Apr 20 tem ainda Merc☌Saturn 11:21 + Merc☌Marte 21:44.",
-     s144:"Alvo $68,285 ou abaixo. Apr 20 tem tripla conjunção = máximo bearish."},
+     bias:"bear",tag:"⚠️ BOTTLENECK — Abertura Asiática",
+     note:"MALEFIC BOTTLENECK: Marte☌Saturno 22:43 UTC = abertura asiática de segunda. Tripla conj 7° Áries: Mars 7°57', Saturn 7°52', Mercury 7°17'. 'Collision of inexorable force with immovable resistance' — buildup de energia cinética que exige descarga. Lua entra Gémeos 17h UTC = LOW absoluto Pesavento (730 ciclos).",
+     s144:"Volatilidade extrema. Alvo $65,524 (132/144) ou $60,001 (144/144 = LOW Feb 27)."},
+    {d:"Apr 20",wd:"Seg",aspect:"Sol→Touro 01:39 · Merc☌Sat 11:21 · Merc☌Marte 21:44",icon:"🔴🔴",
+     bias:"bear",tag:"TRIPLO — Máximo bearish do ano",
+     note:"Três eventos ao longo do dia: Sol ingress Touro 1:39 UTC (sai do campo da tripla conj). Mercúrio☌Saturno 11:21 UTC = notícias bloqueadas pela realidade, comunicação cortada. Mercúrio☌Marte 21:44 UTC = volatilidade máxima, decisões agressivas. Sol+Saturn+Neptune também activos. Este é o dia de máxima descarga.",
+     s144:"Pico de descarga. Alvo $60,001 (144/144) se capitulação. Stop loss crítico."},
+    {d:"Apr 25",wd:"Sex",aspect:"Sol □ Plutão 13:11 UTC (5°28')",icon:"🔴",
+     bias:"bear",tag:"Segundo evento — Crise estrutural",
+     note:"Sol Touro 5°28' em square exacto com Plutão Aquário 5°28'. Mundane astrology: Sol-Plutão squares = 'deep-seated structural and tectonic shifts'. Para o BTC: crise de avaliação. O mercado questiona o que os activos valem. Pode ser o segundo low após o bottleneck de Apr 20, ou confirmação da queda.",
+     s144:"Se BTC ainda não capitulou, este é o segundo ponto de pressão. Zona $60K-65K."},
+    {d:"Apr 26",wd:"Dom",aspect:"⚡ Úrano ingress Gémeos 21:52 UTC",icon:"⭐",
+     bias:"bull",tag:"TURNING POINT — Nova narrativa",
+     note:"EVENTO HISTÓRICO: Úrano termina 7 anos em Touro (ouro digital, reserva de valor) e entra Gémeos (rede, comunicação, velocidade, AI+cripto). Para o BTC: a narrativa muda completamente. De 'ouro digital' para 'rede de comunicação global'. Úrano changing signs = reversão de tendência de longo prazo. Historicamente: queda antes, explosão depois.",
+     s144:"Potencial reversão estrutural de longo prazo. Confluência: bottleneck absorvido + nova narrativa Gémeos. Watch for capitulação seguida de explosive reversal."},
   ]
 };
 
@@ -1463,79 +1502,112 @@ const biasConfig = {
   spike:  {bg:"rgba(255,160,40,.07)",bc:"rgba(255,160,40,.3)",  color:"#ffa028", label:"SPIKE"},
 };
 
+
 function WeekView() {
   const [sel, setSel] = useState(null);
+  const [phase, setPhase] = useState(null);
   const today = new Date();
-  const todayStr = today.toLocaleDateString("en-US",{month:"short",day:"2-digit"}).replace(",","");
+  const todayDay = today.getDate();
+  const todayMon = today.getMonth(); // 0-indexed, Apr=3
   const w = WEEK_DATA;
 
+  const isToday = (dStr) => {
+    const n = parseInt(dStr.split(" ")[1]);
+    return todayMon === 3 && todayDay === n;
+  };
+
   return (
-    <div style={{position:"relative",zIndex:1,maxWidth:720,width:"100%",margin:"0 auto",padding:"0 12px 60px"}}>
+    <div style={{position:"relative",zIndex:1,maxWidth:740,width:"100%",margin:"0 auto",padding:"0 12px 60px"}}>
 
       {/* Header */}
-      <div style={{textAlign:"center",marginBottom:18}}>
-        <div style={{fontSize:11,letterSpacing:3,color:"#a89050",textTransform:"uppercase",marginBottom:6}}>Semana Corrente</div>
-        <div style={{fontSize:24,color:"#c8b060",letterSpacing:2,fontWeight:"normal",marginBottom:4}}>{w.weekLabel}</div>
-        <div style={{fontSize:11,color:"#555",marginBottom:3}}>Seasonal: {w.seasonal}</div>
-        <div style={{fontSize:10,color:"#444"}}>Bear market activo · Inversão LN/LC · Hurst underlying −2</div>
+      <div style={{textAlign:"center",marginBottom:16}}>
+        <div style={{fontSize:10,letterSpacing:3,color:"#a89050",textTransform:"uppercase",marginBottom:5}}>Semana Corrente</div>
+        <div style={{fontSize:22,color:"#c8b060",letterSpacing:2,fontWeight:"normal",marginBottom:3}}>{w.weekLabel}</div>
+        <div style={{fontSize:10,color:"#555",marginBottom:2}}>{w.seasonal}</div>
+        <div style={{fontSize:10,color:"#3a3830"}}>Bear market · Inversão LN/LC · Hurst −2 · Bayer disposal · S144 anchor $60,001</div>
       </div>
 
-      {/* S144 Quick Reference */}
-      <div style={{display:"flex",gap:6,justifyContent:"center",marginBottom:18,flexWrap:"wrap"}}>
-        {[
-          {label:"↑ $73,807",sub:"114/144 resistência",color:"#ff6060"},
-          {label:"● $71,500",sub:"BTC actual",color:"#ffe080"},
-          {label:"↓ $71,046",sub:"120/144 suporte",color:"#50e878"},
-          {label:"↓↓ $68,285",sub:"126/144 major",color:"#ff4060"},
-        ].map((l,i)=>(
-          <div key={i} style={{background:"rgba(255,255,255,.03)",border:`1px solid ${l.color}33`,borderRadius:5,padding:"5px 10px",textAlign:"center"}}>
-            <div style={{fontSize:12,color:l.color,fontFamily:"sans-serif",fontWeight:"bold"}}>{l.label}</div>
-            <div style={{fontSize:9,color:"#555"}}>{l.sub}</div>
-          </div>
-        ))}
+      {/* Phase Timeline */}
+      <div style={{marginBottom:14}}>
+        <div style={{fontSize:10,color:"#a89050",letterSpacing:2,textTransform:"uppercase",marginBottom:6}}>Fases</div>
+        <div style={{display:"flex",gap:4,flexWrap:"wrap"}}>
+          {w.phases.map((ph,i)=>(
+            <div key={i} onClick={()=>setPhase(phase===i?null:i)}
+              style={{flex:"1 1 140px",background:"rgba(255,255,255,.02)",border:`1px solid ${ph.color}44`,
+                borderLeft:`3px solid ${ph.color}`,borderRadius:5,padding:"8px 10px",cursor:"pointer"}}>
+              <div style={{fontSize:11,color:ph.color,fontWeight:"bold",marginBottom:2}}>{ph.icon} {ph.label}</div>
+              <div style={{fontSize:10,color:"#666"}}>{ph.days}</div>
+              {phase===i&&<div style={{fontSize:10,color:"#a0a89a",marginTop:5,lineHeight:1.5}}>{ph.note}</div>}
+            </div>
+          ))}
+        </div>
       </div>
 
-      {/* Daily Aspects */}
-      <div style={{display:"flex",flexDirection:"column",gap:8}}>
+      {/* S144 Levels */}
+      <div style={{marginBottom:14}}>
+        <div style={{fontSize:10,color:"#a89050",letterSpacing:2,textTransform:"uppercase",marginBottom:6}}>Square of 144 — Níveis Chave</div>
+        <div style={{display:"flex",gap:4,flexWrap:"wrap",justifyContent:"center"}}>
+          {w.s144levels.map((l,i)=>{
+            const col = l.type==="resist"?"#ff6060":l.type==="major"?"#ff2040":"#50c878";
+            return(
+              <div key={i} style={{background:"rgba(255,255,255,.02)",border:`1px solid ${col}33`,borderRadius:4,padding:"4px 10px",textAlign:"center"}}>
+                <div style={{fontSize:12,color:col,fontWeight:"bold"}}>${l.price.toLocaleString()}</div>
+                <div style={{fontSize:9,color:"#444"}}>{l.label}</div>
+              </div>
+            );
+          })}
+        </div>
+        <div style={{display:"flex",gap:8,justifyContent:"center",marginTop:6}}>
+          <div style={{fontSize:10,color:"#ff8040"}}>⬆ p1: $73,807 (11 Abr)</div>
+          <div style={{fontSize:10,color:"#ff6060"}}>⬆ p2: $76,127 (14 Abr — doji, −$442 do 108/144)</div>
+        </div>
+      </div>
+
+      {/* Events */}
+      <div style={{display:"flex",flexDirection:"column",gap:7}}>
         {w.aspects.map((ev,i)=>{
           const bc = biasConfig[ev.bias]||biasConfig.neut;
-          const isToday = ev.d===todayStr;
+          const today_ = isToday(ev.d);
           const isOpen = sel===i;
+          const isMajor = ev.bias==="bear" && (ev.tag.includes("BOTTLENECK")||ev.tag.includes("TRIPLO")||ev.tag.includes("TURNING"));
           return (
             <div key={i} onClick={()=>setSel(isOpen?null:i)}
               style={{
-                background:isToday?"rgba(200,176,96,.08)":bc.bg,
-                border:`1px solid ${isToday?"#c8b060":isOpen?bc.bc:bc.bc+"88"}`,
-                borderLeft:`4px solid ${bc.color}`,
-                borderRadius:7,padding:"12px 14px",cursor:"pointer",
+                background:today_?"rgba(200,176,96,.08)":bc.bg,
+                border:`1px solid ${today_?"#c8b060":isOpen?bc.bc:bc.bc+(isMajor?"cc":"55")}`,
+                borderLeft:`4px solid ${today_?"#c8b060":bc.color}`,
+                borderRadius:7,padding:"10px 12px",cursor:"pointer",
                 transition:"border-color .15s",userSelect:"none",
+                boxShadow:isMajor?`0 0 8px ${bc.color}22`:"none",
               }}>
-              {/* Row 1: date + aspect + tag */}
-              <div style={{display:"flex",alignItems:"center",gap:10,marginBottom:6,flexWrap:"wrap"}}>
-                <div style={{minWidth:70,flexShrink:0}}>
-                  <span style={{fontSize:13,color:"#888",fontFamily:"sans-serif"}}>{ev.wd} </span>
-                  <span style={{fontSize:13,color:"#c8b060",fontFamily:"sans-serif"}}>{ev.d.split(" ")[1]}</span>
-                  {isToday&&<div style={{fontSize:9,color:"#ffe080"}}>HOJE</div>}
+              <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:4,flexWrap:"wrap"}}>
+                {/* Date */}
+                <div style={{minWidth:68,flexShrink:0}}>
+                  <span style={{fontSize:12,color:"#666"}}>{ev.wd} </span>
+                  <span style={{fontSize:13,color:today_?"#ffe080":"#c8b060"}}>{ev.d.split(" ")[1]}</span>
+                  {today_&&<div style={{fontSize:8,color:"#ffe080",letterSpacing:1}}>HOJE</div>}
                 </div>
-                <div style={{flex:1}}>
-                  <span style={{fontSize:14,color:bc.color,fontWeight:"bold"}}>{ev.icon} {ev.aspect}</span>
+                {/* Aspect */}
+                <div style={{flex:1,minWidth:120}}>
+                  <span style={{fontSize:13,color:bc.color,fontWeight:"bold"}}>{ev.icon} </span>
+                  <span style={{fontSize:12,color:today_?"#e0d8cc":"#b0a898"}}>{ev.aspect}</span>
                 </div>
+                {/* Tag */}
                 <div style={{
-                  fontSize:11,color:bc.color,background:bc.bg,
-                  border:`1px solid ${bc.bc}`,borderRadius:3,padding:"1px 8px",flexShrink:0
+                  fontSize:10,color:bc.color,background:bc.bg,
+                  border:`1px solid ${bc.bc}`,borderRadius:3,padding:"1px 7px",flexShrink:0,
+                  fontWeight:isMajor?"bold":"normal",
                 }}>{ev.tag}</div>
               </div>
-
-              {/* Row 2: note */}
-              <div style={{fontSize:12,color:"#7a7870",lineHeight:1.55,paddingLeft:80}}>
+              {/* Note */}
+              <div style={{fontSize:11,color:isOpen?"#9a9288":"#5a5248",lineHeight:1.55,paddingLeft:76,transition:"color .2s"}}>
                 {ev.note}
               </div>
-
-              {/* Expanded: S144 */}
+              {/* S144 expanded */}
               {isOpen&&(
-                <div style={{marginTop:10,paddingTop:10,borderTop:"1px solid rgba(255,255,255,.06)",paddingLeft:80}}>
-                  <div style={{fontSize:10,color:"#a89050",letterSpacing:2,marginBottom:4,textTransform:"uppercase"}}>S144 · Acção</div>
-                  <div style={{fontSize:12,color:"#c0c8d0",lineHeight:1.6}}>{ev.s144}</div>
+                <div style={{marginTop:8,paddingTop:8,borderTop:"1px solid rgba(255,255,255,.05)",paddingLeft:76}}>
+                  <div style={{fontSize:9,color:"#a89050",letterSpacing:2,marginBottom:3,textTransform:"uppercase"}}>S144 · Acção</div>
+                  <div style={{fontSize:11,color:"#c0c8d0",lineHeight:1.6}}>{ev.s144}</div>
                 </div>
               )}
             </div>
@@ -1543,48 +1615,49 @@ function WeekView() {
         })}
       </div>
 
-      {/* Net Force visual */}
-      <div style={{marginTop:20,background:"rgba(255,255,255,.02)",border:"1px solid rgba(255,255,255,.05)",borderRadius:6,padding:"14px"}}>
-        <div style={{fontSize:10,color:"#a89050",letterSpacing:2,marginBottom:10,textTransform:"uppercase"}}>Net Force — Semana</div>
-        <div style={{display:"flex",gap:4,alignItems:"flex-end",justifyContent:"space-around"}}>
+      {/* Net Force Chart — extended to Apr 26 */}
+      <div style={{marginTop:16,background:"rgba(255,255,255,.02)",border:"1px solid rgba(255,255,255,.04)",borderRadius:6,padding:"12px"}}>
+        <div style={{fontSize:10,color:"#a89050",letterSpacing:2,marginBottom:10,textTransform:"uppercase"}}>Net Force — Apr 13 → 26</div>
+        <div style={{display:"flex",gap:3,alignItems:"flex-end",justifyContent:"space-around",overflowX:"auto"}}>
           {[
-            {d:"Seg",net:0,bias:"neut"},
-            {d:"Ter",net:2,bias:"bull"},
-            {d:"Qua",net:0,bias:"pivot"},
-            {d:"Qui",net:-1,bias:"spike"},
-            {d:"Sex",net:-3,bias:"bear"},
-            {d:"Sáb",net:-3,bias:"bear"},
-            {d:"Dom",net:-4,bias:"bear"},
+            {d:"13",net:0,bias:"neut"},{d:"14",net:1,bias:"spike"},
+            {d:"15",net:-1,bias:"pivot"},{d:"16",net:-1,bias:"spike"},
+            {d:"17",net:-3,bias:"bear"},{d:"18",net:-3,bias:"bear"},
+            {d:"19",net:-4,bias:"bear"},{d:"20",net:-5,bias:"bear"},
+            {d:"21",net:-3,bias:"bear"},{d:"22",net:-2,bias:"bear"},
+            {d:"23",net:-2,bias:"bear"},{d:"24",net:-2,bias:"bear"},
+            {d:"25",net:-4,bias:"bear"},{d:"26",net:3,bias:"bull"},
           ].map((day,i)=>{
             const bc=biasConfig[day.bias]||biasConfig.neut;
-            const h=Math.abs(day.net)*18+8;
-            const isPos=day.net>0;
+            const abs=Math.abs(day.net);
+            const h=abs*12+6;
+            const isTod = (parseInt(day.d)===todayDay&&todayMon===3);
             return(
-              <div key={i} style={{display:"flex",flexDirection:"column",alignItems:"center",gap:4}}>
-                <div style={{fontSize:10,color:bc.color,fontFamily:"sans-serif"}}>{day.net>0?"+":""}{day.net}</div>
-                <div style={{
-                  width:32,height:h,
-                  background:bc.color+"44",border:`1px solid ${bc.color}`,
-                  borderRadius:3,
-                }}/>
-                <div style={{fontSize:10,color:"#666"}}>{day.d}</div>
+              <div key={i} style={{display:"flex",flexDirection:"column",alignItems:"center",gap:2,minWidth:22}}>
+                <div style={{fontSize:9,color:bc.color}}>{day.net>0?"+":""}{day.net}</div>
+                <div style={{width:20,height:h,background:bc.color+"44",border:`1px solid ${bc.color}${isTod?"":"66"}`,borderRadius:2,outline:isTod?`2px solid #ffe080`:"none"}}/>
+                <div style={{fontSize:8,color:isTod?"#ffe080":"#444"}}>{day.d}</div>
               </div>
             );
           })}
         </div>
-        <div style={{fontSize:10,color:"#333",marginTop:8,textAlign:"center"}}>
-          Net Force positivo = bullish backdrop · negativo = bearish backbone
+        <div style={{display:"flex",justifyContent:"space-between",marginTop:6,paddingTop:4,borderTop:"1px solid rgba(255,255,255,.04)"}}>
+          <div style={{fontSize:9,color:"#ff4060"}}>⚠️ Apr 20: máximo bearish</div>
+          <div style={{fontSize:9,color:"#c8b060"}}>⚡ Apr 26: Úrano ingress Gémeos</div>
+          <div style={{fontSize:9,color:"#ff4060"}}>🔴 Apr 25: Sol²Plutão</div>
         </div>
       </div>
 
-      {/* Footer note */}
-      <div style={{fontSize:10,color:"#2a2820",textAlign:"center",marginTop:14,lineHeight:1.7}}>
-        Fontes: Pesavento (4 Steps, bear inversion) · Hurst (underlying trend −2) · Gann S144 · Jensen Key Days<br/>
-        Topo: $73,807 (114/144) — 11 Abr · LN 17 Abr 11:51 UTC (meio-dia Lisboa) · Marte☌Sat 19 Abr 22:43 UTC
+      {/* Footer */}
+      <div style={{fontSize:9,color:"#252018",textAlign:"center",marginTop:12,lineHeight:1.8}}>
+        Pesavento · Hurst (−2) · Gann S144 · Bayer disposal · Malefic Bottleneck Apr 20<br/>
+        p1: $73,807 (11 Abr) · p2: $76,127 doji (14 Abr) · LN: 17 Abr 11:51 UTC<br/>
+        Marte☌Sat: 19 Abr 22:43 UTC · Sol²Plutão: 25 Abr · ⚡ Úrano→Gémeos: 26 Abr 21:52 UTC
       </div>
     </div>
   );
 }
+
 
 export default function App() {
   const [active, setActive] = useState("MAPA");
