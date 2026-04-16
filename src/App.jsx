@@ -885,7 +885,7 @@ function MapaView() {
 
       {/* Squaring Summary */}
       <div style={{background:"rgba(255,200,50,.05)",border:"1px solid rgba(255,200,50,.2)",borderRadius:8,padding:"14px 16px"}}>
-        <div style={{fontSize:13,color:"#ffc832",letterSpacing:2,marginBottom:10,textTransform:"uppercase"}}>📐 Squaring de Preço — Contexto Actual</div>
+        <div style={{fontSize:16,color:"#ffc832",letterSpacing:2,marginBottom:10,textTransform:"uppercase"}}>📐 Squaring de Preço — Contexto Actual</div>
         <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8}}>
           {[
             ["ATH","$126,272 = 272° = 2°Capricórnio"],
@@ -896,19 +896,19 @@ function MapaView() {
             ["Squaring simultâneo","TEMPO 180° + PREÇO 162° + S9 23×"],
           ].map(([k,v],i)=>(
             <div key={i} style={{background:"rgba(255,255,255,.03)",borderRadius:4,padding:"7px 10px"}}>
-              <div style={{fontSize:11,color:"#a89050",marginBottom:2}}>{k}</div>
-              <div style={{fontSize:12,color:"#ffe080",lineHeight:1.4}}>{v}</div>
+              <div style={{fontSize:14,color:"#a89050",marginBottom:2}}>{k}</div>
+              <div style={{fontSize:15,color:"#ffe080",lineHeight:1.4}}>{v}</div>
             </div>
           ))}
         </div>
-        <div style={{marginTop:10,padding:"8px 12px",background:"rgba(144,240,128,.06)",border:"1px solid rgba(144,240,128,.2)",borderRadius:4,fontSize:13,color:"#90f080"}}>
+        <div style={{marginTop:10,padding:"8px 12px",background:"rgba(144,240,128,.06)",border:"1px solid rgba(144,240,128,.2)",borderRadius:4,fontSize:16,color:"#90f080"}}>
           Saturno a 2°Áries em 3 Mar 2026 (orb 0.03°) = Saturno a fazer square EXACTO do grau zodiacal do ATH + Total Lunar Eclipse Blood Moon
         </div>
       </div>
 
       {/* Price Ladder */}
       <div style={{background:"rgba(255,255,255,.02)",border:"1px solid rgba(255,255,255,.07)",borderRadius:8,padding:"14px 16px"}}>
-        <div style={{fontSize:13,color:"#90c0e0",letterSpacing:2,marginBottom:14,textTransform:"uppercase"}}>📊 Escada de Preços Square of Nine + 0°Áries</div>
+        <div style={{fontSize:16,color:"#90c0e0",letterSpacing:2,marginBottom:14,textTransform:"uppercase"}}>📊 Escada de Preços Square of Nine + 0°Áries</div>
         <div style={{position:"relative"}}>
           {/* Price bar */}
           <div style={{position:"absolute",left:140,right:0,top:0,bottom:0}}>
@@ -932,9 +932,9 @@ function MapaView() {
               return (
                 <div key={i} style={{display:"flex",alignItems:"center",gap:8,padding:"4px 0",borderBottom:"1px solid rgba(255,255,255,.04)",background:isCurrent?"rgba(144,240,128,.05)":"transparent"}}>
                   <div style={{width:8,height:8,borderRadius:"50%",background:lv.c,flexShrink:0,boxShadow:isCurrent?`0 0 8px ${lv.c}`:"none"}}/>
-                  <div style={{fontSize:13,color:lv.c,minWidth:120,fontFamily:"monospace"}}>{lv.label.split(" — ")[0]}</div>
-                  <div style={{fontSize:13,color:"#666",flex:1}}>{lv.label.split(" — ")[1]}</div>
-                  <div style={{fontSize:12,color:"#444"}}>{lv.note}</div>
+                  <div style={{fontSize:16,color:lv.c,minWidth:120,fontFamily:"monospace"}}>{lv.label.split(" — ")[0]}</div>
+                  <div style={{fontSize:16,color:"#666",flex:1}}>{lv.label.split(" — ")[1]}</div>
+                  <div style={{fontSize:15,color:"#444"}}>{lv.note}</div>
                 </div>
               );
             })}
@@ -944,35 +944,35 @@ function MapaView() {
 
       {/* Gann Angular Declines */}
       <div style={{background:"rgba(255,255,255,.02)",border:"1px solid rgba(255,255,255,.07)",borderRadius:8,padding:"14px 16px"}}>
-        <div style={{fontSize:13,color:"#c8b478",letterSpacing:2,marginBottom:12,textTransform:"uppercase"}}>🌕 Ângulos de Preço Gann (desde ATH $126,272)</div>
+        <div style={{fontSize:16,color:"#c8b478",letterSpacing:2,marginBottom:12,textTransform:"uppercase"}}>🌕 Ângulos de Preço Gann (desde ATH $126,272)</div>
         <div style={{display:"flex",flexDirection:"column",gap:6}}>
           {angles.map((a,i)=>{
             const isCurrent = Math.abs(a.p - 69000) < 3000;
             return (
               <div key={i} style={{display:"flex",alignItems:"center",gap:10,padding:"6px 10px",background:isCurrent?"rgba(144,240,128,.06)":"rgba(255,255,255,.02)",borderRadius:4,border:isCurrent?"1px solid rgba(144,240,128,.3)":"1px solid rgba(255,255,255,.04)"}}>
-                <div style={{fontSize:14,color:a.c,fontFamily:"monospace",minWidth:55}}>{a.a}°</div>
-                <div style={{fontSize:14,color:a.c,fontFamily:"monospace",minWidth:100}}>${a.p.toLocaleString()}</div>
-                <div style={{fontSize:14,color:isCurrent?"#90f080":"#888",flex:1}}>{a.label}</div>
-                {isCurrent && <div style={{fontSize:11,color:"#90f080",fontWeight:"bold"}}>◄ ACTUAL</div>}
+                <div style={{fontSize:17,color:a.c,fontFamily:"monospace",minWidth:55}}>{a.a}°</div>
+                <div style={{fontSize:17,color:a.c,fontFamily:"monospace",minWidth:100}}>${a.p.toLocaleString()}</div>
+                <div style={{fontSize:17,color:isCurrent?"#90f080":"#888",flex:1}}>{a.label}</div>
+                {isCurrent && <div style={{fontSize:14,color:"#90f080",fontWeight:"bold"}}>◄ ACTUAL</div>}
               </div>
             );
           })}
         </div>
-        <div style={{marginTop:10,fontSize:13,color:"#555",lineHeight:1.6}}>
+        <div style={{marginTop:10,fontSize:16,color:"#555",lineHeight:1.6}}>
           Fórmula: ATH × (1 − ângulo/360) | $54K/$72K/$108K = 0°Áries exactos (múltiplos de 360)
         </div>
       </div>
 
       {/* Key Dates Timeline */}
       <div style={{background:"rgba(255,255,255,.02)",border:"1px solid rgba(255,255,255,.07)",borderRadius:8,padding:"14px 16px"}}>
-        <div style={{fontSize:13,color:"#ffb0d0",letterSpacing:2,marginBottom:12,textTransform:"uppercase"}}>📅 Datas Chave 2026 — Confluências Máximas</div>
+        <div style={{fontSize:16,color:"#ffb0d0",letterSpacing:2,marginBottom:12,textTransform:"uppercase"}}>📅 Datas Chave 2026 — Confluências Máximas</div>
         <div style={{display:"flex",flexDirection:"column",gap:6}}>
           {keyDates.map((kd,i)=>(
             <div key={i} style={{display:"flex",alignItems:"center",gap:10,padding:"7px 10px",background:"rgba(255,255,255,.02)",borderRadius:4,border:"1px solid rgba(255,255,255,.04)"}}>
-              <div style={{fontSize:14,color:"#a89050",fontFamily:"monospace",minWidth:56,flexShrink:0}}>{kd.d}</div>
-              <div style={{fontSize:13,color:"#ffe080",minWidth:68,flexShrink:0}}>{kd.stars}</div>
-              <div style={{fontSize:14,color:bC[kd.bias]||"#ddd",flex:1,lineHeight:1.35}}>{kd.label}</div>
-              <div style={{fontSize:9,color:bC[kd.bias]||"#888",opacity:.7,textTransform:"uppercase"}}>{kd.bias}</div>
+              <div style={{fontSize:17,color:"#a89050",fontFamily:"monospace",minWidth:56,flexShrink:0}}>{kd.d}</div>
+              <div style={{fontSize:16,color:"#ffe080",minWidth:68,flexShrink:0}}>{kd.stars}</div>
+              <div style={{fontSize:17,color:bC[kd.bias]||"#ddd",flex:1,lineHeight:1.35}}>{kd.label}</div>
+              <div style={{fontSize:12,color:bC[kd.bias]||"#888",opacity:.7,textTransform:"uppercase"}}>{kd.bias}</div>
             </div>
           ))}
         </div>
@@ -980,7 +980,7 @@ function MapaView() {
 
       {/* Bayer Phase */}
       <div style={{background:"rgba(80,200,160,.04)",border:"1px solid rgba(80,200,160,.15)",borderRadius:8,padding:"14px 16px"}}>
-        <div style={{fontSize:13,color:"#50c8a0",letterSpacing:2,marginBottom:8,textTransform:"uppercase"}}>🍽️ Bayer Dinner Table + Wyckoff Phase</div>
+        <div style={{fontSize:16,color:"#50c8a0",letterSpacing:2,marginBottom:8,textTransform:"uppercase"}}>🍽️ Bayer Dinner Table + Wyckoff Phase</div>
         <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8}}>
           {[
             ["Bayer 2025–2026","Fase DISPOSAL — após champagne/nut do ATH Oct 2025"],
@@ -991,8 +991,8 @@ function MapaView() {
             ["Saturn square natal","Saturno a fazer square ao Plutão natal BTC = transformação estrutural máxima"],
           ].map(([k,v],i)=>(
             <div key={i} style={{background:"rgba(255,255,255,.03)",borderRadius:4,padding:"7px 10px"}}>
-              <div style={{fontSize:11,color:"#50c8a0",marginBottom:2}}>{k}</div>
-              <div style={{fontSize:13,color:"#c0e0d0",lineHeight:1.4}}>{v}</div>
+              <div style={{fontSize:14,color:"#50c8a0",marginBottom:2}}>{k}</div>
+              <div style={{fontSize:16,color:"#c0e0d0",lineHeight:1.4}}>{v}</div>
             </div>
           ))}
         </div>
@@ -1000,8 +1000,8 @@ function MapaView() {
 
       {/* Jensen Key Days compact */}
       <div style={{background:"rgba(255,255,255,.02)",border:"1px solid rgba(255,255,255,.07)",borderRadius:8,padding:"14px 16px"}}>
-        <div style={{fontSize:13,color:"#ffe080",letterSpacing:2,marginBottom:8,textTransform:"uppercase"}}>📐 Jensen Key Days Críticos + Graus Críticos 2026</div>
-        <div style={{fontSize:13,color:"#888",marginBottom:10,lineHeight:1.6}}>
+        <div style={{fontSize:16,color:"#ffe080",letterSpacing:2,marginBottom:8,textTransform:"uppercase"}}>📐 Jensen Key Days Críticos + Graus Críticos 2026</div>
+        <div style={{fontSize:16,color:"#888",marginBottom:10,lineHeight:1.6}}>
           Key Days = Lua square Mercúrio/Marte/Vénus. Se mercado faz H/L num key day → mantém nova tendência até ao próximo key day.
         </div>
         <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:6}}>
@@ -1016,8 +1016,8 @@ function MapaView() {
             ["Dec 8","FIM do Santa Claus (não Dez 20). Gap Dec 8–20 = neutro"],
           ].map(([k,v],i)=>(
             <div key={i} style={{background:"rgba(255,255,255,.03)",borderRadius:4,padding:"7px 10px"}}>
-              <div style={{fontSize:11,color:"#ffc832",marginBottom:2}}>{k}</div>
-              <div style={{fontSize:13,color:"#ddd8c8",lineHeight:1.4}}>{v}</div>
+              <div style={{fontSize:14,color:"#ffc832",marginBottom:2}}>{k}</div>
+              <div style={{fontSize:16,color:"#ddd8c8",lineHeight:1.4}}>{v}</div>
             </div>
           ))}
         </div>
@@ -1025,7 +1025,7 @@ function MapaView() {
 
       {/* Seasonal windows */}
       <div style={{background:"rgba(80,200,80,.03)",border:"1px solid rgba(80,200,80,.15)",borderRadius:8,padding:"14px 16px"}}>
-        <div style={{fontSize:13,color:"#50c850",letterSpacing:2,marginBottom:10,textTransform:"uppercase"}}>📅 Seasonals Pesavento (108+ anos de dados)</div>
+        <div style={{fontSize:16,color:"#50c850",letterSpacing:2,marginBottom:10,textTransform:"uppercase"}}>📅 Seasonals Pesavento (108+ anos de dados)</div>
         {[
           ["Feb 2 – Mar 28","BEARISH","Ides of March"],
           ["Mar 28 – Apr 16","BULLISH","April Earnings Rally"],
@@ -1039,9 +1039,9 @@ function MapaView() {
           const c = bias==="BULLISH"?"#50e870":bias.includes("CRASH")?"#ff5030":bias==="NEUTRO"?"#888":"#ff5050";
           return (
             <div key={i} style={{display:"flex",alignItems:"center",gap:10,padding:"5px 0",borderBottom:"1px solid rgba(255,255,255,.04)"}}>
-              <div style={{fontSize:13,color:"#a89050",fontFamily:"monospace",minWidth:130,flexShrink:0}}>{dates}</div>
-              <div style={{fontSize:13,color:c,minWidth:90,flexShrink:0}}>{bias}</div>
-              <div style={{fontSize:11,color:"#888"}}>{label}</div>
+              <div style={{fontSize:16,color:"#a89050",fontFamily:"monospace",minWidth:130,flexShrink:0}}>{dates}</div>
+              <div style={{fontSize:16,color:c,minWidth:90,flexShrink:0}}>{bias}</div>
+              <div style={{fontSize:14,color:"#888"}}>{label}</div>
             </div>
           );
         })}
@@ -1209,9 +1209,9 @@ function LocalTrendsView() {
   return (
     <div style={{position:"relative",zIndex:1,maxWidth:720,width:"100%",margin:"0 auto",padding:"0 12px 60px"}}>
       <div style={{textAlign:"center",marginBottom:16}}>
-        <div style={{fontSize:22,letterSpacing:3,color:"#c8b060",fontWeight:"normal",marginBottom:4}}>Local Trends 2026</div>
-        <div style={{fontSize:11,color:"#666",letterSpacing:1}}>Moon Sign QE + Lua Nova/Cheia + Jensen Key Days · contexto direcional</div>
-        <div style={{fontSize:10,color:"#444",marginTop:3}}>Bear market activo · Inversão LN/LC aplicada · Seasonal integrado</div>
+        <div style={{fontSize:26,letterSpacing:3,color:"#c8b060",fontWeight:"normal",marginBottom:4}}>Local Trends 2026</div>
+        <div style={{fontSize:14,color:"#666",letterSpacing:1}}>Moon Sign QE + Lua Nova/Cheia + Jensen Key Days · contexto direcional</div>
+        <div style={{fontSize:13,color:"#444",marginTop:3}}>Bear market activo · Inversão LN/LC aplicada · Seasonal integrado</div>
       </div>
 
       <div style={{display:"flex",gap:5,justifyContent:"center",marginBottom:14,flexWrap:"wrap"}}>
@@ -1219,7 +1219,7 @@ function LocalTrendsView() {
           <button key={b.k} onClick={()=>setTf(b.k)}
             style={{padding:"4px 12px",background:tf===b.k?"rgba(200,176,96,.15)":"rgba(255,255,255,.03)",
               border:`1px solid ${tf===b.k?"#c8b060":"rgba(255,255,255,.07)"}`,borderRadius:4,
-              color:tf===b.k?"#c8b060":"#555",fontSize:11,cursor:"pointer",fontFamily:"inherit"}}>
+              color:tf===b.k?"#c8b060":"#555",fontSize:14,cursor:"pointer",fontFamily:"inherit"}}>
             {b.l}
           </button>
         ))}
@@ -1227,7 +1227,7 @@ function LocalTrendsView() {
 
       {Object.entries(months).map(([mo,evs])=>(
         <div key={mo} style={{marginBottom:18}}>
-          <div style={{fontSize:10,letterSpacing:3,color:"#a89050",textTransform:"uppercase",
+          <div style={{fontSize:13,letterSpacing:3,color:"#a89050",textTransform:"uppercase",
             borderBottom:"1px solid rgba(200,176,96,.12)",paddingBottom:4,marginBottom:8}}>
             ── {mo} ({evs.length} sinais) ──────────────
           </div>
@@ -1246,21 +1246,21 @@ function LocalTrendsView() {
                   borderLeft:`3px solid ${isConf?"#ffb432":isHigh?"#ffe080":dc.color}`,
                 }}>
                   <div style={{minWidth:44,flexShrink:0}}>
-                    <div style={{fontSize:12,color:"#888",fontFamily:"sans-serif"}}>{ev.d.split(" ")[1]} {ev.d.split(" ")[0].substring(0,3)}</div>
-                    {isToday&&<div style={{fontSize:9,color:"#ffe080"}}>HOJE</div>}
-                    {isConf&&<div style={{fontSize:9,color:"#ffb432",fontWeight:"bold"}}>⭐ CONF</div>}
-                    {isHigh&&!isConf&&<div style={{fontSize:9,color:"#ffe080"}}>⭐ ALTA</div>}
+                    <div style={{fontSize:15,color:"#888",fontFamily:"sans-serif"}}>{ev.d.split(" ")[1]} {ev.d.split(" ")[0].substring(0,3)}</div>
+                    {isToday&&<div style={{fontSize:12,color:"#ffe080"}}>HOJE</div>}
+                    {isConf&&<div style={{fontSize:12,color:"#ffb432",fontWeight:"bold"}}>⭐ CONF</div>}
+                    {isHigh&&!isConf&&<div style={{fontSize:12,color:"#ffe080"}}>⭐ ALTA</div>}
                   </div>
                   <div style={{flex:1,minWidth:0}}>
                     <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",flexWrap:"wrap",gap:4,marginBottom:4}}>
-                      <span style={{fontSize:12,color:"#ccc"}}>{ev.l}</span>
+                      <span style={{fontSize:15,color:"#ccc"}}>{ev.l}</span>
                       <div style={{display:"flex",gap:6,alignItems:"center",flexShrink:0}}>
-                        <span style={{fontSize:11,color:probColor(ev.prob),background:"rgba(0,0,0,.3)",borderRadius:3,padding:"1px 6px"}}>{ev.prob}</span>
-                        <span style={{fontSize:11,color:dc.color,fontWeight:"bold"}}>{ev.dir}</span>
+                        <span style={{fontSize:14,color:probColor(ev.prob),background:"rgba(0,0,0,.3)",borderRadius:3,padding:"1px 6px"}}>{ev.prob}</span>
+                        <span style={{fontSize:14,color:dc.color,fontWeight:"bold"}}>{ev.dir}</span>
                       </div>
                     </div>
-                    <div style={{fontSize:11,color:"#5a5850",lineHeight:1.5}}>{ev.note}</div>
-                    <div style={{fontSize:10,color:"#3a3830",marginTop:3}}>Seasonal: {ev.seas}</div>
+                    <div style={{fontSize:14,color:"#5a5850",lineHeight:1.5}}>{ev.note}</div>
+                    <div style={{fontSize:13,color:"#3a3830",marginTop:3}}>Seasonal: {ev.seas}</div>
                   </div>
                 </div>
               );
@@ -1269,7 +1269,7 @@ function LocalTrendsView() {
         </div>
       ))}
 
-      <div style={{fontSize:10,color:"#2a2820",textAlign:"center",marginTop:8,lineHeight:1.7,padding:"10px 0"}}>
+      <div style={{fontSize:13,color:"#2a2820",textAlign:"center",marginTop:8,lineHeight:1.7,padding:"10px 0"}}>
         Fontes: Pesavento Cap.11 (Moon vs Sign QE) · Jensen (1978) Key Days · Bear Market Inversion (Pesavento p.20)<br/>
         ⭐ Alta conf. = múltiplos frameworks alinham na mesma direcção
       </div>
@@ -1325,12 +1325,12 @@ function ChartS144View() {
   return(
     <div style={{position:"relative",zIndex:1,maxWidth:720,width:"100%",margin:"0 auto",padding:"0 12px 60px"}}>
       <div style={{textAlign:"center",marginBottom:20}}>
-        <div style={{fontSize:11,letterSpacing:3,color:"#a89050",textTransform:"uppercase",marginBottom:8}}>Square of 144 · BTC Live</div>
+        <div style={{fontSize:14,letterSpacing:3,color:"#a89050",textTransform:"uppercase",marginBottom:8}}>Square of 144 · BTC Live</div>
         <div style={{display:"flex",alignItems:"baseline",justifyContent:"center",gap:12,marginBottom:4}}>
-          <span style={{fontSize:42,color:"#ffe080",letterSpacing:-1,fontWeight:"normal"}}>${price.toLocaleString("en",{maximumFractionDigits:0})}</span>
-          <span style={{fontSize:18,color:up?"#50e878":"#ff5060",fontFamily:"sans-serif"}}>{up?"+":""}{change24h?.toFixed(2)||"..."}%</span>
+          <span style={{fontSize:48,color:"#ffe080",letterSpacing:-1,fontWeight:"normal"}}>${price.toLocaleString("en",{maximumFractionDigits:0})}</span>
+          <span style={{fontSize:21,color:up?"#50e878":"#ff5060",fontFamily:"sans-serif"}}>{up?"+":""}{change24h?.toFixed(2)||"..."}%</span>
         </div>
-        <div style={{fontSize:11,color:"#444",letterSpacing:1}}>BTC/USDT · Binance · {lastUpd?`${lastUpd}`:"a carregar..."} · cada 20s</div>
+        <div style={{fontSize:14,color:"#444",letterSpacing:1}}>BTC/USDT · Binance · {lastUpd?`${lastUpd}`:"a carregar..."} · cada 20s</div>
       </div>
 
       <div style={{display:"flex",gap:16,alignItems:"flex-start",justifyContent:"center",flexWrap:"wrap"}}>
@@ -1365,64 +1365,64 @@ function ChartS144View() {
 
         <div style={{flex:1,minWidth:190,display:"flex",flexDirection:"column",gap:10}}>
           <div style={{background:"rgba(255,224,128,.06)",border:"1px solid rgba(255,224,128,.2)",borderRadius:6,padding:"12px 14px"}}>
-            <div style={{fontSize:10,color:"#a89050",letterSpacing:2,marginBottom:8,textTransform:"uppercase"}}>Posição S144</div>
-            <div style={{fontSize:13,color:"#ffe080",marginBottom:4}}>Nível <strong>{unitsFromLow.toFixed(1)}/144</strong> do LOW</div>
-            <div style={{fontSize:12,color:"#c8b060",marginBottom:6}}>Zona: {below.frac} → {above.frac}</div>
+            <div style={{fontSize:13,color:"#a89050",letterSpacing:2,marginBottom:8,textTransform:"uppercase"}}>Posição S144</div>
+            <div style={{fontSize:16,color:"#ffe080",marginBottom:4}}>Nível <strong>{unitsFromLow.toFixed(1)}/144</strong> do LOW</div>
+            <div style={{fontSize:15,color:"#c8b060",marginBottom:6}}>Zona: {below.frac} → {above.frac}</div>
             <div style={{background:"rgba(0,0,0,.4)",borderRadius:4,height:8,overflow:"hidden"}}>
               <div style={{width:`${Math.min(100,unitsFromLow/144*100).toFixed(1)}%`,height:"100%",background:"linear-gradient(90deg,#ff4060,#ffe080)",borderRadius:4}}/>
             </div>
-            <div style={{display:"flex",justifyContent:"space-between",fontSize:9,color:"#555",marginTop:3}}>
+            <div style={{display:"flex",justifyContent:"space-between",fontSize:12,color:"#555",marginTop:3}}>
               <span>LOW $60K</span><span>ATH $126K</span>
             </div>
           </div>
 
           <div style={{background:"rgba(255,255,255,.02)",border:"1px solid rgba(255,255,255,.06)",borderRadius:6,padding:"12px 14px",display:"flex",flexDirection:"column",gap:6}}>
-            <div style={{fontSize:10,color:"#a89050",letterSpacing:2,marginBottom:2,textTransform:"uppercase"}}>Níveis Chave</div>
+            <div style={{fontSize:13,color:"#a89050",letterSpacing:2,marginBottom:2,textTransform:"uppercase"}}>Níveis Chave</div>
             <div style={{display:"flex",justifyContent:"space-between"}}>
-              <span style={{fontSize:12,color:"#90e0f0"}}>▲ Resist.</span>
-              <span style={{fontSize:13,color:"#90e0f0",fontFamily:"sans-serif"}}>${above.price.toLocaleString()} <span style={{fontSize:10,color:"#555"}}>({above.frac})</span></span>
+              <span style={{fontSize:15,color:"#90e0f0"}}>▲ Resist.</span>
+              <span style={{fontSize:16,color:"#90e0f0",fontFamily:"sans-serif"}}>${above.price.toLocaleString()} <span style={{fontSize:13,color:"#555"}}>({above.frac})</span></span>
             </div>
             <div style={{height:1,background:"rgba(255,255,255,.05)"}}/>
             <div style={{display:"flex",justifyContent:"space-between"}}>
-              <span style={{fontSize:12,color:"#ffe080"}}>● BTC</span>
-              <span style={{fontSize:13,color:"#ffe080",fontFamily:"sans-serif"}}>${price.toLocaleString()}</span>
+              <span style={{fontSize:15,color:"#ffe080"}}>● BTC</span>
+              <span style={{fontSize:16,color:"#ffe080",fontFamily:"sans-serif"}}>${price.toLocaleString()}</span>
             </div>
             <div style={{height:1,background:"rgba(255,255,255,.05)"}}/>
             <div style={{display:"flex",justifyContent:"space-between"}}>
-              <span style={{fontSize:12,color:"#ff5060"}}>▼ Suporte</span>
-              <span style={{fontSize:13,color:"#ff5060",fontFamily:"sans-serif"}}>${below.price.toLocaleString()} <span style={{fontSize:10,color:"#555"}}>({below.frac})</span></span>
+              <span style={{fontSize:15,color:"#ff5060"}}>▼ Suporte</span>
+              <span style={{fontSize:16,color:"#ff5060",fontFamily:"sans-serif"}}>${below.price.toLocaleString()} <span style={{fontSize:13,color:"#555"}}>({below.frac})</span></span>
             </div>
           </div>
 
           <div style={{background:"rgba(255,80,60,.04)",border:"1px solid rgba(255,80,60,.15)",borderRadius:6,padding:"12px 14px"}}>
-            <div style={{fontSize:10,color:"#a89050",letterSpacing:2,marginBottom:6,textTransform:"uppercase"}}>Price = Time (Gann)</div>
-            <div style={{fontSize:12,color:"#c0c8d0",lineHeight:1.7}}>
+            <div style={{fontSize:13,color:"#a89050",letterSpacing:2,marginBottom:6,textTransform:"uppercase"}}>Price = Time (Gann)</div>
+            <div style={{fontSize:15,color:"#c0c8d0",lineHeight:1.7}}>
               <div>📅 Dias desde LOW: <strong style={{color:"#90e0f0"}}>40</strong></div>
               <div>📐 Unidades preço: <strong style={{color:"#90e0f0"}}>{unitsFromLow.toFixed(1)}</strong></div>
               <div>⚠️ Time lag: <strong style={{color:"#ff7050"}}>{timeLag} dias</strong></div>
             </div>
-            <div style={{fontSize:11,color:"#ff7050",marginTop:6,lineHeight:1.5}}>Tempo move mais rápido que preço → BEARISH em Gann</div>
+            <div style={{fontSize:14,color:"#ff7050",marginTop:6,lineHeight:1.5}}>Tempo move mais rápido que preço → BEARISH em Gann</div>
           </div>
 
           <div style={{background:"rgba(255,255,255,.02)",border:"1px solid rgba(255,255,255,.06)",borderRadius:6,padding:"12px 14px",display:"flex",flexDirection:"column",gap:4}}>
-            <div style={{fontSize:10,color:"#a89050",letterSpacing:2,marginBottom:4,textTransform:"uppercase"}}>Distâncias</div>
-            <div style={{fontSize:12,color:"#888"}}>Do ATH: <span style={{color:"#ff5060"}}>−${(ATH_PRICE-price).toLocaleString()} (−{pctATH}%)</span></div>
-            <div style={{fontSize:12,color:"#888"}}>Do LOW: <span style={{color:"#50e878"}}>+${(price-LOW_PRICE).toLocaleString()} (+{pctLow}%)</span></div>
-            <div style={{fontSize:12,color:"#888"}}>Unidade S144: <span style={{color:"#c8b060"}}>$460</span></div>
-            <div style={{fontSize:12,color:"#888"}}>↑ até {above.frac}: <span style={{color:"#90e0f0"}}>+${(above.price-price).toLocaleString()}</span></div>
-            <div style={{fontSize:12,color:"#888"}}>↓ até {below.frac}: <span style={{color:"#ff5060"}}>−${(price-below.price).toLocaleString()}</span></div>
+            <div style={{fontSize:13,color:"#a89050",letterSpacing:2,marginBottom:4,textTransform:"uppercase"}}>Distâncias</div>
+            <div style={{fontSize:15,color:"#888"}}>Do ATH: <span style={{color:"#ff5060"}}>−${(ATH_PRICE-price).toLocaleString()} (−{pctATH}%)</span></div>
+            <div style={{fontSize:15,color:"#888"}}>Do LOW: <span style={{color:"#50e878"}}>+${(price-LOW_PRICE).toLocaleString()} (+{pctLow}%)</span></div>
+            <div style={{fontSize:15,color:"#888"}}>Unidade S144: <span style={{color:"#c8b060"}}>$460</span></div>
+            <div style={{fontSize:15,color:"#888"}}>↑ até {above.frac}: <span style={{color:"#90e0f0"}}>+${(above.price-price).toLocaleString()}</span></div>
+            <div style={{fontSize:15,color:"#888"}}>↓ até {below.frac}: <span style={{color:"#ff5060"}}>−${(price-below.price).toLocaleString()}</span></div>
           </div>
         </div>
       </div>
 
       <div style={{marginTop:20,borderRadius:8,overflow:"hidden",border:"1px solid rgba(200,176,96,.15)"}}>
-        <div style={{fontSize:10,color:"#a89050",letterSpacing:2,textAlign:"center",padding:"8px 0 4px",textTransform:"uppercase",background:"rgba(6,7,16,.9)"}}>TradingView — BTCUSDT Daily</div>
+        <div style={{fontSize:13,color:"#a89050",letterSpacing:2,textAlign:"center",padding:"8px 0 4px",textTransform:"uppercase",background:"rgba(6,7,16,.9)"}}>TradingView — BTCUSDT Daily</div>
         <iframe src="https://s.tradingview.com/widgetembed/?symbol=BINANCE%3ABTCUSDT&interval=D&theme=dark&style=1&locale=pt&timezone=Europe%2FLisbon" style={{width:"100%",height:420,border:"none",display:"block"}}/>
       </div>
 
       <div style={{marginTop:14,padding:"12px 14px",background:"rgba(255,255,255,.02)",border:"1px solid rgba(255,255,255,.04)",borderRadius:6}}>
-        <div style={{fontSize:10,color:"#a89050",letterSpacing:2,marginBottom:6,textTransform:"uppercase"}}>Metodologia S144</div>
-        <div style={{fontSize:11,color:"#5a5850",lineHeight:1.8}}>
+        <div style={{fontSize:13,color:"#a89050",letterSpacing:2,marginBottom:6,textTransform:"uppercase"}}>Metodologia S144</div>
+        <div style={{fontSize:14,color:"#5a5850",lineHeight:1.8}}>
           144 = 12² · Fibonacci · Ancora: ATH $126,272 (Oct 6 2025) → LOW $60,001 (Feb 27 2026) · 144 dias exactos = 144 unidades $460 · <strong style={{color:"#c8b060"}}>Price=Time confirmado</strong> · Unidade: $460.22
         </div>
       </div>
@@ -1521,23 +1521,23 @@ function WeekView() {
 
       {/* Header */}
       <div style={{textAlign:"center",marginBottom:16}}>
-        <div style={{fontSize:10,letterSpacing:3,color:"#a89050",textTransform:"uppercase",marginBottom:5}}>Semana Corrente</div>
-        <div style={{fontSize:22,color:"#c8b060",letterSpacing:2,fontWeight:"normal",marginBottom:3}}>{w.weekLabel}</div>
-        <div style={{fontSize:10,color:"#555",marginBottom:2}}>{w.seasonal}</div>
-        <div style={{fontSize:10,color:"#3a3830"}}>Bear market · Inversão LN/LC · Hurst −2 · Bayer disposal · S144 anchor $60,001</div>
+        <div style={{fontSize:13,letterSpacing:3,color:"#a89050",textTransform:"uppercase",marginBottom:5}}>Semana Corrente</div>
+        <div style={{fontSize:26,color:"#c8b060",letterSpacing:2,fontWeight:"normal",marginBottom:3}}>{w.weekLabel}</div>
+        <div style={{fontSize:13,color:"#555",marginBottom:2}}>{w.seasonal}</div>
+        <div style={{fontSize:13,color:"#3a3830"}}>Bear market · Inversão LN/LC · Hurst −2 · Bayer disposal · S144 anchor $60,001</div>
       </div>
 
       {/* Phase Timeline */}
       <div style={{marginBottom:14}}>
-        <div style={{fontSize:10,color:"#a89050",letterSpacing:2,textTransform:"uppercase",marginBottom:6}}>Fases</div>
+        <div style={{fontSize:13,color:"#a89050",letterSpacing:2,textTransform:"uppercase",marginBottom:6}}>Fases</div>
         <div style={{display:"flex",gap:4,flexWrap:"wrap"}}>
           {w.phases.map((ph,i)=>(
             <div key={i} onClick={()=>setPhase(phase===i?null:i)}
               style={{flex:"1 1 140px",background:"rgba(255,255,255,.02)",border:`1px solid ${ph.color}44`,
                 borderLeft:`3px solid ${ph.color}`,borderRadius:5,padding:"8px 10px",cursor:"pointer"}}>
-              <div style={{fontSize:11,color:ph.color,fontWeight:"bold",marginBottom:2}}>{ph.icon} {ph.label}</div>
-              <div style={{fontSize:10,color:"#666"}}>{ph.days}</div>
-              {phase===i&&<div style={{fontSize:10,color:"#a0a89a",marginTop:5,lineHeight:1.5}}>{ph.note}</div>}
+              <div style={{fontSize:14,color:ph.color,fontWeight:"bold",marginBottom:2}}>{ph.icon} {ph.label}</div>
+              <div style={{fontSize:13,color:"#666"}}>{ph.days}</div>
+              {phase===i&&<div style={{fontSize:13,color:"#a0a89a",marginTop:5,lineHeight:1.5}}>{ph.note}</div>}
             </div>
           ))}
         </div>
@@ -1545,21 +1545,21 @@ function WeekView() {
 
       {/* S144 Levels */}
       <div style={{marginBottom:14}}>
-        <div style={{fontSize:10,color:"#a89050",letterSpacing:2,textTransform:"uppercase",marginBottom:6}}>Square of 144 — Níveis Chave</div>
+        <div style={{fontSize:13,color:"#a89050",letterSpacing:2,textTransform:"uppercase",marginBottom:6}}>Square of 144 — Níveis Chave</div>
         <div style={{display:"flex",gap:4,flexWrap:"wrap",justifyContent:"center"}}>
           {w.s144levels.map((l,i)=>{
             const col = l.type==="resist"?"#ff6060":l.type==="major"?"#ff2040":"#50c878";
             return(
               <div key={i} style={{background:"rgba(255,255,255,.02)",border:`1px solid ${col}33`,borderRadius:4,padding:"4px 10px",textAlign:"center"}}>
-                <div style={{fontSize:12,color:col,fontWeight:"bold"}}>${l.price.toLocaleString()}</div>
-                <div style={{fontSize:9,color:"#444"}}>{l.label}</div>
+                <div style={{fontSize:15,color:col,fontWeight:"bold"}}>${l.price.toLocaleString()}</div>
+                <div style={{fontSize:12,color:"#444"}}>{l.label}</div>
               </div>
             );
           })}
         </div>
         <div style={{display:"flex",gap:8,justifyContent:"center",marginTop:6}}>
-          <div style={{fontSize:10,color:"#ff8040"}}>⬆ p1: $73,807 (11 Abr)</div>
-          <div style={{fontSize:10,color:"#ff6060"}}>⬆ p2: $76,127 (14 Abr — doji, −$442 do 108/144)</div>
+          <div style={{fontSize:13,color:"#ff8040"}}>⬆ p1: $73,807 (11 Abr)</div>
+          <div style={{fontSize:13,color:"#ff6060"}}>⬆ p2: $76,127 (14 Abr — doji, −$442 do 108/144)</div>
         </div>
       </div>
 
@@ -1583,31 +1583,31 @@ function WeekView() {
               <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:4,flexWrap:"wrap"}}>
                 {/* Date */}
                 <div style={{minWidth:68,flexShrink:0}}>
-                  <span style={{fontSize:12,color:"#666"}}>{ev.wd} </span>
-                  <span style={{fontSize:13,color:today_?"#ffe080":"#c8b060"}}>{ev.d.split(" ")[1]}</span>
-                  {today_&&<div style={{fontSize:8,color:"#ffe080",letterSpacing:1}}>HOJE</div>}
+                  <span style={{fontSize:15,color:"#666"}}>{ev.wd} </span>
+                  <span style={{fontSize:16,color:today_?"#ffe080":"#c8b060"}}>{ev.d.split(" ")[1]}</span>
+                  {today_&&<div style={{fontSize:11,color:"#ffe080",letterSpacing:1}}>HOJE</div>}
                 </div>
                 {/* Aspect */}
                 <div style={{flex:1,minWidth:120}}>
-                  <span style={{fontSize:13,color:bc.color,fontWeight:"bold"}}>{ev.icon} </span>
-                  <span style={{fontSize:12,color:today_?"#e0d8cc":"#b0a898"}}>{ev.aspect}</span>
+                  <span style={{fontSize:16,color:bc.color,fontWeight:"bold"}}>{ev.icon} </span>
+                  <span style={{fontSize:15,color:today_?"#e0d8cc":"#b0a898"}}>{ev.aspect}</span>
                 </div>
                 {/* Tag */}
                 <div style={{
-                  fontSize:10,color:bc.color,background:bc.bg,
+                  fontSize:13,color:bc.color,background:bc.bg,
                   border:`1px solid ${bc.bc}`,borderRadius:3,padding:"1px 7px",flexShrink:0,
                   fontWeight:isMajor?"bold":"normal",
                 }}>{ev.tag}</div>
               </div>
               {/* Note */}
-              <div style={{fontSize:11,color:isOpen?"#9a9288":"#5a5248",lineHeight:1.55,paddingLeft:76,transition:"color .2s"}}>
+              <div style={{fontSize:14,color:isOpen?"#9a9288":"#5a5248",lineHeight:1.55,paddingLeft:76,transition:"color .2s"}}>
                 {ev.note}
               </div>
               {/* S144 expanded */}
               {isOpen&&(
                 <div style={{marginTop:8,paddingTop:8,borderTop:"1px solid rgba(255,255,255,.05)",paddingLeft:76}}>
-                  <div style={{fontSize:9,color:"#a89050",letterSpacing:2,marginBottom:3,textTransform:"uppercase"}}>S144 · Acção</div>
-                  <div style={{fontSize:11,color:"#c0c8d0",lineHeight:1.6}}>{ev.s144}</div>
+                  <div style={{fontSize:12,color:"#a89050",letterSpacing:2,marginBottom:3,textTransform:"uppercase"}}>S144 · Acção</div>
+                  <div style={{fontSize:14,color:"#c0c8d0",lineHeight:1.6}}>{ev.s144}</div>
                 </div>
               )}
             </div>
@@ -1617,7 +1617,7 @@ function WeekView() {
 
       {/* Net Force Chart — extended to Apr 26 */}
       <div style={{marginTop:16,background:"rgba(255,255,255,.02)",border:"1px solid rgba(255,255,255,.04)",borderRadius:6,padding:"12px"}}>
-        <div style={{fontSize:10,color:"#a89050",letterSpacing:2,marginBottom:10,textTransform:"uppercase"}}>Net Force — Apr 13 → 26</div>
+        <div style={{fontSize:13,color:"#a89050",letterSpacing:2,marginBottom:10,textTransform:"uppercase"}}>Net Force — Apr 13 → 26</div>
         <div style={{display:"flex",gap:3,alignItems:"flex-end",justifyContent:"space-around",overflowX:"auto"}}>
           {[
             {d:"13",net:0,bias:"neut"},{d:"14",net:1,bias:"spike"},
@@ -1634,22 +1634,22 @@ function WeekView() {
             const isTod = (parseInt(day.d)===todayDay&&todayMon===3);
             return(
               <div key={i} style={{display:"flex",flexDirection:"column",alignItems:"center",gap:2,minWidth:22}}>
-                <div style={{fontSize:9,color:bc.color}}>{day.net>0?"+":""}{day.net}</div>
+                <div style={{fontSize:12,color:bc.color}}>{day.net>0?"+":""}{day.net}</div>
                 <div style={{width:20,height:h,background:bc.color+"44",border:`1px solid ${bc.color}${isTod?"":"66"}`,borderRadius:2,outline:isTod?`2px solid #ffe080`:"none"}}/>
-                <div style={{fontSize:8,color:isTod?"#ffe080":"#444"}}>{day.d}</div>
+                <div style={{fontSize:11,color:isTod?"#ffe080":"#444"}}>{day.d}</div>
               </div>
             );
           })}
         </div>
         <div style={{display:"flex",justifyContent:"space-between",marginTop:6,paddingTop:4,borderTop:"1px solid rgba(255,255,255,.04)"}}>
-          <div style={{fontSize:9,color:"#ff4060"}}>⚠️ Apr 20: máximo bearish</div>
-          <div style={{fontSize:9,color:"#c8b060"}}>⚡ Apr 26: Úrano ingress Gémeos</div>
-          <div style={{fontSize:9,color:"#ff4060"}}>🔴 Apr 25: Sol²Plutão</div>
+          <div style={{fontSize:12,color:"#ff4060"}}>⚠️ Apr 20: máximo bearish</div>
+          <div style={{fontSize:12,color:"#c8b060"}}>⚡ Apr 26: Úrano ingress Gémeos</div>
+          <div style={{fontSize:12,color:"#ff4060"}}>🔴 Apr 25: Sol²Plutão</div>
         </div>
       </div>
 
       {/* Footer */}
-      <div style={{fontSize:9,color:"#252018",textAlign:"center",marginTop:12,lineHeight:1.8}}>
+      <div style={{fontSize:12,color:"#252018",textAlign:"center",marginTop:12,lineHeight:1.8}}>
         Pesavento · Hurst (−2) · Gann S144 · Bayer disposal · Malefic Bottleneck Apr 20<br/>
         p1: $73,807 (11 Abr) · p2: $76,127 doji (14 Abr) · LN: 17 Abr 11:51 UTC<br/>
         Marte☌Sat: 19 Abr 22:43 UTC · Sol²Plutão: 25 Abr · ⚡ Úrano→Gémeos: 26 Abr 21:52 UTC
@@ -1673,10 +1673,10 @@ export default function App() {
     <div style={{minHeight:"100vh",background:"#060710",fontFamily:"Georgia,serif",color:"#e0d8cc",display:"flex",flexDirection:"column"}}>
       <div style={{position:"fixed",inset:0,zIndex:0,background:"radial-gradient(ellipse at 15% 20%,rgba(40,18,80,.65),transparent 50%),radial-gradient(ellipse at 85% 80%,rgba(8,28,58,.65),transparent 50%)",pointerEvents:"none"}}/>
       <header style={{position:"relative",zIndex:1,textAlign:"center",padding:"24px 16px 10px"}}>
-        <p style={{fontSize:12,letterSpacing:2,color:"#a89050",margin:"0 0 5px",textTransform:"uppercase"}}>Gann · Jensen · Pesavento · Bayer · Fibonacci · NASA/JPL · ATH Oct 6, 2025</p>
-        <h1 style={{fontSize:"clamp(22px,5vw,40px)",fontWeight:"normal",letterSpacing:2,margin:0,background:"linear-gradient(120deg,#ffe080,#c8b060,#ffcce0,#90e0f0)",WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent"}}>BTC Astro-Timing 2026</h1>
+        <p style={{fontSize:15,letterSpacing:2,color:"#a89050",margin:"0 0 5px",textTransform:"uppercase"}}>Gann · Jensen · Pesavento · Bayer · Fibonacci · NASA/JPL · ATH Oct 6, 2025</p>
+        <h1 style={{fontSize:"clamp(26px,5vw,44px)",fontWeight:"normal",letterSpacing:2,margin:0,background:"linear-gradient(120deg,#ffe080,#c8b060,#ffcce0,#90e0f0)",WebkitBackgroundClip:"text",WebkitTextFillColor:"transparent"}}>BTC Astro-Timing 2026</h1>
         <div style={{width:40,height:1,background:"linear-gradient(90deg,transparent,#c8b060,transparent)",margin:"6px auto"}}/>
-        <p style={{fontSize:12,color:"#ffe08066",margin:0}}>Click any event · source · reasoning · historical bias</p>
+        <p style={{fontSize:15,color:"#ffe08066",margin:0}}>Click any event · source · reasoning · historical bias</p>
       </header>
       <nav style={{position:"relative",zIndex:1,display:"flex",flexWrap:"wrap",justifyContent:"center",gap:4,padding:"8px 10px 3px"}}>
         {MONTHS.map(m=>{
@@ -1686,8 +1686,8 @@ export default function App() {
           const bd=isA?(isV?"#64c8dc":isC?"#ffb432":"#ffc832"):hC?"rgba(255,200,50,.3)":"rgba(255,255,255,.06)";
           const cl=isA?(isV?"#90e0f0":isC?"#ffb432":"#ffe080"):isV?"#64c8dc88":isC?"#ffb43255":"#555";
           return <button key={m} onClick={()=>{setActive(m);setFilter("all");setExpanded(null);}}
-            style={{padding:"5px 12px",background:bg,border:`1px solid ${bd}`,borderRadius:4,color:cl,fontSize:13,letterSpacing:.5,cursor:"pointer",fontFamily:"inherit"}}>
-            {ML[m]}{hC&&<span style={{color:"#ffe080",fontSize:9,marginLeft:2}}>★</span>}
+            style={{padding:"5px 12px",background:bg,border:`1px solid ${bd}`,borderRadius:4,color:cl,fontSize:16,letterSpacing:.5,cursor:"pointer",fontFamily:"inherit"}}>
+            {ML[m]}{hC&&<span style={{color:"#ffe080",fontSize:12,marginLeft:2}}>★</span>}
           </button>;
         })}
       </nav>
@@ -1699,7 +1699,7 @@ export default function App() {
       )}
       {active!=="MAPA"&&active!=="WEEK"&&active!=="S144"&&active!=="TREND"&&<div style={{position:"relative",zIndex:1,textAlign:"center",marginBottom:10}}>
         <span style={{fontSize:active==="VISAO"?22:28,letterSpacing:3,color:active==="CONF"?"#ffb432":active==="VISAO"?"#90e0f0":"#c8b060",fontWeight:"normal"}}>{month.l}</span>
-        {!isSpecial&&<span style={{fontSize:12,color:"#444",marginLeft:10}}>{events.length} events</span>}
+        {!isSpecial&&<span style={{fontSize:15,color:"#444",marginLeft:10}}>{events.length} events</span>}
       </div>}
       {active==="MAPA" && <MapaView/>}
       {active==="WEEK" && <WeekView/>}
@@ -1723,34 +1723,34 @@ export default function App() {
                 <div style={{minWidth:8,height:8,borderRadius:"50%",background:dc,marginTop:6,boxShadow:`0 0 6px ${dc}`,flexShrink:0}}/>
                 <div style={{flex:1,minWidth:0}}>
                   <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",flexWrap:"wrap",gap:4,marginBottom:4}}>
-                    <span style={{fontSize:14,color:dc,letterSpacing:1,textTransform:"uppercase",fontWeight:"bold"}}>{ev.w}</span>
+                    <span style={{fontSize:17,color:dc,letterSpacing:1,textTransform:"uppercase",fontWeight:"bold"}}>{ev.w}</span>
                     <div style={{display:"flex",gap:5,alignItems:"center"}}>
-                      <span style={{fontSize:13,color:bias.color,background:bias.bg,border:`1px solid ${bias.color}44`,borderRadius:3,padding:"1px 7px",fontFamily:"sans-serif"}}>
+                      <span style={{fontSize:16,color:bias.color,background:bias.bg,border:`1px solid ${bias.color}44`,borderRadius:3,padding:"1px 7px",fontFamily:"sans-serif"}}>
                         {bias.icon} {bias.label}
                       </span>
-                      <span style={{fontSize:11,color:cfg.b,opacity:.5}}>{cfg.l}</span>
-                      <span style={{fontSize:12,color:"#555"}}>{isOpen?"▲":"▼"}</span>
+                      <span style={{fontSize:14,color:cfg.b,opacity:.5}}>{cfg.l}</span>
+                      <span style={{fontSize:15,color:"#555"}}>{isOpen?"▲":"▼"}</span>
                     </div>
                   </div>
-                  <p style={{fontSize:16,color:confl?"#ffe0b0":ev.t==="g"?"#ffe080cc":"#ddd8c8",margin:"0 0 4px",lineHeight:1.45}}>{ev.e}</p>
-                  <p style={{fontSize:13,color:"#5a5850",margin:0,lineHeight:1.55}}>{ev.c}</p>
+                  <p style={{fontSize:19,color:confl?"#ffe0b0":ev.t==="g"?"#ffe080cc":"#ddd8c8",margin:"0 0 4px",lineHeight:1.45}}>{ev.e}</p>
+                  <p style={{fontSize:16,color:"#5a5850",margin:0,lineHeight:1.55}}>{ev.c}</p>
                 </div>
               </div>
               {isOpen&&(
                 <div style={{marginTop:14,marginLeft:18,borderTop:"1px solid rgba(255,255,255,.07)",paddingTop:14,display:"flex",flexDirection:"column",gap:12}}>
                   <div style={{display:"flex",gap:10,alignItems:"flex-start"}}>
-                    <span style={{fontSize:12,color:"#90e0f0",minWidth:76,flexShrink:0,paddingTop:1}}>📚 SOURCE</span>
-                    <span style={{fontSize:13,color:"#a0b8c8",lineHeight:1.6}}>{ev.src}</span>
+                    <span style={{fontSize:15,color:"#90e0f0",minWidth:76,flexShrink:0,paddingTop:1}}>📚 SOURCE</span>
+                    <span style={{fontSize:16,color:"#a0b8c8",lineHeight:1.6}}>{ev.src}</span>
                   </div>
                   <div style={{display:"flex",gap:10,alignItems:"flex-start"}}>
-                    <span style={{fontSize:12,color:"#90e0f0",minWidth:76,flexShrink:0,paddingTop:4}}>📊 HISTORY</span>
-                    <span style={{fontSize:13,color:bias.color,background:bias.bg,border:`1px solid ${bias.color}33`,borderRadius:4,padding:"4px 12px",fontFamily:"sans-serif",lineHeight:1.5}}>
+                    <span style={{fontSize:15,color:"#90e0f0",minWidth:76,flexShrink:0,paddingTop:4}}>📊 HISTORY</span>
+                    <span style={{fontSize:16,color:bias.color,background:bias.bg,border:`1px solid ${bias.color}33`,borderRadius:4,padding:"4px 12px",fontFamily:"sans-serif",lineHeight:1.5}}>
                       {bias.icon} {bias.label} — {ev.bias==="bull"?"Market historically rises around this event.":ev.bias==="bear"?"Market historically falls around this event.":ev.bias==="warn"?"Historically associated with crashes or major dislocations.":ev.bias==="turn"?"Historical turning point — direction depends on context and trend.":"Neutral signal — amplifies the existing trend."}
                     </span>
                   </div>
                   <div style={{display:"flex",gap:10,alignItems:"flex-start"}}>
-                    <span style={{fontSize:12,color:"#90e0f0",minWidth:76,flexShrink:0,paddingTop:3}}>💡 REASONING</span>
-                    <p style={{fontSize:15,color:"#c0c8d0",margin:0,lineHeight:1.7}}>{ev.why}</p>
+                    <span style={{fontSize:15,color:"#90e0f0",minWidth:76,flexShrink:0,paddingTop:3}}>💡 REASONING</span>
+                    <p style={{fontSize:18,color:"#c0c8d0",margin:0,lineHeight:1.7}}>{ev.why}</p>
                   </div>
                 </div>
               )}
@@ -1759,12 +1759,12 @@ export default function App() {
         })}
       </div>}
       <footer style={{position:"relative",zIndex:1,borderTop:"1px solid rgba(255,255,255,.04)",padding:"12px",display:"flex",flexWrap:"wrap",justifyContent:"center",gap:10}}>
-        {Object.entries(TC).map(([k,v])=><div key={k} style={{display:"flex",alignItems:"center",gap:4}}><div style={{width:7,height:7,borderRadius:"50%",background:v.d,boxShadow:`0 0 4px ${v.d}`}}/><span style={{fontSize:12,color:"#4a4840"}}>{v.l}</span></div>)}
+        {Object.entries(TC).map(([k,v])=><div key={k} style={{display:"flex",alignItems:"center",gap:4}}><div style={{width:7,height:7,borderRadius:"50%",background:v.d,boxShadow:`0 0 4px ${v.d}`}}/><span style={{fontSize:15,color:"#4a4840"}}>{v.l}</span></div>)}
         <div style={{width:"100%",display:"flex",justifyContent:"center",gap:14,marginTop:6,flexWrap:"wrap"}}>
-          {Object.entries(BIAS).map(([k,v])=><span key={k} style={{fontSize:11,color:v.color}}>{v.icon} {v.label}</span>)}
+          {Object.entries(BIAS).map(([k,v])=><span key={k} style={{fontSize:14,color:v.color}}>{v.icon} {v.label}</span>)}
         </div>
       </footer>
     </div>
   );
 }
-function ps(a,c){return{padding:"4px 13px",background:a?`${c}18`:"transparent",border:a?`1px solid ${c}44`:"1px solid rgba(255,255,255,.04)",borderRadius:20,color:a?c:"#4a4840",fontSize:13,cursor:"pointer",fontFamily:"inherit"};}
+function ps(a,c){return{padding:"4px 13px",background:a?`${c}18`:"transparent",border:a?`1px solid ${c}44`:"1px solid rgba(255,255,255,.04)",borderRadius:20,color:a?c:"#4a4840",fontSize:16,cursor:"pointer",fontFamily:"inherit"};}
