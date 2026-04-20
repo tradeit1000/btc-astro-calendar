@@ -333,7 +333,7 @@ APR:{l:"April",e:[
    c:"Full Moon = peak signal (1,346 cycles). Moon in Virgo = QE-era ABSOLUTE PEAK (61 cycles, 2009-present). Double peak signal: the most precise distribution zone of the April Earnings Rally.",
    why:"Pesavento's Moon vs Sign (QE-era, 61 cycles): Virgo = absolute peak, replacing the pre-QE Libra peak. Combined with Full Moon peak signal (1,346 cycles): DOUBLE PEAK SIGNAL on April 1. This is the most statistically certain distribution point of the entire April Earnings Rally cluster. Falls at the heart of the Jupiter-Uranus sextile bullish cluster — the bullish move likely peaks HERE, on this specific Full Moon in Virgo. Sell here; watch for a brief consolidation then potential resumption. Average Full Moon peak: 1-3 days AFTER Full Moon."},
   {w:"Apr 06",t:"g",bias:"turn",src:"Gann Master Time Factor + Square of Nine",
-   e:"📐 Gann 180° MIDPOINT ⚡ + TIME=PRICE SQUARING — BTC $69,000 ≈ S9 Level 23×",
+   e:"📐 Gann 180° MIDPOINT ⚡ — ✅ CONFIRMADO: BTC $69K→rally até $76K (alvo: $73-78K)",
    c:"182.6 dias desde ATH = 180° midpoint angular. BTC ~$69,000 ≈ $69,352 (S9 −184 steps, 23 rotações abaixo ATH). TEMPO e PREÇO a fazer squaring simultâneo.",
    why:"GANN: '180° = máxima pressão — inversão ou aceleração.' TRIPLO SQUARING HOJE: (1) TEMPO=180° midpoint Gann; (2) PREÇO=$69,000≈162° angular decline do ATH ($69,450=162° exact); (3) S9=$69,352 (23 rotações). DESCOBERTA CRÍTICA: 162° é o ângulo BULLISH de Jensen para Júpiter-Saturno! O BTC desceu em PREÇO exactamente até ao ângulo bullish de Jensen no mesmo dia que o TEMPO atinge 180°. O quadro completo: TIME=180° (Gann máxima pressão) + PRICE=162° (Jensen bull angle) + S9=23 rotações. Com o cluster Jupiter-Uranus sextile (Mar28-Apr6) como contexto, a resolução UPWARD confirma o April Earnings Rally (alvo: $73,630-$78,920). A resolução DOWNWARD (quebra de $67,261) abre caminho para $63,136 (Gann 50% retracement = ATH×50% exact). Gann: 'Each stock moves according to its individual time limit... because the vibration and wave length varies.' BTC tem a sua frequência vibracional própria — o Master Time Factor identifica QUANDO essa vibração atinge os seus extremos."},
   {w:"Apr 13",t:"g",bias:"turn",src:"Gann Master Time Factor",
@@ -353,8 +353,8 @@ APR:{l:"April",e:[
    c:"In 'Sell in May' bearish context, New Moon polarity inverts per Pesavento. Marks a temporary bounce peak — a sell opportunity.",
    why:"Pesavento's inversion rule: New Moon = bottom in bull markets, TOP in bear markets. 'Sell in May' is a confirmed bearish seasonal. This New Moon likely produces a short-term bounce that should be SOLD INTO — not a trend reversal."},
   {w:"Apr 20–21",t:"m",bias:"warn",src:"Jensen (1978) + JPL geocentric + AstrologyKing + Book of Han (111 CE)",
-   e:"⭐⭐⭐ TRIPLE CONJUNCTION: Mercury + Mars + Saturn — All within 0.8° ⚠️ RAREST BEARISH EVENT OF 2026",
-   c:"Mercury, Mars and Saturn all within 0.8° of each other over two consecutive days. Mars CONJ Saturn (0.035°, near-exact, Apr 20) + Mercury CONJ Saturn (0.681°, Apr 20) + Mercury CONJ Mars (0.076°, near-exact, Apr 21). The most concentrated bearish planetary cluster of the year.",
+   e:"⭐⭐⭐ HOJE: TRIPLE CONJUNCTION confirmada — Merc☌Sat 0.04° · Marte☌Sat 0.36° · Merc☌Marte 0.32° ⚠️ MÁXIMO BEARISH 2026",
+   c:"CONFIRMADO 20 Abr: Merc☌Saturno orb 0.04° (EXACTO). Marte☌Saturno orb 0.36°. Merc☌Marte orb 0.32°. Lua em Gémeos 12° = LOW absoluto (730 ciclos Pesavento). Sol em Touro 0.4°. BTC ~$75,300 na zona de resistência 108/144.",
    why:"TRIPLE CONJUNCTION breakdown: (1) Mars CONJ Saturn Apr 20 — 0.035° orb, essentially exact. Mars (aggression/force) + Saturn (contraction/restriction) = THE most classically bearish combination in financial astrology. Historically associated with market crashes, military defeats, forced liquidations. This is the most exact Mars-Saturn conjunction of 2026. (2) Mercury CONJ Saturn Apr 20 — 0.681° orb. Book of Han (111 CE): 'Mercury conjunct Saturn results in stagnation and depression. It signifies the defeat of an army. War should not be undertaken.' (3) Mercury CONJ Mars Apr 21 — 0.076° orb, near-exact. Aggressive narrative collapses. The sequence Apr 20-21: all three planets (Mercury, Mars, Saturn) within 0.8° simultaneously = a rare triple conjunction delivering maximum bearish force. Falls within 'Sell in May' bearish seasonal (Apr 16–Jun 26), reinforcing the directional bias. Jensen: Saturn aspects to Mercury = 'structural restraint applied to narrative.' Mars CONJ Saturn = forced contraction through aggressive means — classic crash catalyst energy."},
   {w:"Apr 24",t:"v",bias:"turn",src:"JPL geocentric",
    e:"♀ Venus CONJUNCT Uranus (0.095°) — Near-Exact Sudden Value Disruption",
@@ -836,15 +836,15 @@ function useBtcPrice() {
 function MapaView() {
   const livePrice = useBtcPrice();
   const ATH = 126272;
-  const CURRENT = livePrice || 83500;
+  const CURRENT = livePrice || 74572;
 
   const s9 = [
     {p:126272,label:"ATH",c:"#ff6060",note:"6 Out 2025"},
     {p:99444,label:"$99,444 — S9 10×",c:"#ff8040",note:"resistência forte"},
     {p:80286,label:"$80,286 — S9 18×",c:"#ff9930",note:"resistência"},
-    {p:73630,label:"$73,630 — S9 21×",c:"#ffc040",note:"resistência"},
+    {p:73630,label:"$73,630 — S9 21×",c:"#ffc040",note:"zona actual ← BTC ~$74K"},
     {p:72000,label:"$72,000 — 0°Áries ×200",c:"#ffe060",note:"0°Áries EXACT"},
-    {p:69352,label:"$69,352 — S9 23×",c:"#90e890",note:"suporte actual"},
+    {p:69352,label:"$69,352 — S9 23×",c:"#90e890",note:"suporte próximo"},
     {p:67261,label:"$67,261 — S9 24×",c:"#60d060",note:"próximo suporte"},
     {p:64800,label:"$64,800 — 0°Áries ×180",c:"#40c060",note:"0°Áries EXACT"},
     {p:63136,label:"$63,136 — ATH × 50%",c:"#30b0b0",note:"Gann 50% crítico"},
@@ -1054,7 +1054,7 @@ function MapaView() {
 
 const LOCAL_TRENDS = [
   {d:"Apr 08",b:"key",l:"📐 Key Day: Lua sq Marte",dir:"🟢 WATCH LONG",prob:"BAIXA",note:"Key Day Marte + Apr Rally bullish → favorecer long se já em alta",seas:"Apr Rally"},
-  {d:"Apr 11",b:"conf",l:"⭐ p1 CONFIRMADO — $73,807 (114/144)",dir:"🔴 SHORT",prob:"ALTA",note:"BTC fez topo exacto em $73,807 = 114/144 do Square of 144. Bearish doji. p1 do padrão Bayer disposal. Hurst: peak cedo (underlying trend −2). Short entry.",seas:"Sell in May"},
+  {d:"Apr 11",b:"conf",l:"⭐ p1 CONFIRMADO — $73,807 (114/144)",dir:"🔴 SHORT",prob:"ALTA",note:"✅ CONFIRMADO. BTC fez topo exacto em $73,807 = 114/144. Bearish doji. p1 do padrão Bayer. Hurst: peak cedo (underlying −2). CoinDesk confirmou rejeição em $76K em Apr 14.",seas:"Sell in May"},
   {d:"Apr 13",b:"key",l:"Marte ☌ Neptuno EXACTO 05:29 UTC",dir:"🔴 SHORT",prob:"MÉDIA",note:"Marte☌Neptuno exacto = pico da energia ilusória que alimentou o rally. Vénus☌Júpiter também exacto. Gann dia 45 do LOW. Fade do bounce. Short activo.",seas:"Sell in May"},
   {d:"Apr 14",b:"conf",l:"⭐ p2 CONFIRMADO — $76,127 (doji, falhou 108/144)",dir:"🔴 SHORT",prob:"ALTA",note:"BTC topo $76,127 = bearish doji a $442 do nível 108/144 ($76,569). Bear market tax: aspectos bullish (Vénus☌Júpiter + Merc⚹Úrano) produziram movimento menor que o esperado. p2 confirmado. Bayer: último 'p.' antes da grande 's.'.",seas:"Sell in May"},
   {d:"Apr 15",b:"key",l:"Mercúrio ingress Áries 03:22 UTC",dir:"🔴 SHORT",prob:"MÉDIA",note:"Pivot: Mercúrio entra Áries na sessão asiática. Europa acorda já com nova narrativa. 6♦️ Card of Financial Responsibility: ajustamento kármico. Short entry ao acordar Europa.",seas:"Sell in May"},
@@ -1144,7 +1144,7 @@ const LOCAL_TRENDS = [
   {d:"Dec 30",b:"key",l:"📐 Key Day: Lua sq Mercúrio",dir:"🟢 WATCH LONG",prob:"BAIXA",note:"Key Day + Jan Effect bullish → fim do ano",seas:"Jan Effect"},
   // ── MAJOR CALENDAR EVENTS (from CONF + VISAO) ──
   {d:"Apr 06",b:"conf",l:"Gann 180° + Time=Price Squaring",dir:"🔴 SHORT",prob:"MÉDIA",note:"182 dias do ATH = Gann 180° (metade do ciclo anual). Price=Time squaring potencial. Sell in May contextualiza como topo local.",seas:"Sell in May"},
-  {d:"Apr 20",b:"conf",l:"⭐⭐ TRIPLA CONJUNÇÃO — Merc+Marte+Sat + Taurus Ingress",dir:"🔴 SHORT",prob:"ALTA",note:"MÁXIMO BEARISH DO ANO. Tripla conj 7° Áries (Merc+Marte+Sat). Sol ingress Touro 1:39 UTC. Merc☌Sat 11:21 UTC. Merc☌Marte 21:44 UTC. Book of Han 111 CE: 'defeat of an army.' Malefic Bottleneck activo Apr 19-20. S144 alvo $60,001 (144/144).",seas:"Sell in May"},
+  {d:"Apr 20",b:"conf",l:"⭐⭐ HOJE — TRIPLA CONJUNÇÃO CONFIRMADA (Merc☌Sat 0.04°)",dir:"🔴 SHORT",prob:"ALTA",note:"HOJE: Merc☌Sat orb 0.04° exacto. Marte☌Sat 0.36°. Merc☌Marte 0.32°. Lua Gémeos 12° = LOW absoluto 730 ciclos. BTC ~$75,300 entre 108/144 ($76,569) e 114/144 ($73,807). Merc☌Sat 11:21 UTC activo. Merc☌Marte 21:44 UTC final. Volatilidade máxima esperada tarde. Book of Han: 'defeat of an army.'",seas:"Sell in May"},
   {d:"Jun 10",b:"conf",l:"Venus-Jupiter Conjunção (99 ciclos bullish) + Saturn cap",dir:"🟢 BOUNCE",prob:"MÉDIA",note:"Venus-Jupiter = sinal bullish verificado em 99 ciclos (Pesavento). Mercury-Saturn simultâneo = cap ao optimismo. Bounce técnico dentro Sell in May → alívio, não bottom major.",seas:"Sell in May"},
   {d:"Jun 15",b:"conf",l:"⭐⭐⭐⭐⭐⭐ BOTTOM SIGNAL — 6 Frameworks",dir:"🟢 LONG",prob:"ALTA",note:"Sinal mais importante do ano. 6 sistemas convergem: (1) NM em Gemini 730 ciclos Pesavento, (2) Jupiter Quintile Uranus 0.04° Jensen action trigger, (3) Summer Rally aproxima-se, (4) Moon Gemini = absolute low long-term, (5) Hurst 40-day trough, (6) Gann squaring. BOTTOM INTERMÉDIO → long de alta confiança.",seas:"Sell in May→Summer"},
   {d:"Sep 01",b:"conf",l:"⭐ J-S Trine Exacto 0.029° + Fall Crash Abre",dir:"🔴 SHORT",prob:"ALTA",note:"Jupiter-Saturn trine exacto (Jensen bullish estrutural). Mas Fall Crash abre hoje. Jensen (1978): trine durante Node bearish = bottom 15-18 meses à frente. Gann 360° a 35 dias. PICO do rally de verão antes da queda de outono → short.",seas:"Fall Crash"},
@@ -1309,7 +1309,7 @@ function ChartS144View() {
     return ()=>clearInterval(iv);
   },[]);
 
-  const price = btc || 71560;
+  const price = btc || 74572;
   const unitsFromLow = (price-LOW_PRICE)/S144_UNIT;
   const pctATH = ((ATH_PRICE-price)/ATH_PRICE*100).toFixed(1);
   const pctLow = ((price-LOW_PRICE)/LOW_PRICE*100).toFixed(1);
@@ -1432,14 +1432,15 @@ function ChartS144View() {
 
 // ── WEEK VIEW DATA ──────────────────────────────────────────
 const WEEK_DATA = {
-  weekLabel: "Apr 13–26, 2026",
+  weekLabel: "Apr 13–26, 2026 · HOJE: Apr 20",
   seasonal: "April Rally → terminou · Sell in May activo · Uranus ingress Gemini Apr 26",
-  btcRef: 83500,
-  tops: [{price:73807,label:"p1 — 11 Abr",n:114},{price:76127,label:"p2 — 14 Abr (doji)",n:108}],
+  btcRef: 74572,
+  tops: [{price:73807,label:"p1 — 11 Abr",n:114},{price:76127,label:"p2 — 14 Abr (doji)",n:108},{price:75300,label:"actual — 20 Abr",n:109}],
   s144levels: [
+    {n:102,price:79330,type:"resist",label:"102/144 — próxima resistência"},
     {n:108,price:76569,type:"resist",label:"108/144 — topo rejeitado"},
-    {n:114,price:73807,type:"resist",label:"114/144 — p1"},
-    {n:120,price:71046,type:"support",label:"120/144 — suporte 1"},
+    {n:114,price:73807,type:"support",label:"114/144 — suporte (p1)"},
+    {n:120,price:71046,type:"support",label:"120/144 — suporte 2"},
     {n:126,price:68285,type:"support",label:"126/144 — alvo queda"},
     {n:132,price:65524,type:"support",label:"132/144 — zona capitulação"},
     {n:144,price:60001,type:"major",label:"144/144 — LOW Feb 27"},
@@ -1453,7 +1454,7 @@ const WEEK_DATA = {
   aspects: [
     {d:"Apr 13",wd:"Seg",aspect:"Marte ☌ Neptuno 05:29 UTC",icon:"🔴",
      bias:"neut",tag:"Energia ilusória esgota",
-     note:"Marte☌Neptuno exacto 5h29 UTC em Áries 2°39'. Pico da energia que alimentou o rally $68K→$76K. Vénus☌Júpiter (99 ciclos Pesavento) também exacto hoje. Gann: dia 45 do LOW. Ambos os aspectos bullish atingem o pico e começam a separar-se.",
+     note:"✅ CONFIRMADO. Marte☌Neptuno + Vénus☌Júpiter exactos. BTC consolidou entre $71-73K antes do push final de Apr 14. Aspectos consumidos pelo rally. Gann 45d do LOW validado como turning point.",
      s144:"Fade do bounce. Resistência $76,569 (108/144) já testada e rejeitada a $76,127."},
     {d:"Apr 14",wd:"Ter",aspect:"Mercúrio ⚹ Úrano + BEARISH DOJI $76,127",icon:"🟡",
      bias:"spike",tag:"p2 confirmado — topo local",
@@ -1477,12 +1478,12 @@ const WEEK_DATA = {
      s144:"Teste $71,046 → $68,285. Manter shorts abertos."},
     {d:"Apr 19",wd:"Dom",aspect:"Marte ☌ Saturno 22:43 UTC",icon:"🔴🔴",
      bias:"bear",tag:"⚠️ BOTTLENECK — Abertura Asiática",
-     note:"MALEFIC BOTTLENECK: Marte☌Saturno 22:43 UTC = abertura asiática de segunda. Tripla conj 7° Áries: Mars 7°57', Saturn 7°52', Mercury 7°17'. 'Collision of inexorable force with immovable resistance' — buildup de energia cinética que exige descarga. Lua entra Gémeos 17h UTC = LOW absoluto Pesavento (730 ciclos).",
+     note:"✅ CONFIRMADO. Marte☌Saturno exacto 22:43 UTC. BTC abriu segunda a $73,820 — literalmente sobre o nível 114/144 ($73,807). Lua entrou Gémeos às 17h UTC (LOW absoluto Pesavento 730 ciclos). US capturou navio iraniano (geopolítica = Marte☌Sat). Evento activo no mercado real.",
      s144:"Volatilidade extrema. Alvo $65,524 (132/144) ou $60,001 (144/144 = LOW Feb 27)."},
-    {d:"Apr 20",wd:"Seg",aspect:"Sol→Touro 01:39 · Merc☌Sat 11:21 · Merc☌Marte 21:44",icon:"🔴🔴",
-     bias:"bear",tag:"TRIPLO — Máximo bearish do ano",
-     note:"Três eventos ao longo do dia: Sol ingress Touro 1:39 UTC (sai do campo da tripla conj). Mercúrio☌Saturno 11:21 UTC = notícias bloqueadas pela realidade, comunicação cortada. Mercúrio☌Marte 21:44 UTC = volatilidade máxima, decisões agressivas. Sol+Saturn+Neptune também activos. Este é o dia de máxima descarga.",
-     s144:"Pico de descarga. Alvo $60,001 (144/144) se capitulação. Stop loss crítico."},
+    {d:"Apr 20",wd:"Seg",aspect:"HOJE · Merc☌Sat 11:21 · Merc☌Marte 21:44",icon:"🔴🔴",
+     bias:"bear",tag:"⚠️ HOJE — Máximo bearish do ano",
+     note:"HOJE 20 ABR ⚠️. Abertura $73,820 (sobre 114/144=$73,807). High $75,242. Actual ~$74,572. US capturou navio iraniano = Marte☌Sat geopolítico ✅. Sol→Touro 1:39 UTC ✅. Merc☌Sat 11:21 UTC ← PRÓXIMO. Merc☌Marte 21:44 UTC ← NOITE. Book of Han: 'defeat of an army.' Lag Gann 20.3 dias bearish. Campo de batalha $73,807-$76,569.""
+     s144:"BTC $75,300 entre 108/144 ($76,569) e 114/144 ($73,807). Pressão máxima activa. Resistência $76,569. Suporte $73,807→$68,285."},
     {d:"Apr 25",wd:"Sex",aspect:"Sol □ Plutão 13:11 UTC (5°28')",icon:"🔴",
      bias:"bear",tag:"Segundo evento — Crise estrutural",
      note:"Sol Touro 5°28' em square exacto com Plutão Aquário 5°28'. Mundane astrology: Sol-Plutão squares = 'deep-seated structural and tectonic shifts'. Para o BTC: crise de avaliação. O mercado questiona o que os activos valem. Pode ser o segundo low após o bottleneck de Apr 20, ou confirmação da queda.",
@@ -1524,7 +1525,7 @@ function WeekView() {
         <div style={{fontSize:13,letterSpacing:3,color:"#a89050",textTransform:"uppercase",marginBottom:5}}>Semana Corrente</div>
         <div style={{fontSize:26,color:"#c8b060",letterSpacing:2,fontWeight:"normal",marginBottom:3}}>{w.weekLabel}</div>
         <div style={{fontSize:13,color:"#555",marginBottom:2}}>{w.seasonal}</div>
-        <div style={{fontSize:13,color:"#3a3830"}}>Bear market · Inversão LN/LC · Hurst −2 · Bayer disposal · S144 anchor $60,001</div>
+        <div style={{fontSize:13,color:"#ff4060",fontWeight:"bold"}}>⚠️ HOJE: Malefic Bottleneck activo · Merc☌Sat 11:21 UTC · Merc☌Marte 21:44 UTC</div>
       </div>
 
       {/* Phase Timeline */}
