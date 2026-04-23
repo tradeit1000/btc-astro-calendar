@@ -836,13 +836,13 @@ function useBtcPrice() {
 function MapaView() {
   const livePrice = useBtcPrice();
   const ATH = 126272;
-  const CURRENT = livePrice || 74572;
+  const CURRENT = livePrice || 78553;
 
   const s9 = [
     {p:126272,label:"ATH",c:"#ff6060",note:"6 Out 2025"},
     {p:99444,label:"$99,444 — S9 10×",c:"#ff8040",note:"resistência forte"},
     {p:80286,label:"$80,286 — S9 18×",c:"#ff9930",note:"resistência"},
-    {p:73630,label:"$73,630 — S9 21×",c:"#ffc040",note:"zona actual ← BTC ~$74K"},
+    {p:73630,label:"$73,630 — S9 21×",c:"#ffc040",note:"suporte — quebrado acima"},
     {p:72000,label:"$72,000 — 0°Áries ×200",c:"#ffe060",note:"0°Áries EXACT"},
     {p:69352,label:"$69,352 — S9 23×",c:"#90e890",note:"suporte próximo"},
     {p:67261,label:"$67,261 — S9 24×",c:"#60d060",note:"próximo suporte"},
@@ -1063,8 +1063,8 @@ const LOCAL_TRENDS = [
   {d:"Apr 20",b:"conf",l:"⭐ TRIPLO — Merc☌Sat 11:21 + Merc☌Marte 21:44 + Sol ingress Touro",dir:"🔴 SHORT",prob:"ALTA",note:"Três eventos: Sol→Touro 1:39 UTC, Merc☌Sat 11:21 UTC (notícias bloqueadas), Merc☌Marte 21:44 UTC (volatilidade máxima). Máximo bearish do ano — Book of Han (111 CE): 'defeat of an army.' Alvo $60,001 (144/144).",seas:"Sell in May"},
   {d:"Apr 22",b:"key",l:"📐 Key Day: Lua sq Merc+Marte",dir:"🔴 WATCH SHORT",prob:"BAIXA",note:"Key Day duplo + Sell in May bearish → pico volatilidade, favorecer short",seas:"Sell in May"},
   {d:"Apr 24",b:"key",l:"♀ Vénus ☌ Úrano (0.095°) — Near-Exact",dir:"🔴 WATCH SHORT",prob:"BAIXA",note:"Vénus☌Úrano quasi-exacto = disrupção inesperada de valor financeiro. Dentro Sell in May → disrupção serve trend bearish. Reacção agressiva possível.",seas:"Sell in May"},
-  {d:"Apr 25",b:"conf",l:"⭐ Sol □ Plutão 13:11 UTC (5°28') — Crise estrutural",dir:"🔴 SHORT",prob:"ALTA",note:"Sol Touro square Plutão Aquário = deep structural shift. Crise de avaliação — o mercado questiona o que os activos valem. Segundo evento de stress após bottleneck Apr 20. Potencial segundo low ou aceleração da queda.",seas:"Sell in May"},
-  {d:"Apr 26",b:"conf",l:"⚡ ÚRANO INGRESS GÉMEOS 21:52 UTC — TURNING POINT",dir:"🟡 WATCH",prob:"ALTA",note:"EVENTO HISTÓRICO: Úrano termina 7 anos em Touro e entra Gémeos. BTC: narrativa muda de 'ouro digital' para 'rede de comunicação global'. Historicamente Úrano changing signs = reversão de tendência estrutural. Potencial low de capitulação seguido de reversão explosiva.",seas:"Sell in May"},
+  {d:"Apr 25",b:"conf",l:"⭐ Sol □ Plutão 13:11 UTC (5°28') — Crise estrutural",dir:"🔴 SHORT",prob:"ALTA",note:"SÁBADO 25 ABR 13:11 UTC. BTC actual $78,553 — se mantiver aqui até sábado, Sol□Plutão pode ser o pico da narrativa Neptuniana (ceasefire). Crise de avaliação: o que vale o BTC realmente? Maior risco de reversão brusca. Watch $76,569 (108/144) como suporte crítico.",seas:"Sell in May"},
+  {d:"Apr 26",b:"conf",l:"⚡ ÚRANO INGRESS GÉMEOS 21:52 UTC — TURNING POINT",dir:"🟡 WATCH",prob:"ALTA",note:"EVENTO HISTÓRICO: Úrano ingress Gémeos 21:52 UTC. Com BTC a $78-79K, este é o momento onde: ou (A) a alta continua como turning point estrutural bullish — 'nova era cripto', ou (B) o preço colapsa primeiro (Sol□Plutão 25 Abr) e depois reversa aqui. A short-squeeze com 46+ dias de funding negativo aumenta a probabilidade de (A). Decisão estrutural de longo prazo.",seas:"Sell in May"},
   {d:"Apr 30",b:"lcheia",l:"🌕 Lua Cheia — bear inversion: FUNDO LOCAL",dir:"🟢 BOUNCE",prob:"MÉDIA",note:"Lua Cheia + Sell in May + inversão bear → FUNDO LOCAL → bounce técnico",seas:"Sell in May"},
   {d:"May 01",b:"low",l:"🔴 Moon Escorpião = Low QE",dir:"🟡 BOUNCE",prob:"MÉDIA",note:"Low QE absoluto + Sell in May → bounce possível mas trend negativo",seas:"Sell in May"},
   {d:"May 07",b:"key",l:"📐 Key Day: Lua sq Marte",dir:"🔴 WATCH SHORT",prob:"BAIXA",note:"Key Day + Sell in May → confirma pressão baixista",seas:"Sell in May"},
@@ -1309,7 +1309,7 @@ function ChartS144View() {
     return ()=>clearInterval(iv);
   },[]);
 
-  const price = btc || 74572;
+  const price = btc || 71560;
   const unitsFromLow = (price-LOW_PRICE)/S144_UNIT;
   const pctATH = ((ATH_PRICE-price)/ATH_PRICE*100).toFixed(1);
   const pctLow = ((price-LOW_PRICE)/LOW_PRICE*100).toFixed(1);
@@ -1434,7 +1434,7 @@ function ChartS144View() {
 const WEEK_DATA = {
   weekLabel: "Apr 13–26, 2026 · HOJE: Apr 20",
   seasonal: "April Rally → terminou · Sell in May activo · Uranus ingress Gemini Apr 26",
-  btcRef: 74572,
+  btcRef: 78553,
   tops: [{price:73807,label:"p1 — 11 Abr",n:114},{price:76127,label:"p2 — 14 Abr (doji)",n:108},{price:75300,label:"actual — 20 Abr",n:109}],
   s144levels: [
     {n:102,price:79330,type:"resist",label:"102/144 — próxima resistência"},
@@ -1482,7 +1482,7 @@ const WEEK_DATA = {
      s144:"Volatilidade extrema. Alvo $65,524 (132/144) ou $60,001 (144/144 = LOW Feb 27)."},
     {d:"Apr 20",wd:"Seg",aspect:"HOJE · Merc☌Sat 11:21 · Merc☌Marte 21:44",icon:"🔴🔴",
      bias:"bear",tag:"⚠️ HOJE — Máximo bearish do ano",
-     note:"HOJE 20 ABR ⚠️. Abertura $73,820 (sobre 114/144=$73,807). High $75,242. Actual ~$74,572. US capturou navio iraniano = Marte☌Sat geopolítico ✅. Sol→Touro 1:39 UTC ✅. Merc☌Sat 11:21 UTC ← PRÓXIMO. Merc☌Marte 21:44 UTC ← NOITE. Book of Han: 'defeat of an army.' Lag Gann 20.3 dias bearish. Campo de batalha $73,807-$76,569.""
+     note:"✅ CONFIRMADO. Abertura $73,820 (sobre 114/144). Close $75,324. Merc☌Sat 11:21 UTC ✅. Merc☌Marte 21:44 UTC ✅. BTC aguentou acima $73,807 — bear não quebrou. Bottleneck absolvido sem crash imediato. Trump anuncia 21 Abr: cease-fire indefinido = Neptuno a trabalhar.""
      s144:"BTC $75,300 entre 108/144 ($76,569) e 114/144 ($73,807). Pressão máxima activa. Resistência $76,569. Suporte $73,807→$68,285."},
     {d:"Apr 25",wd:"Sex",aspect:"Sol □ Plutão 13:11 UTC (5°28')",icon:"🔴",
      bias:"bear",tag:"Segundo evento — Crise estrutural",
@@ -1525,7 +1525,7 @@ function WeekView() {
         <div style={{fontSize:13,letterSpacing:3,color:"#a89050",textTransform:"uppercase",marginBottom:5}}>Semana Corrente</div>
         <div style={{fontSize:26,color:"#c8b060",letterSpacing:2,fontWeight:"normal",marginBottom:3}}>{w.weekLabel}</div>
         <div style={{fontSize:13,color:"#555",marginBottom:2}}>{w.seasonal}</div>
-        <div style={{fontSize:13,color:"#ff4060",fontWeight:"bold"}}>⚠️ HOJE: Malefic Bottleneck activo · Merc☌Sat 11:21 UTC · Merc☌Marte 21:44 UTC</div>
+        <div style={{fontSize:13,color:"#ffc832",fontWeight:"bold"}}>🔴 ATENÇÃO: BTC $78,553 — ACIMA 108/144 ($76,569) — p3 de Bayer? · Apr 25 Sol□Plutão · Apr 26 Úrano→Gémeos</div>
       </div>
 
       {/* Phase Timeline */}
