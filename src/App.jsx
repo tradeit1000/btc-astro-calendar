@@ -24,6 +24,18 @@ const D = {
 
 MAPA:{l:"📊 Referência Rápida",e:[]},
 VISAO:{l:"Annual Overview",e:[
+  {w:"🎯 STATUS 22 MAI 2026",t:"g",bias:"warn",src:"Multi-framework audit",
+   e:"⚠️ ACTUAL: BTC $77,400 · Wyckoff Distribution Fase C/D · Sell in May activo",
+   c:"BTC entre $76K (suporte) e $82K (tecto 7 falhas). Estrutura distributiva confirmada. Hoje: Sol☌Urano 0.09°.",
+   why:"Auditoria de predições vs realidade Abr-Mai 2026: micro-timing 100% preciso (p1 $73,807 = 114/144 exacto, p2 $76,127 doji, LN 17 Abr = topo confirmado). Estrutura macro: distribuição Wyckoff Fase C/D com 7 falhas na zona $82K em 3 semanas (Mai 6-15). Sell in May a produzir: $81,500 → $76,000 = -6.75% em 4 dias. Suporte $76K aguentou 2 testes. Contexto multi-framework: 8/8 sistemas apontam para mais downside estrutural após bounce de mid-Jun. Alvo estrutural: $60K → $40-52K (COT analog 2022 + Bayer tongue + Fall Crash Zone)."},
+  {w:"📊 H1 VALIDATION",t:"g",bias:"warn",src:"Backtesting Abr-Mai 2026",
+   e:"✅ H1 CONFIRMADO: Todos os aspectos exactos funcionaram como relógio",
+   c:"Apr 11 p1, Apr 14 p2, Apr 17 LN topo, Apr 19 Marte☌Sat geopolítico — 100% preciso.",
+   why:"BACKTEST: (1) 11 Abr — p1 $73,807 = 114/144 exacto do S144 [previsto]; (2) 14 Abr — p2 $76,127 doji a $442 do 108/144 [previsto — bear market tax de Pesavento validado]; (3) 17 Abr LN 11:51 UTC — BTC $75,746, bear market inversion confirmada (LN = topo, não bottom); (4) 19 Abr — Marte☌Saturno 22:43 UTC manifestou-se como captura de navio iraniano pelos EUA — dimensão geopolítica confirmada. Erro: Apr 20 bottleneck não produziu crash imediato porque Trump ceasefire indefinido (Merc☌Neptuno) foi mais forte que Marte☌Sat. Padrão descoberto: aspectos Neptuno criam narrativas que atrasam o markdown mas não o cancelam."},
+  {w:"🔥 KEY LEVELS 2026",t:"g",bias:"turn",src:"Gann Square of 144 + Wyckoff distribution",
+   e:"📐 Níveis Estruturais: $82K TECTO · $76K PIVOT · $60K BASE",
+   c:"Resistência 96/144=$82,091 (7 falhas). Suporte 108/144=$76,569 (2 defesas). Base 144/144=$60,001.",
+   why:"Square of 144 recalibrado (ATH $126,272 → LOW $60,001, unidade $460.22). 7 tentativas falhadas na zona $82K entre 6-15 Mai = tecto de distribuição Wyckoff Fase C. Suporte $76,569 (108/144) aguentou 2 testes (18-19 Mai). Quebra de $76K com volume = Sign of Weakness confirmed = markdown para $73,807 (114/144) → $68,285 (126/144) → $60,001 (144/144). Point-and-figure count da distribuição: alvo mínimo $60K, potencial $52K ou $48K (analog June-Nov 2022)."},
   {w:"ANNUAL BACKDROP",t:"g",bias:"warn",src:"Jensen — Astro-Cycles and Speculative Markets (1978) p.79",
    e:"⚠️ North Node 270° Square to 9° Gemini (Jensen) — Entire Year",
    c:"Jensen's critical national hinge. Node squares historically = major market lows. Peak orb July (0.6°).",
@@ -36,16 +48,16 @@ VISAO:{l:"Annual Overview",e:[
    e:"PHASE 2 — April Earnings Rally: BULLISH Seasonal",
    c:"Bullish seasonal Mar 28–Apr 16 overlapping the most concentrated multi-framework bullish cluster of 2026.",
    why:"Pesavento: Aries/Taurus + Q1 earnings. CLUSTER: Jupiter SEXTILE Uranus (Mar 28–Apr 6) — Jensen documented 28/28 gains (100% win rate since 1896). Simultaneously: Jensen 2×88d (Mar 31), Full Moon (Apr 1), Gann 180° (Apr 6), Mars Helio 90° (Mar 26). Five independent systems in 9 days."},
-  {w:"Apr 16→Jun 26",t:"p",bias:"bear",src:"Pesavento & Smoleny (2015)",
-   e:"PHASE 3 — Sell in May: BEARISH Seasonal",
-   c:"Classic 2+ month bearish window. Confirmed 108+ years.",
-   why:"Pesavento: Sun through Taurus/Gemini/Cancer = extended bearish window. Counterforce: Venus CONJ Jupiter Jun 10 (correct geocentric date, 99 bullish cycles) creates a countertrend bounce — use as sell-the-rally opportunity. Mars Helio 135° May 21 adds pressure."},
+  {w:"Apr 16→Jun 26",t:"p",bias:"bear",src:"Pesavento & Smoleny (2015) — CONFIRMADO",
+   e:"PHASE 3 — Sell in May: ✅ BEARISH CONFIRMADO em curso",
+   c:"CONFIRMED: BTC $81,500 (15 Mai) → $76,000 (19 Mai) = -6.75% em 4 dias. Bear a produzir.",
+   why:"Pesavento validado: Sun through Taurus/Gemini/Cancer = extended bearish window. Timeline real: (1) 22 Abr Trump ceasefire = último bounce ilusório para $78,553; (2) 6 Mai canal descendente iniciou; (3) 15 Mai 7ª tentativa falhada na zona $82K (topo confirmado da distribuição); (4) 18 Mai 'Iran flush' -6.75%; (5) 19 Mai $76K suporte aguentou. Fase actual: 22-29 Mai cluster bearish (Sol☌Urano hoje, Marte□Plutão 26/5, Gann 90° do LOW 28/5, Vénus□Saturno 29/5). Counterforce: Venus CONJ Jupiter 9-10 Jun = bounce a curto prazo, NÃO trend change. 'Sell in May bottoms in early July' — Pesavento explicit."},
   {w:"Jun 15",t:"g",bias:"turn",src:"Pesavento (730 cycles) + Jensen + Gann + NASA/JPL",
    e:"⭐⭐⭐⭐⭐ STRONGEST BOTTOM SIGNAL OF THE YEAR — New Moon in Gemini",
    c:"Moon in Gemini = ABSOLUTE LOW per Pesavento (730 S&P cycles, 1950–present). Four additional frameworks confirm.",
    why:"Pesavento 730-cycle Moon vs Sign study: Gemini Moon = strongest absolute lows. Five frameworks: (1) Moon in Gemini=absolute low, (2) New Moon=bottom signal, (3) Mercury Greatest Elongation=clarity, (4) Gann 4×9 weeks, (5) Moon Perigee Jun 14 for amplification. Average bottom: New Moon −1 day."},
-  {w:"Jun 26→Sep 4",t:"p",bias:"bull",src:"Pesavento & Smoleny (2015) + Jensen (1978)",
-   e:"PHASE 4 — Summer Rally: BULLISH Seasonal",
+  {w:"Jun 26→Sep 4",t:"p",bias:"turn",src:"Pesavento & Smoleny (2015) — CONTEXTO REVISTO",
+   e:"⚠️ PHASE 4 — Summer Rally: BOUNCE dentro de bear market maior",
    c:"Reliable 2-month bullish window. Sun conjunct US natal Sun (Cancer). Jensen 3×88d aligns at opening.",
    why:"Pesavento: Cancer/Leo/Virgo transit conjuncts US natal Sun. Jensen 3×88d (Jun 27) aligns within 1 day of opening. Mercury Direct Jul 23 clears narrative fog. WARNING: Venus Greatest Elongation Aug 15 (45.9°E) = peak sentiment zone — Mercury CONJ Jupiter same day (bullish reinforcement, double bull) but 1 week later Venus OPP Saturn Aug 22 (bearish) — watch for internal correction."},
   {w:"Sep 4→Oct 27",t:"p",bias:"warn",src:"Pesavento & Smoleny (2015) — 108 years",
@@ -905,15 +917,21 @@ function MapaView() {
   const pct = p => 100 - ((p - minP) / range * 100);
 
   const keyDates = [
-    {d:"Mar 3",stars:"⭐⭐⭐",label:"Lunar Eclipse + Saturn squares ATH",bias:"turn"},
-    {d:"Apr 6",stars:"⭐⭐⭐",label:"Gann 180° + TIME=PRICE squaring",bias:"turn"},
-    {d:"Apr 20",stars:"⚠️",label:"Triple conjunction bearish",bias:"bear"},
-    {d:"Jun 15",stars:"⭐⭐⭐⭐⭐⭐",label:"Bottom signal máximo — 6 frameworks",bias:"bull"},
-    {d:"Sep 1",stars:"⭐⭐⭐",label:"J-S trine exacto + Fall Crash abre",bias:"turn"},
-    {d:"Sep 22",stars:"⚠️",label:"Sun entra Libra = crash signal US chart",bias:"bear"},
-    {d:"Oct 6",stars:"⭐⭐⭐⭐",label:"Gann 360° + Fall Crash + Venus Retro",bias:"bear"},
-    {d:"Nov 9",stars:"⭐⭐⭐",label:"NM Escorpião — Triple Bottom",bias:"bull"},
-    {d:"Dec 21",stars:"⭐⭐⭐⭐",label:"Gann 7×9w = Jensen 5×88d = Solstício",bias:"turn"},
+    {d:"Apr 11",stars:"✅",label:"p1 $73,807 (114/144) — CONFIRMADO",bias:"bear"},
+    {d:"Apr 14",stars:"✅",label:"p2 $76,127 doji — CONFIRMADO",bias:"bear"},
+    {d:"Apr 17",stars:"✅",label:"LN 11:51 = TOPO ($75,746) — CONFIRMADO",bias:"bear"},
+    {d:"May 15",stars:"✅",label:"7ª falha zona $82K ($81,500)",bias:"bear"},
+    {d:"May 26",stars:"⚠️",label:"Marte □ Plutão — aspecto mais violento",bias:"bear"},
+    {d:"May 28",stars:"⭐⭐⭐",label:"Gann 90° do LOW $60,001",bias:"bear"},
+    {d:"Jun 9-10",stars:"⭐⭐⭐⭐",label:"Vénus☌Júpiter — pivot/bounce (99 ciclos)",bias:"bull"},
+    {d:"Jun 15",stars:"⭐⭐⭐",label:"LN Gémeos — bounce/pivot confirm",bias:"turn"},
+    {d:"Jun 30",stars:"⭐⭐⭐",label:"Dia 144 swing square + Merc retro",bias:"turn"},
+    {d:"Jul 20-25",stars:"⚡⚡⚡",label:"Super-cluster Jup-Ura-Nep-Plu",bias:"turn"},
+    {d:"Sep 4",stars:"⭐⭐⭐⭐",label:"Rally Top FIXED — ATH+333",bias:"bear"},
+    {d:"Oct 6",stars:"⭐⭐⭐⭐⭐",label:"Marie Stanton +1 ano ATH",bias:"bear"},
+    {d:"Oct 7-10",stars:"⚠️⚠️⚠️",label:"Fall Crash Zone ($35-44K)",bias:"bear"},
+    {d:"Nov 29",stars:"⭐⭐⭐⭐⭐",label:"Úrano △ Plutão generacional 0.01°",bias:"turn"},
+    {d:"Dec 21",stars:"⭐⭐⭐",label:"Solstício + Gann angles",bias:"turn"},
   ];
 
   const bC = {bull:"#50e870",bear:"#ff5050",turn:"#ffe080",warn:"#ff5030"};
@@ -1350,10 +1368,10 @@ function LocalTrendsView() {
     tf==="conf"?e.b==="conf":
     e.b===tf
   )).sort((a,b)=>{
-    const months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    const months=["Jan","Feb","Mar","Apr","May","Mai","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
     const [am,ad]=a.d.split(" "); const [bm,bd]=b.d.split(" ");
-    const av=months.indexOf(am)*100+parseInt(ad);
-    const bv=months.indexOf(bm)*100+parseInt(bd);
+    const av=(am==="Mai"?4:months.indexOf(am))*100+parseInt(ad);
+    const bv=(bm==="Mai"?4:months.indexOf(bm))*100+parseInt(bd);
     return av-bv;
   });
 
